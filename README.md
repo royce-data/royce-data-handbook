@@ -20,7 +20,9 @@ You can view the fully rendered HTML version locally by opening `index.html` loc
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/Data-Curators-Royce-Institute/royce_data_handbook/graphs/contributors).
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/graphs/contributors).
+
+Note that the `main` branch is protected. If you would like to contribute to this project, please create a new branch, push your branch to the repository and create a pull request. We will then review it and merge it with the main branch.
 
 ## Credits
 
