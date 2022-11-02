@@ -60,7 +60,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Events" href="../misc_org/events.html" />
+    <link rel="next" title="Updating this book" href="contribution-workflow.html" />
     <link rel="prev" title="Contributing to this book" href="notes-on-jb.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -177,6 +177,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Get started with Jupyter Book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribution-workflow.html">
+     Updating this book
     </a>
    </li>
   </ul>
@@ -468,6 +473,11 @@ title="Print to PDF"
    Clone the Repo and start contributing
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-workflow-for-contributing">
+   A workflow for contributing
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -549,6 +559,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clone-the-repo-and-start-contributing">
    Clone the Repo and start contributing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-workflow-for-contributing">
+   A workflow for contributing
   </a>
  </li>
 </ul>
@@ -668,7 +683,7 @@ If you are using a machine provided by the University of Manchester do not insta
 </section>
 <section id="optional-pick-your-favourite-ide">
 <h2>(Optional) Pick your favourite IDE<a class="headerlink" href="#optional-pick-your-favourite-ide" title="Permalink to this headline">#</a></h2>
-<p>Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> to text editors such as <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a> accompanied by a detached terminal window<a class="footnote-reference brackets" href="#text-editors" id="id3">3</a>. For what we demonstrate here we will use <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.
+<p>Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a class="reference external" href="https://www.rstudio.com/products/rstudio/">RStudio</a>, to text editors such as <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a> accompanied by a detached terminal window<a class="footnote-reference brackets" href="#text-editors" id="id3">3</a>. For what we demonstrate here we will use <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.
 If you are comfortable with your set up we do not recommend you change anything.</p>
 </section>
 <section id="install-the-jupyter-book-environment">
@@ -725,7 +740,9 @@ Open up a terminal and activate your environment as outlines in steps 1 - 3 <a c
 <p>You can find a condensed version in the <span class="xref myst">README</span> accompanying the repository this handbook is hosted on.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The guide below assumes you have some familiarity with Git and branching. If not please follow one of the guides we recommend here.</p>
+<p>The guide below assumes you have some familiarity with Git and branching.<br />
+If not you are not familiar with Git please follow one of the guides we recommend here.<br />
+A more in-depth version of steps 3 - 7 can be found on the <a class="reference internal" href="contribution-workflow.html"><span class="doc std std-doc">next page</span></a>.</p>
 </div>
 <p>Follow these steps to clone the repository to your local drive and push updates:</p>
 <ol>
@@ -747,8 +764,19 @@ Open up a terminal and activate your environment as outlines in steps 1 - 3 <a c
 </pre></div>
 </div>
 </li>
-<li><p>Create a new branch - this will be where you will work and push updates from</p></li>
+<li><p>Create a new branch to push your updates from</p></li>
+<li><p>Initialise your <a class="reference external" href="https://jupyterbook.org">Jupyter Book</a> environment</p></li>
+<li><p>Type in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">handbook</span><span class="o">/</span>
+</pre></div>
+</div>
+</li>
+<li><p>Push your updates to the repository</p></li>
 </ol>
+</section>
+<section id="a-workflow-for-contributing">
+<h2>A workflow for contributing<a class="headerlink" href="#a-workflow-for-contributing" title="Permalink to this headline">#</a></h2>
+<p>We will discuss the workflow to push updates in the next page <a class="reference internal" href="contribution-workflow.html"><span class="doc std std-doc"><i class="bi bi-arrow-right"></i></span></a></p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="note-on-lsw"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -798,10 +826,10 @@ Open up a terminal and activate your environment as outlines in steps 1 - 3 <a c
             <p class="prev-next-title">Contributing to this book</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../misc_org/events.html" title="next page">
+    <a class='right-next' id="next-link" href="contribution-workflow.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Events</p>
+        <p class="prev-next-title">Updating this book</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
