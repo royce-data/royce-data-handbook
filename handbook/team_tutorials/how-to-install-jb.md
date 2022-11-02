@@ -88,7 +88,7 @@ To check that Anaconda is properly installed on Git Bash follow the steps outlin
 
 ## (Optional) Pick your favourite IDE
 
-Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from [PyCharm](https://www.jetbrains.com/pycharm/) to text editors such as [Sublime Text](https://www.sublimetext.com/) accompanied by a detached terminal window[^text-editors]. For what we demonstrate here we will use [Visual Studio Code](https://code.visualstudio.com/).
+Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from [PyCharm](https://www.jetbrains.com/pycharm/) and [RStudio](https://www.rstudio.com/products/rstudio/), to text editors such as [Sublime Text](https://www.sublimetext.com/) accompanied by a detached terminal window[^text-editors]. For what we demonstrate here we will use [Visual Studio Code](https://code.visualstudio.com/).
 If you are comfortable with your set up we do not recommend you change anything.
 
 
@@ -142,7 +142,9 @@ jupyter-book
 You can find a condensed version in the [README]() accompanying the repository this handbook is hosted on.  
 
 :::{warning}
-The guide below assumes you have some familiarity with Git and branching. If not please follow one of the guides we recommend here.
+The guide below assumes you have some familiarity with Git and branching.  
+If not you are not familiar with Git please follow one of the guides we recommend here.  
+A more in-depth version of steps 3 - 7 can be found on the [next page](contribution-workflow.md).
 :::
 
 Follow these steps to clone the repository to your local drive and push updates:
@@ -158,7 +160,16 @@ Follow these steps to clone the repository to your local drive and push updates:
    ```
    git clone <text-you-copied>
    ```
-4. Create a new branch - this will be where you will work and push updates from
+4. Create a new branch to push your updates from
+5. Initialise your {{ jupyter_book }} environment
+6. Type in:
+   ```
+   jupyter-book build handbook/
+   ```
+7. Push your updates to the repository
+
+## A workflow for contributing
+We will discuss the workflow to push updates in the next page [<i class="bi bi-arrow-right"></i>](contribution-workflow.md)
 
 
 
