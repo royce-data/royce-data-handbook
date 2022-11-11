@@ -81,7 +81,7 @@ To check which files are tracked or untracked (usually new files in the root dir
 git status
 ```
 You will get a terminal output like so:
-```{image} ../images/git-track.jpg
+```{image} ../images/contribution-workflow/git-track.jpg
 ```
 ### Add files to the git tree and commit your changes
 We will follow these basic rules for adding files and committing changes to the git repository:
@@ -103,15 +103,39 @@ Commit message convention is to write things in the present tense, a commit mess
 The commit message is important for your reviewer to understand what you did, so try to keep it short but descriptive
 ```
 #### Add and commit a bulk of files
-Once you have added and committed your individual files, check that you have not left out anything important by typing the following to check what has been tracked and not:
+Once you have added and committed your individual files, check that you have not left out anything important by checking what has been tracked and not.  
+Type the following:
 ```
 git status
 ```
+Usually the files you would want to bulk add are in the `_build/` directory.  
+To bulk add files, type:
+```
+git add .
+```
+Since these are usually from the `_build` directory, the commit message could be something like:
+```
+git commit -m 'build handbook'
+```
 ### Push changes to the repository
-
-**NOTE set-upstream**
+To push changes to the remote repository on GitHub, type the following (make sure you are in your branch):
+```
+git push
+```
+Usually, your branch will be untracked, so you'll receive a prompt with a message to push the whole branch to the remote repository to type:
+```
+git push --set-upstream origin <your-branch-name>
+``` 
 
 ### Create a pull request on the repository
+Now that you pushed your branch to the remote repository head to the repository URL, [](https://github.com/Data-Curators-Royce-Institute/royce-data-handbook). You will see a message like,
+```
+<your-branch-name> has recent pushes ...
+```
+Press the button <span class="badge text-bg-success">Compare & pull request</span>  
+You will be redirected to the __Open a pull request__ page. Give it a descriptive title and expand in the comment section if you need further explanation,
+```{image} ../images/contribution-workflow/pull-request.jpg
+```
 
 ### Check the book compiles on our GitHub repository
 
