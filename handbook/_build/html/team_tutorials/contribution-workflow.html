@@ -484,8 +484,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-book-compiles-on-our-github-repository">
-     Check the book compiles on our GitHub repository
+    <a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">
+     Check the book builds on our GitHub repository
     </a>
    </li>
   </ul>
@@ -498,6 +498,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#git-fetch-pull">
      Git fetch-pull
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-delete-your-branch">
+     (Optional) Delete your branch
     </a>
    </li>
   </ul>
@@ -596,8 +601,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-book-compiles-on-our-github-repository">
-     Check the book compiles on our GitHub repository
+    <a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">
+     Check the book builds on our GitHub repository
     </a>
    </li>
   </ul>
@@ -610,6 +615,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#git-fetch-pull">
      Git fetch-pull
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-delete-your-branch">
+     (Optional) Delete your branch
     </a>
    </li>
   </ul>
@@ -777,17 +787,37 @@ To bulk add files, type:</p>
 </pre></div>
 </div>
 <p>Press the button <span class="badge text-bg-success">Compare &amp; pull request</span><br />
-You will be redirected to the <strong>Open a pull request</strong> page. Give it a descriptive title and expand in the comment section if you need further explanation,</p>
+You will be redirected to the <strong>Open a pull request</strong> page. Give it a descriptive title and expand in the comment section if you need further explanation, and press the <span class="badge text-bg-success">Create pull request</span></p>
 <img alt="../_images/pull-request.jpg" src="../_images/pull-request.jpg" />
 </section>
-<section id="check-the-book-compiles-on-our-github-repository">
-<h3>Check the book compiles on our GitHub repository<a class="headerlink" href="#check-the-book-compiles-on-our-github-repository" title="Permalink to this headline">#</a></h3>
+<section id="check-the-book-builds-on-our-github-repository">
+<h3>Check the book builds on our GitHub repository<a class="headerlink" href="#check-the-book-builds-on-our-github-repository" title="Permalink to this headline">#</a></h3>
+<p>We have set up a workflow that builds the contents of the book on the repository side to check that everything works well before the handbook on your branch is merged, built and deployed to GitHub Pages.
+Check that it does build on the remote repository:</p>
+<img alt="images/contribution-workflow/dummy.jpg" src="images/contribution-workflow/dummy.jpg" />
 </section>
 </section>
 <section id="update-your-local-repo">
 <h2>Update your local repo<a class="headerlink" href="#update-your-local-repo" title="Permalink to this headline">#</a></h2>
+<p>Once your branch has been merged move to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and do the fetch-pull-delete procedure we will explain below.</p>
 <section id="git-fetch-pull">
 <h3>Git fetch-pull<a class="headerlink" href="#git-fetch-pull" title="Permalink to this headline">#</a></h3>
+<p>Move to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Use fetch to check for updates on the remote repository</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+<p>Pull the latest version of the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch so that your local repository matches to the remote repository</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-delete-your-branch">
+<h3>(Optional) Delete your branch<a class="headerlink" href="#optional-delete-your-branch" title="Permalink to this headline">#</a></h3>
+<p>To keep everything tidy we recommend that you delete your local branch that was just merged to the remote repository. We will be doing the same on the remote side so that only the <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branches exist on the remote repository.</p>
 </section>
 </section>
 </section>

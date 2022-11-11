@@ -133,12 +133,31 @@ Now that you pushed your branch to the remote repository head to the repository 
 <your-branch-name> has recent pushes ...
 ```
 Press the button <span class="badge text-bg-success">Compare & pull request</span>  
-You will be redirected to the __Open a pull request__ page. Give it a descriptive title and expand in the comment section if you need further explanation,
+You will be redirected to the __Open a pull request__ page. Give it a descriptive title and expand in the comment section if you need further explanation, and press the <span class="badge text-bg-success">Create pull request</span> 
 ```{image} ../images/contribution-workflow/pull-request.jpg
 ```
 
-### Check the book compiles on our GitHub repository
-
+### Check the book builds on our GitHub repository
+We have set up a workflow that builds the contents of the book on the repository side to check that everything works well before the handbook on your branch is merged, built and deployed to GitHub Pages.
+Check that it does build on the remote repository:
+```{image} ../images/contribution-workflow/dummy.jpg
+```
 ## Update your local repo
+Once your branch has been merged move to the `main` branch and do the fetch-pull-delete procedure we will explain below.
 
 ### Git fetch-pull
+Move to the `main` branch
+```
+git checkout main
+```
+Use fetch to check for updates on the remote repository
+```
+git fetch
+```
+Pull the latest version of the `main` branch so that your local repository matches to the remote repository
+```
+git pull
+```
+
+### (Optional) Delete your branch
+To keep everything tidy we recommend that you delete your local branch that was just merged to the remote repository. We will be doing the same on the remote side so that only the `main` and `gh-pages` branches exist on the remote repository.
