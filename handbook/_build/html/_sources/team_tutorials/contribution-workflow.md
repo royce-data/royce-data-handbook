@@ -140,7 +140,7 @@ You will be redirected to the __Open a pull request__ page. Give it a descriptiv
 ### Check the book builds on our GitHub repository
 We have set up a workflow that builds the contents of the book on the repository side to check that everything works well before the handbook on your branch is merged, built and deployed to GitHub Pages.
 Check that it does build on the remote repository:
-```{image} ../images/contribution-workflow/dummy.jpg
+```{image} ../images/contribution-workflow/pr-check.jpg
 ```
 ## Update your local repo
 Once your branch has been merged move to the `main` branch and do the fetch-pull-delete procedure we will explain below.
@@ -161,3 +161,7 @@ git pull
 
 ### (Optional) Delete your branch
 To keep everything tidy we recommend that you delete your local branch that was just merged to the remote repository. We will be doing the same on the remote side so that only the `main` and `gh-pages` branches exist on the remote repository.
+
+```
+git branch -d <branch-name>
+```
