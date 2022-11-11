@@ -139,7 +139,7 @@ jupyter-book
 :::
 
 ## Clone the Repo and start contributing
-You can find a condensed version in the [README]() accompanying the repository this handbook is hosted on.  
+You can find a condensed version in the [README](https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/blob/main/README.md) accompanying the repository this handbook is hosted on.  
 
 :::{warning}
 The guide below assumes you have some familiarity with Git and branching.  
