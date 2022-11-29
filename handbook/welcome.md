@@ -10,7 +10,7 @@ This book isn't meant to be read page-to-page or in the sequence presented in th
 We suggest starting out with a topic from the sidebar that interests you.  
 <br>
 Some of the most useful materials will be found under the **Research Data Management** section and the **[Utilities](bib-util/useful-interesting.md)** article.  
-If you would like to consult with us, please have a look at this [page](misc_org/appointments.md).
+If you would like to consult with us, please have a look at this **[page](misc_org/appointments.md)**.
 <br>
 :::{note}
 Some of the content in this book are training materials for our team, so while not directly relevant they might be useful to some, or if you're interested in contributing.
