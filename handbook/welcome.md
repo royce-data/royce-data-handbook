@@ -1,20 +1,3 @@
-<!-- ---
-title: Welcome
----
-{bdg-primary}`Test badge`
-```{button-link} https://royce.ac.uk/data-curation
-:class: btn btn-primary
-Button text
-```
-
-```{button-ref} dir-tree
-:ref-type: doc
-:color: secondary
-:outline:
-:class: btn btn-secondary
-Test Title
-``` -->
-
 # Welcome to the Royce Institute Data Handbook
 
 We've written this to share resources that we find useful to (research) data management practices, and to host our user guides.  
@@ -32,8 +15,6 @@ Some of the most useful materials will be found under the **Research Data Manage
 Some of the content in this book are training materials for our team, so while not directly relevant they might be useful to some, or if you're interested in contributing.
 :::
 
-<!-- ```{tableofcontents}
-``` -->
 <br>
 
 All animated images (GIFs) in this book were created using the ScreenToGif tool by {cite}`manarin_screentogif_nodate`
