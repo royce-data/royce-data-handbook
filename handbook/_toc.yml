@@ -12,6 +12,9 @@ parts:
     sections:
     - file: rdm/git-how-to-install-windows
       title: Git Bash on Windows
+- caption: Open Research
+  chapters:
+  - file: open-research/case-for-open-research
 - caption: Team Tutorials
   chapters:
   - file: team_tutorials/work-on-this-book
