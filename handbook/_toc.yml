@@ -14,7 +14,9 @@ parts:
       title: Git Bash on Windows
 - caption: Open Research
   chapters:
-  - file: open-research/case-for-open-research
+  - file: open-research/open-research-resources
+    sections:
+    - file: open-research/case-for-open-research
 - caption: Team Tutorials
   chapters:
   - file: team_tutorials/work-on-this-book
