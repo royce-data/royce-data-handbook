@@ -11,7 +11,7 @@ parts:
   - file: rdm/git
     sections:
     - file: rdm/git-how-to-install-windows
-      title: Git Bash on Windows
+      title: Git Bash for Workshops
 - caption: Open Research
   chapters:
   - file: open-research/open-research-resources
@@ -28,6 +28,9 @@ parts:
   chapters:
   - file: misc_org/appointments
   - file: misc_org/events
+  - file: workshops/workshops
+    sections:
+    - file: workshops/git-intro
 - caption: Bibliography and Useful Links
   chapters:
   - file: bib-util/bibliography.md
