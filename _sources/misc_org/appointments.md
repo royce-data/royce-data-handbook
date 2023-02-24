@@ -1,9 +1,9 @@
 # Consult with us
 
 Currently there are two ways to arrange a meeting with us:
-1. Email us on `<firstname.lastname>[AT]manchester[DOT]ac[DOT]uk` (we are working on a Data Curators email address)
+1. Email us on `datacuration[AT]royce[DOT]ac[DOT]uk`
    :::{note}
-   You can find out more on this [page](https://www.royce.ac.uk/data-curation/)
+   You can find out about the team and our personal contact information on this [page](https://www.royce.ac.uk/data-curation/)
    :::
 2. Book us during our clinic hours using our online booking form below [<i class="bi bi-arrow-down-square-fill"></i>](#calendly-link)
    :::{attention}
