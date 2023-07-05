@@ -124,7 +124,7 @@ for materials science and engineering we might want to expand this definition, s
 ```{figure} /images/rdmp-guide/rdmp_update_workflow.png
 ---
 align: center
-figwidth: 500px
+figwidth: 400px
 name: fig-rdmpupdate
 ---
 When to write or update your data management plan
@@ -252,8 +252,8 @@ Data sharing will outline:
 - Code sharing, such as software, and data analysis and visualisation scripts on code repositories
 - Documentation describing the data such as:
   - README files
-    - Data dictionaries
-    - Package requirements for recreating coding environments
+  - Data dictionaries
+  - Package requirements for recreating coding environments
 
 ::: {admonition} Metadata
 :class: caution
