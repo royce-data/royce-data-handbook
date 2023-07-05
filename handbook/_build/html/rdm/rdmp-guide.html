@@ -58,8 +58,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js"></script>
-    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script src="../_static/analytics_script.js"></script>
     <script src="../_static/rdmp_mermaid_config.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -723,8 +721,11 @@ So, here are some considerations for writing your analysis README file:</p>
 <li><p>Storage:</p>
 <ul>
 <li><p>Where the data will be stored</p></li>
-<li><p>How the data will be backed up, including any data loss mitigation and duplicate data storage systems</p></li>
+<li><p>How the data will be backed up, including any data loss mitigation and duplicate data storage systems</p>
+<ul>
 <li><p>How much storage space is required</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Access:</p>
@@ -768,7 +769,7 @@ This important as both physical and digital data take up physical space, so outl
 <li><p>Data sharing procedures</p></li>
 <li><p>Software to facilitate data sharing procedures</p></li>
 <li><p>Who will be granted access to data sharing spaces</p></li>
-<li><p>hether web-apps such as Zendto or Privnote will be used to share data across:</p>
+<li><p>Whether web-apps such as Zendto or Privnote will be used to share data across:</p>
 <ul>
 <li><p>collaborators at other institutions</p></li>
 <li><p>industrial partners</p></li>
@@ -785,9 +786,12 @@ This important as both physical and digital data take up physical space, so outl
 <li><p>Code sharing, such as software, and data analysis and visualisation scripts on code repositories</p></li>
 <li><p>Documentation describing the data such as:</p>
 <ul>
-<li><p>README files</p></li>
+<li><p>README files</p>
+<ul>
 <li><p>Data dictionaries</p></li>
 <li><p>Package requirements for recreating coding environments</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
