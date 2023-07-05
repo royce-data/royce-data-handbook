@@ -11,7 +11,7 @@ A research data management plan (DMP) is a living document, i.e. continually edi
 ```{figure} /images/rdmp-guide/elixir_rdmkit_lifecycle.svg
 ---
 align: center
-figwidth: 400px
+figwidth: 350px
 name: fig-rdmlifecycle
 ---
 The research data lifecycle as illustrated in the ELIXIR RDMkit
@@ -124,7 +124,7 @@ for materials science and engineering we might want to expand this definition, s
 ```{figure} /images/rdmp-guide/rdmp_update_workflow.png
 ---
 align: center
-figwidth: 400px
+figwidth: 350px
 name: fig-rdmpupdate
 ---
 When to write or update your data management plan
