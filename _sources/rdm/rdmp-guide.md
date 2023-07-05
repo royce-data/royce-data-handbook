@@ -124,7 +124,7 @@ for materials science and engineering we might want to expand this definition, s
 ```{figure} /images/rdmp-guide/rdmp_update_workflow.png
 ---
 align: center
-figwidth: 500px
+figwidth: 400px
 name: fig-rdmpupdate
 ---
 When to write or update your data management plan
