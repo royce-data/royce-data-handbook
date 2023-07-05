@@ -100,24 +100,34 @@ nav.bd-links p.caption {
 }
 
 #bd-docs-nav ul.nav li a:hover {
-    color: rgb(255,209,0)
+    color: rgb(255,209,0);
 }
 
 #bd-docs-nav ul.nav li.active>a {
-    color: rgb(255,209,0)
+    color: rgb(255,209,0);
 }
 
 #bd-docs-nav div.navbar_extra_footer {
-    color: #ffffff
+    color: #ffffff;
 }
 
 #bd-docs-nav div.navbar_extra_footer a {
-    color: rgb(255,209,0)
+    color: rgb(255,209,0);
 }
 
 nav.bd-links li > a {
-    color: #ffffff
+    color: #ffffff;
 }
+
+.prev-next-area a p.prev-next-title {
+    color: rgb(0,161,154);
+}
+
+.prev-next-area a:hover p.prev-next-title {
+    color: rgb(255,209,0);
+}
+
+
 
 /* RULE FOR NOT PRINTING Table of Contents */
 
