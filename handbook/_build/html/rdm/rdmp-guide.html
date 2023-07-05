@@ -1,0 +1,1148 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to write a research data management plan &#8212; Data Management Handbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script src="../_static/analytics_script.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rdm/rdmp-guide';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The tree function" href="dir-tree.html" />
+    <link rel="prev" title="Introduction" href="rdm-intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_royce_banner.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_royce_banner.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rdm-intro.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reasearch Data Management Plan Writing Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-how-to-install-windows.html">Git Bash for Workshops</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Open Research</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/open-research-resources.html">Open Research Articles</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-research/case-for-open-research.html">The Case for Open Research</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../team_tutorials/work-on-this-book.html">Get started with this guide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/notes-on-jb.html">Contributing to this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/how-to-install-jb.html">Get started with Jupyter Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/contribution-workflow.html">Updating this book</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Events</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography and Useful Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/bibliography.html">Blibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/useful-interesting.html">Utilities</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/rdm/rdmp-guide.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Frdm/rdmp-guide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/rdm/rdmp-guide.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How to write a research data management plan</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-guide">About this guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management-planning">Data Management Planning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-research-data-lifecycle">The research data lifecycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-research-data-management-plan">What is a research data management plan?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-to-write-a-data-management-plan">Reasons to write a Data Management Plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-research-data-management-plan">Writing a research data management plan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-write-a-research-data-management-plan">When to write a research data management plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-update-a-research-data-management-plan">When to update a research data management plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-research-data-lifecycle">Your research data lifecycle</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">Data collection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data analysis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-storage">Data storage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-protection">Data protection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-ownership">Data ownership</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sharing">Data sharing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-management-plans">Example data management plans</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dmponline">DMPonline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dmptool">DMPtool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#argos-openaire-data-management-planning-tool">ARGOS - OpenAIRE Data Management Planning Tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#royce-partner-institutional-guidance">Royce partner institutional guidance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-cambridge">University of Cambridge</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#imperial-college-london">Imperial College London</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-leeds">University of Leeds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-liverpool">University of Liverpool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-university-of-manchester">The University of Manchester</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-oxford">University of Oxford</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-university-of-sheffield">The University of Sheffield</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-training-from-the-university-of-manchester-library">Digital Training from The University of Manchester Library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="section" id="how-to-write-a-research-data-management-plan">
+<h1>How to write a research data management plan<a class="headerlink" href="#how-to-write-a-research-data-management-plan" title="Permalink to this headline">#</a></h1>
+<div class="section" id="about-this-guide">
+<h2>About this guide<a class="headerlink" href="#about-this-guide" title="Permalink to this headline">#</a></h2>
+<p>This guide is for early stage postgraduate researcher (PGR), PhD, or students associated with the Henry Royce Institute and partners. We aim to guide you through a data management planning considerations, a general data management plan creation process and to point you to resources for support at the Henry Royce Institute and your Royce Partner Institution.</p>
+</div>
+<div class="section" id="data-management-planning">
+<h2>Data Management Planning<a class="headerlink" href="#data-management-planning" title="Permalink to this headline">#</a></h2>
+<p>A research data management plan (DMP) is a living document, i.e. continually edited, that outlines all the stages of your physical and digital research data lifecycle <span id="id1">[<a class="reference internal" href="#id24" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">12</a>]</span>, illustrated in <a class="reference internal" href="#fig-rdmlifecycle"><span class="std std-numref">Fig. 1</span></a> <span id="id2">[<a class="reference internal" href="#id19" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span>. A plan will include how the data will becollected, stored, protected, shared, and who will own the license rights to the data, <strong>before</strong> the data collection begins. Such plans can be updated at every point of the PhD research project lifetime, to reflect the data management needs of different studies.</p>
+<div class="figure align-center" id="fig-rdmlifecycle" style="width: 400px">
+<img alt="../_images/elixir_rdmkit_lifecycle.svg" src="../_images/elixir_rdmkit_lifecycle.svg" /><p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The research data lifecycle as illustrated in the ELIXIR RDMkit</span><a class="headerlink" href="#fig-rdmlifecycle" title="Permalink to this image">#</a></p>
+</div>
+<p>DMPs can be general across the project or outline how each study will be conducted. DMPs are a great way to outline your study and reflect on it, as they will highlight areas that require more attention, can evidence that your research is well planned, demonstrate to your industrial sponsor that you are implementing their data sharing and security policies in  how you conduct your research, and are a self-made resource to aid thesis writing. Several awarding and funding bodies either recommend, or require dara management plans for awarding funding <span id="id3">[<a class="reference internal" href="#id20" title="Engineering &amp; Physical Sciences Research Council, UK Research and Innovation. Policy framework on research data. principles of epsrc research data policy framework. URL: https://www.ukri.org/about-us/epsrc/our-policies-and-standards/policy-framework-on-research-data/principles/.">8</a>, <a class="reference internal" href="#id22" title="Science and Technology Facilities Council, UK Research and Innovation. Data management plan. URL: https://www.ukri.org/councils/stfc/guidance-for-applicants/what-to-include-in-your-proposal/data-management-plan/.">9</a>, <a class="reference internal" href="#id21" title="Science and Technology Facilities Council, UK Research and Innovation. Stfc scientific data policy. URL: https://www.ukri.org/publications/stfc-scientific-data-policy/.">10</a>, <a class="reference internal" href="#id23" title="UK Research and Innovation. Publishing your research findings. making your research data open. URL: https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/.">13</a>]</span>.</p>
+<p>During you research lifetime you might be tasked to write a DMP. Data management planning might appear daunting at first but is a skill that can be acquired and built on. Below you will find key considerations, resources and examples to begin data management planning. The table of contents on the right can help guide you to the content you are looking for, click on the resource title to be redirected to it through the page.</p>
+<div class="section" id="the-research-data-lifecycle">
+<h3>The research data lifecycle<a class="headerlink" href="#the-research-data-lifecycle" title="Permalink to this headline">#</a></h3>
+<p>These online resources offer a detailed insight into the research data lifecycle:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/data_life_cycle">Data life cycle</a>, RDMkit, ELIXIR <span id="id4">[<a class="reference internal" href="#id19" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#the-research-data-lifecycle-a-model-for-data-management">The Research Data Lifecycle - A Model for Data Management</a>, The Turing Way <span id="id5">[<a class="reference internal" href="#id18" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">11</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-wjFMMQD3UA">Research Data Lifecycle</a>, UK Data Service <span id="id6">[<a class="reference internal" href="#id24" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">12</a>]</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="what-is-a-research-data-management-plan">
+<h2>What is a research data management plan?<a class="headerlink" href="#what-is-a-research-data-management-plan" title="Permalink to this headline">#</a></h2>
+<div class="section" id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h3>
+<p>A data management plan is a living document that describes your project’s research data lifecycle. Research data has a longer lifespan than the project itself, and can be used, reused and adapted after the project ends, in other projects, internal or external to the originating research group. The data management lifecycle comprises the planning (project and data management), data collection process, data processing and analysis, management and storage during a research project. It also describes data ownership and how the data will be preserved and shared during and upon completion of a project <span id="id7">[<a class="reference internal" href="#id19" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>, <a class="reference internal" href="#id17" title="Madeleine Pownall, Flávio Azevedo, Laura M. König, Hannah R. Slack, Thomas Rhys Evans, Zoe Flack, Sandra Grinschgl, Mahmoud M. Elsherif, Katie A. Gilligan-Lee, Catia M. F. de Oliveira, Biljana Gjoneska, Tamara Kalandadze, Katherine Button, Sarah Ashcroft-Jones, Jenny Terry, Nihan Albayrak-Aydemir, Filip Děchtěrenko, Shilaan Alzahawi, Bradley J. Baker, Merle-Marie Pittelkow, Lydia Riedl, Kathleen Schmidt, Charlotte R. Pennington, John J. Shaw, Timo Lüke, Matthew C. Makel, Helena Hartmann, Mirela Zaneva, Daniel Walker, Steven Verheyen, Daniel Cox, Jennifer Mattschey, Tom Gallagher-Mitchell, Peter Branney, Yanna Weisberg, Kamil Izydorczak, Ali H. Al-Hoorie, Ann-Marie Creaven, Suzanne L. K. Stewart, Kai Krautter, Karen Matvienko-Sikar, Samuel J. Westwood, Patr\'ıcia Arriaga, Meng Liu, Myriam A. Baum, Tobias Wingen, Robert M. Ross, Aoife O\textquotesingle Mahony, Agata Bochynska, Michelle Jamieson, Myrthe Vel Tromp, Siu Kit Yeung, Martin R. Vasilev, Amélie Gourdon-Kanhukamwe, Leticia Micheli, Markus Konkol, David Moreau, James E. Bartlett, Kait Clark, Gwen Brekelmans, Theofilos Gkinopoulos, Samantha L. Tyler, Jan Philipp Röer, Zlatomira G. Ilchovska, Christopher R. Madan, Olly Robertson, Bethan J. Iley, Samuel Guay, Martina Sladekova, and Shanu Sadhwani. Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes. Royal Society Open Science, 2023. doi:https://doi.org/10.1098/rsos.221255.">7</a>, <a class="reference internal" href="#id18" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">11</a>, <a class="reference internal" href="#id24" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">12</a>]</span>.</p>
+</div>
+<div class="section" id="reasons-to-write-a-data-management-plan">
+<h3>Reasons to write a Data Management Plan<a class="headerlink" href="#reasons-to-write-a-data-management-plan" title="Permalink to this headline">#</a></h3>
+<p>Writing a data management plan can be daunting as a new PhD student. You might not have done it before and being faced with a flush sheet of paper can lead to a block. When it comes to writing we always suggest that you should first get something down on paper. Once you have started, the process becomes easier. It is useful to approach the DMP as a tool to help you in your PGR project journey, rather than something preventing you from practicing research.</p>
+<p>So, what are some reasons for devising and writing a DMP?</p>
+<ol class="arabic simple">
+<li><p>It is required by your university department, faculty, awarding body, funder, or a combination</p></li>
+<li><p>It will help you be consistent with your data management</p></li>
+<li><p>Being consistent with your data management means fast retrieval</p></li>
+</ol>
+<p>Here are some other (selfish) reasons to write a DMP:</p>
+<ol class="arabic simple">
+<li><p>Writing a DMP can help highlight areas of your study that require a bit more attention</p></li>
+<li><p>You can adapt a pre-existing DMP for a similar project</p></li>
+<li><p>A DMP is a great resource to refer to when writing your thesis, it can even be adapted as written materials in your thesis, to describe the data collection process</p></li>
+</ol>
+</div>
+<div class="section" id="before-you-start">
+<h3>Before you start<a class="headerlink" href="#before-you-start" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Gather all your guidance and policy documents including:</p>
+<ol class="arabic simple">
+<li><p>Funder guidance</p></li>
+<li><p>Funder approved DMP templates (<a class="reference external" href="https://rdmkit.elixir-europe.org/data_management_plan">https://rdmkit.elixir-europe.org/data_management_plan</a>)</p></li>
+<li><p>Institutional guidance</p></li>
+<li><p>Private funder guidance (e.g. industrial sponsor)</p>
+<ol class="arabic simple">
+<li><p>What file-sharing policies does my industrial sponsor have in place?</p></li>
+<li><p>What file security policies does my industrial sponsor require?</p></li>
+<li><p>Will the data be commercially sensitive?</p></li>
+<li><p>Who has first refusal on data ownership? (PhD contract)</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Decide one your DMP workflow, and at what stages of your research to add to it. Your PhD might be one long project, supported by several smaller ones, or a long project with various stages of data collection. We recommend writing one DMP. The benefit of a living document is that you can always edit it.</p></li>
+<li><p>Seek reviewers for your DMP. It is always a good idea to have your DMP reviewed by a diverse group of people, e.g. your supervisor/project PI, your group member, cohort PGR colleague, an institutional research services librarian (highly recommended!). They can help highlight inconsistencies, clear up confusion, and provide input. We all work with data, so getting people that don’t necessarily work in the same field as you, or are not researchers, can be very valuable</p></li>
+<li><p>Consider yourself, your project, and your pre-existing resources</p>
+<ol class="arabic simple">
+<li><p>Pre-existing data</p>
+<ol class="arabic simple">
+<li><p>Digital</p>
+<ol class="arabic simple">
+<li><p>Is my PhD project a continuation from my Master’s Degree research project (self-generated data)?</p></li>
+<li><p>Is my PhD project a continuation from a previous PhD student’s project or a Master’s student’s project (inherited data)?</p></li>
+<li><p>Will I be using publicly available data, published alongside papers or in data repositories?</p></li>
+</ol>
+</li>
+<li><p>Physical</p>
+<ol class="arabic simple">
+<li><p>Will I receive samples?</p></li>
+<li><p>Will I inherit samples?</p></li>
+<li><p>Will I be creating samples out of raw materials?</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Research group data management methods</p>
+<ol class="arabic simple">
+<li><p>Does my PI/Supervisor have a file-naming convention everyone adopts?</p></li>
+<li><p>Does the group use a particular storage system?</p></li>
+<li><p>How does my group share files internally and externally?</p></li>
+<li><p>How does my group collaborate?</p></li>
+<li><p>How does my group manage physical data storage, i.e. samples</p></li>
+</ol>
+</li>
+<li><p>Institutional data management resources, e.g. cloud storage providers (OneDrive, Google Drive, Dropbox Business, etc.), electronic laboratory notebooks, librarian or data curation services, data management plan writing software and reviewers, sample tracking software</p></li>
+<li><p>Sensitive data</p></li>
+</ol>
+</li>
+<li><p>Consider the audience for your data management plan</p>
+<ol class="arabic simple">
+<li><p>Me, I am the intended audience for my data management plan</p></li>
+<li><p>my supervisor</p></li>
+<li><p>my colleagues</p></li>
+<li><p>my awarding body (some awarding bodies might withhold progression unless you can supply a data management plan)</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Consulting funder, sponsor and institutional policy, and discussing with your supervisor who has first refusal to data ownership, will save you a lot of time</p>
+</div>
+</div>
+<div class="section" id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h3>
+<p>A data management plan outlines the research data lifecycle <strong>before</strong> the data is collected, as is applicable to each individual project. Not all these will apply to every individual project since all research projects are unique and have their own requirements.</p>
+<p>The <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#what-is-data">Turing Way Handbook</a> defines data as</p>
+<blockquote class="epigraph">
+<div><p>Data are objects that you use and produce during your research life cycle, encompassing datasets, software, code, workflow, models, figures, tables, images and videos, interviews, articles. Data are your research asset.</p>
+<p class="attribution">—The Turing Way Community</p>
+</div></blockquote>
+<p>for materials science and engineering we might want to expand this definition, specifically when it comes to physical data, and include materials and samples as data.</p>
+</div>
+</div>
+<div class="section" id="writing-a-research-data-management-plan">
+<h2>Writing a research data management plan<a class="headerlink" href="#writing-a-research-data-management-plan" title="Permalink to this headline">#</a></h2>
+<div class="section" id="when-to-write-a-research-data-management-plan">
+<h3>When to write a research data management plan<a class="headerlink" href="#when-to-write-a-research-data-management-plan" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>Before starting a project</p></li>
+<li><p>During the conception of a project</p></li>
+<li><p>During the running of a project (not recommended)</p></li>
+<li><p>After the project has finished (not recommended)</p></li>
+</ol>
+</div>
+<div class="section" id="when-to-update-a-research-data-management-plan">
+<h3>When to update a research data management plan<a class="headerlink" href="#when-to-update-a-research-data-management-plan" title="Permalink to this headline">#</a></h3>
+<ol class="arabic simple">
+<li><p>If you migrated storage to a system not outlined in the latest version of your DMP</p></li>
+<li><p>Before the start of a new cycle (sub-project) of your PhD project</p></li>
+<li><p>When you have collected data and need to store or process it in such a way that is not covered by the latest iteration of your DMP</p></li>
+</ol>
+<div class="figure align-center" id="fig-rdmpupdate" style="width: 500px">
+<img alt="../_images/rdmp_update_workflow.png" src="../_images/rdmp_update_workflow.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">When to write or update your data management plan</span><a class="headerlink" href="#fig-rdmpupdate" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="your-research-data-lifecycle">
+<h3>Your research data lifecycle<a class="headerlink" href="#your-research-data-lifecycle" title="Permalink to this headline">#</a></h3>
+<p>With the above in mind, we can delve into what might be included in each section of the planning of the research data lifecycle</p>
+<div class="section" id="data-collection">
+<h4>Data collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">#</a></h4>
+<p>Data collection should cover what data will be collected, or created, how it will be collected, and the file formats associated with the collected data.</p>
+<p>Data can comprise</p>
+<ul class="simple">
+<li><p>Physical data:</p>
+<ul>
+<li><p>What physical data is going to be collected, including:</p>
+<ul>
+<li><p>Samples from raw materials</p></li>
+<li><p>Sample receipt and modification from industrial partners</p></li>
+</ul>
+</li>
+<li><p>How the physical data will be collected or created:</p>
+<ul>
+<li><p>The equipment used to create the data</p></li>
+<li><p>The physical size of the data (if applicable)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Digital data:</p>
+<ul>
+<li><p>What digital data is going to be collected including:</p>
+<ul>
+<li><p>generation of novel data from:</p>
+<ul>
+<li><p>simulated data</p></li>
+<li><p>data captured from measurement equipment</p></li>
+<li><p>computer code, including software packages and analysis scripts</p></li>
+</ul>
+</li>
+<li><p>reuse of pre-existing in-group data</p></li>
+<li><p>sourcing data from open (or closed sources)</p></li>
+</ul>
+</li>
+<li><p>How the digital data will be collected:</p>
+<ul>
+<li><p>The equipment used to collect or create it</p></li>
+<li><p>The file formats associated with the data, and whether they are proprietary</p></li>
+<li><p>The volume of data including individual file size and the estimated amount generated</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="data-processing">
+<h4>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">#</a></h4>
+<p>Data processing will usually involve what happens to the data after collection. Once data is collected it needs to pass by these processing stages to be ready for analysis in an order that suits one’s workflow.</p>
+<p>Here are some considerations the data processing stage might involve:</p>
+<ol class="arabic simple">
+<li><p>Do I need to transfer the captured data to an area that is easily accessible to me for analysis</p></li>
+<li><p>What is the most sensible file-naming convention I can follow for easily locating my data and fast retrieval?</p>
+<ul class="simple">
+<li><p>Naming files in a sensible way that describes brief information about the data. Below is a general rule for file naming convention, leading to <code class="docutils literal notranslate"><span class="pre">2023-07-12_rdmp_guide_sd.md</span></code>. However, we always suggest following your research groups file-naming convention if there is one in place:</p>
+<ul>
+<li><p>date of capture</p></li>
+<li><p>what analysis generated the data</p></li>
+<li><p>the initials of the person who captured the data</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Do I need to convert my files to an open data format suitable for analysis, such as <code class="docutils literal notranslate"><span class="pre">.txt</span></code>, or <code class="docutils literal notranslate"><span class="pre">.csv</span></code>?</p></li>
+<li><p>Do I need to clean the data for ingestion and convert data to a suitable data type?</p>
+<ul class="simple">
+<li><p>This can include:</p>
+<ul>
+<li><p>changing column names to a format compatible with your analysis programme, such as snake case or camel case</p></li>
+<li><p>converting numbers which have been captured as text to integer or floating-point type</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How should I document the organisation, conversion and cleaning process in a README file makes most sense to me and anyone wishing to use or reuse my data in the future?</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Data Processing vs. Data Analysis</p>
+<p>There might be some confusion over the distinction in data processing and analysis, as they usually will come together. A good way of thinking about it is that processing are all the steps required to prepare the data for, and facilitate analysis.</p>
+</div>
+</div>
+<div class="section" id="data-analysis">
+<h4>Data analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">#</a></h4>
+<p>Once the data is processed, cleaned and in a suitable location to be accessed by your analysis software it is time to analyse it. Usually, analysis is unique to each field, however, it is important to ensure that your analysis is reproducible by you or anyone wishing to reproduce the results so documentation of the analysis, either in a README file or the analysis script is important. This documentation of analysis will also aid in the writing of reports, journal articles, and the PhD thesis.<br />
+So, here are some considerations for writing your analysis README file:</p>
+<ol class="arabic simple">
+<li><p>If I wanted to repeat this analysis and get the same results in several months or years time, would I be able to with this README as a guide?</p></li>
+<li><p>If someone other than myself wanted to repeat this analysis would they be able to understand the data and the analysis, and reproduce it?</p></li>
+<li><p>Do I need someone to review this README to ensure the analysis is reproducible?</p></li>
+</ol>
+<div class="caution admonition">
+<p class="admonition-title">Documenting your project in DMPOnline</p>
+<p>DMPOnline is one of our suggested tools for writing, updating, preserving and sharing your data management plan. The EPSRC approved tempate only has a small section on Documentation and Metadata. You can choose how brief or detailed you would like to be in describing your documentation process. However, we do suggest you have well-planned file organisation and documentation conventions set for your project for your future self, your supervisor, your group, and anyone building on from your work.</p>
+</div>
+</div>
+<div class="section" id="data-storage">
+<h4>Data storage<a class="headerlink" href="#data-storage" title="Permalink to this headline">#</a></h4>
+<p>Data storage outlines how you will be storing the data following collection. Data storage will usually include an outline of how you will store the data, including:</p>
+<p>preservation, archiving, retention</p>
+<ul class="simple">
+<li><p>Storage:</p>
+<ul>
+<li><p>Where the data will be stored</p></li>
+<li><p>How the data will be backed up, including any data loss mitigation and duplicate data storage systems</p></li>
+<li><p>How much storage space is required</p></li>
+</ul>
+</li>
+<li><p>Access:</p>
+<ul>
+<li><p>Who has access to the data</p></li>
+<li><p>How the approved users will access the data</p></li>
+</ul>
+</li>
+<li><p>Documentation and data quality</p>
+<ul>
+<li><p>A file naming convention to adopt across all files for findability</p></li>
+<li><p>How directories the data is kept in will be structured for findability</p></li>
+<li><p>Metadata accompanying the data such as data dictionaries, README files</p></li>
+<li><p>Documentation post-project for data archiving</p></li>
+</ul>
+</li>
+<li><p>Preservation, archiving and retention</p>
+<ul>
+<li><p>Where and how the data will be stored after the end of the project</p></li>
+<li><p>Whether the data will be reused</p></li>
+<li><p>How long the data will be retained for</p></li>
+<li><p>Data destruction plans
+This important as both physical and digital data take up physical space, so outlining how long the data will be retained for and any plans for reuse will help understand the long-term storage needs</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="data-protection">
+<h4>Data protection<a class="headerlink" href="#data-protection" title="Permalink to this headline">#</a></h4>
+<p>Data protection can overlap with the access and data loss mitigation parts of ‘Data Storage’, and with ‘Data Sharing’. Data protection can expand to cover procedures for dealing with sensitive data, e.g. company data, redaction of sensitive information, embargo periods</p>
+</div>
+<div class="section" id="data-ownership">
+<h4>Data ownership<a class="headerlink" href="#data-ownership" title="Permalink to this headline">#</a></h4>
+<p>Data ownership covers intellectual property (IP) rights to the data. For fully government funded projects, IP rights usually belong to the institution where the research was primarily conducted. In certain cases, where part of the funding or resources come from private partners in industry, an agreement will dictate who has first refusal to IP rights. This can also cover terms under which sensitive data can be shared.</p>
+</div>
+<div class="section" id="data-sharing">
+<h4>Data sharing<a class="headerlink" href="#data-sharing" title="Permalink to this headline">#</a></h4>
+<p>Data sharing covers how you will be sharing your data internally, across collaborators, and externally. UK Research and Innovation (UKRI) funded research has a requirement for data to be shared openly, unless certain co-funder terms specify otherwise. As EPSRC funded research falls under UKRI, you might be required to share your data openly, unless an industrial partner wants the data to be kept confidential.</p>
+<p>Data sharing will outline:</p>
+<ul class="simple">
+<li><p>Data sharing procedures</p></li>
+<li><p>Software to facilitate data sharing procedures</p></li>
+<li><p>Who will be granted access to data sharing spaces</p></li>
+<li><p>hether web-apps such as Zendto or Privnote will be used to share data across:</p>
+<ul>
+<li><p>collaborators at other institutions</p></li>
+<li><p>industrial partners</p></li>
+</ul>
+</li>
+<li><p>Collaborations procedures across multi-institution projects</p></li>
+<li><p>Open data sharing such as:</p>
+<ul>
+<li><p>Depositing the data on open data repositories, such as Zenodo, Figshare, or institutional repositories</p></li>
+<li><p>Transforming proprietary format data to an open format prior to release</p></li>
+</ul>
+</li>
+<li><p>Open access publishing plans in research journals</p></li>
+<li><p>Code sharing, such as software, and data analysis and visualisation scripts on code repositories</p></li>
+<li><p>Documentation describing the data such as:</p>
+<ul>
+<li><p>README files</p></li>
+<li><p>Data dictionaries</p></li>
+<li><p>Package requirements for recreating coding environments</p></li>
+</ul>
+</li>
+</ul>
+<div class="caution admonition">
+<p class="admonition-title">Metadata</p>
+<p><strong>A note about metadata</strong></p>
+<p>Metadata is as simple as data about your data, i.e. how it was captured, the process, who captured it and under what conditions. In the absence of metadata standards for your field, area of research, or measurement you can write a text file to accompany your dataset(s), explaining how it was captured and how it is presented, whether you are presenting, raw, cleaned, or cleaned and analysed data and how it’s tabulated</p>
+</div>
+</div>
+</div>
+<div class="section" id="example-data-management-plans">
+<h3>Example data management plans<a class="headerlink" href="#example-data-management-plans" title="Permalink to this headline">#</a></h3>
+<p>Below you will find some example DMPs where the authors elected to make them publicly available. These data management plans were generated using web applications built for the purpose of facilitating DMP writing. They implement custom DMP templates designed by institutes, or funders, and questions to help you consider each stage of your RDM lifecycle.</p>
+<div class="section" id="dmponline">
+<h4>DMPonline<a class="headerlink" href="#dmponline" title="Permalink to this headline">#</a></h4>
+<p>DMPs produced using the DMPonline tool EPSRC template. The DMPonline tool is recommended by most Royce partners for UKRI (EPSRC, STFC) funded research projects. The DMPonline tool is developed by the Digital Curation Centre (DCC) and the University of California Curation Center (UC3).</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/plans/70204/export.pdf?export%5Bquestion_headings%5D=true">Advanced Induction Technologies for Non-ferrous Metal Recovery</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/plans/45530/export.pdf?export%5Bquestion_headings%5D=true">Doing More With Less: A Digital Twin for Ti forgings</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/plans/16137/export.pdf?export%5Bquestion_headings%5D=true">Brains on Board</a></p></li>
+</ul>
+</div>
+<div class="section" id="dmptool">
+<h4>DMPtool<a class="headerlink" href="#dmptool" title="Permalink to this headline">#</a></h4>
+<p>DMPs produced using the DMPtool. The DMPtool is developed by the University of California Curation Center and the Digital Curation Centre.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dmptool.org/plans/12137/export.pdf?export%5Bquestion_headings%5D=true">ORIENTATIONAL ORDER INDUCED BY A POLYMER NETWORK IN THE ISOTROPIC PHASE OF LIQUID CRYSTAL</a></p></li>
+<li><p><a class="reference external" href="https://dmptool.org/plans/53731/export.pdf?export%5Bquestion_headings%5D=true">CAREER: Probing Function in Paramagnetic Sodium Electrodes</a></p></li>
+<li><p><a class="reference external" href="https://dmptool.org/plans/63402/export.pdf?export%5Bquestion_headings%5D=true">Graphene and metal oxides composites: Application as toxic gas sensors</a></p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">DMP tools</p>
+<p>DMPonline and DMPtool are based on the same <a class="reference external" href="https://github.com/DMPRoadmap/roadmap">DMPRoadmap</a> codebase</p>
+</div>
+</div>
+<div class="section" id="argos-openaire-data-management-planning-tool">
+<h4>ARGOS - OpenAIRE Data Management Planning Tool<a class="headerlink" href="#argos-openaire-data-management-planning-tool" title="Permalink to this headline">#</a></h4>
+<p>DMPs from ARGOS can be downloaded and viewed by clicking export on the right-hand pane next to the DMP title and choosing your preferred export format.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://argos.openaire.eu/explore-plans/publicOverview/eec50572-04de-45d7-b4c3-a06033d54f10">DMP - Engineering Research Infrastructures for European Synergies (ERIES)</a></p></li>
+<li><p><a class="reference external" href="https://argos.openaire.eu/explore-plans/publicOverview/f57d2deb-f575-4a6c-890c-153b5b96973c">ADIMAG - Additive Manufacturing and Smart Surface Engineering of Magnesium (PID2021-124341OB-C22)</a></p></li>
+<li><p><a class="reference external" href="https://argos.openaire.eu/explore-plans/publicOverview/a4c45a6c-d9c4-4405-a8be-797ca13f9651">Energy Optimization, Inefficiency Detection and Decarbonization using AI (EnergAI)</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
+<div class="section" id="royce-partner-institutional-guidance">
+<h3>Royce partner institutional guidance<a class="headerlink" href="#royce-partner-institutional-guidance" title="Permalink to this headline">#</a></h3>
+<p>Most Royce partners have a partnership with the DMP generation tool, DMPonline. Below we have compiled a non-exhaustive list of research data management and data management planning services provided at each Royce partner institution.</p>
+<div class="section" id="university-of-cambridge">
+<h4>University of Cambridge<a class="headerlink" href="#university-of-cambridge" title="Permalink to this headline">#</a></h4>
+<p>The University of Cambridge runs its own Data Management Plan Support service, and suggests using the DCC DMPonline tool in its guidance.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.data.cam.ac.uk/DMPsupport">University of Cambridge DMP support</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/">DMPonline</a></p></li>
+</ul>
+</div>
+<div class="section" id="imperial-college-london">
+<h4>Imperial College London<a class="headerlink" href="#imperial-college-london" title="Permalink to this headline">#</a></h4>
+<p>Imperial College London has institutional guidance on how to complete a DMP on DCC DMPonline and runs a DMP consultation service for its researchers.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.imperial.ac.uk/research-and-innovation/support-for-staff/scholarly-communication/research-data-management/data-management-planning/data-management-plan/">How to complete a data management plan</a></p></li>
+<li><p><a class="reference external" href="https://www.imperial.ac.uk/research-and-innovation/support-for-staff/scholarly-communication/research-data-management/book-a-one-to-one/">DMP Consultation Service</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/">DMPonline</a></p></li>
+</ul>
+</div>
+<div class="section" id="university-of-leeds">
+<h4>University of Leeds<a class="headerlink" href="#university-of-leeds" title="Permalink to this headline">#</a></h4>
+<p>The University of Leeds Library hosts their own guidance on the University of Leeds website, runs its own support service through and has created a DMP template for its researchers available to download on their website.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://library.leeds.ac.uk/info/14062/research_data_management/143/research_data_management_timeline">Research data management timeline</a></p></li>
+<li><p><a class="reference external" href="https://library.leeds.ac.uk/info/14062/research_data_management/62/data_management_planning">Write a data management plan</a></p></li>
+<li><p><a class="reference external" href="https://library.leeds.ac.uk/info/14062/research_data_management/61/research_data_management_explained">What is research data?</a></p></li>
+<li><p><a class="reference external" href="https://library.leeds.ac.uk/info/1600/about/149/meet_the_teams/2">Research data management support service</a></p></li>
+<li><p><a class="reference external" href="https://library.leeds.ac.uk/downloads/download/80/university_of_leeds_data_management_plan_template">Leeds DMP template</a></p></li>
+</ul>
+</div>
+<div class="section" id="university-of-liverpool">
+<h4>University of Liverpool<a class="headerlink" href="#university-of-liverpool" title="Permalink to this headline">#</a></h4>
+<p>The University of Liverpool has developed their own Postgraduate Research student template, available via DMPOnline, it is an extensive template designed to guide you through every step of writing your data management plan.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.liverpool.ac.uk/library/research-data-management/essentials/data-management-plan/">Data Management Plan</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.dcc.ac.uk/">DMPonline</a> (Select the Liverpool template!)</p></li>
+</ul>
+</div>
+<div class="section" id="the-university-of-manchester">
+<h4>The University of Manchester<a class="headerlink" href="#the-university-of-manchester" title="Permalink to this headline">#</a></h4>
+<p>The University of Manchester has their own DMPonline service and excellent training and guidance by the University of Manchester Library hosted on their website.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dmponline.manchester.ac.uk/">University of Manchester DMPonline</a></p></li>
+<li><p><a class="reference external" href="https://www.library.manchester.ac.uk/training/my-research-essentials/">My Research Essentials</a></p></li>
+<li><p><a class="reference external" href="https://www.library.manchester.ac.uk/training/my-research-essentials/workshops/">University of Manchester Workshops</a></p></li>
+</ul>
+</div>
+<div class="section" id="university-of-oxford">
+<h4>University of Oxford<a class="headerlink" href="#university-of-oxford" title="Permalink to this headline">#</a></h4>
+<p>Research Data Oxford runs as a cross-departmental service. They host their own guidance and have curated guidance from around the web on their website, and recommends DMPonline for DMP generation.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://researchdata.ox.ac.uk/">Research Data Oxford</a></p></li>
+<li><p><a class="reference external" href="https://researchdata.ox.ac.uk/taxonomy/1411/term/7616">Data management planning tools</a></p></li>
+<li><p><a class="reference external" href="https://researchdata.ox.ac.uk/dmp-online">DMPonline guidance</a></p></li>
+</ul>
+</div>
+<div class="section" id="the-university-of-sheffield">
+<h4>The University of Sheffield<a class="headerlink" href="#the-university-of-sheffield" title="Permalink to this headline">#</a></h4>
+<p>The University of Sheffield Library hosts their own research data management guidance and resources on their website and runs their own DMPonline service.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sheffield.ac.uk/library/research-data-management">Research data management</a></p></li>
+<li><p><a class="reference external" href="https://dmponline.sheffield.ac.uk/">DMPonline</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h3>
+<p>Here are some resources you might want to consult in addition to this guide.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://zenodo.org/record/7759355#.ZGTWMnbMLDc">Data management plans and data management costs</a> <span id="id8">[<a class="reference internal" href="#id29" title="Anja Perry. Data management plans and data management costs. doi:10.5281/zenodo.7759355.">6</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING">Raw data, backup and versioning</a> <span id="id9">[<a class="reference internal" href="#id28" title="OpenAIRE. Raw data, backup and versioning. URL: https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING.">5</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/non-digital-data-guide">How to deal with non-digital data</a> <span id="id10">[<a class="reference internal" href="#id25" title="OpenAIRE. Guides for researchers: how to deal with non-digital data. URL: https://www.openaire.eu/non-digital-data-guide.">4</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/data-formats-preservation-guide">Data formats for preservation</a> <span id="id11">[<a class="reference internal" href="#id27" title="OpenAIRE. Data formats for preservation. URL: https://www.openaire.eu/data-formats-preservation-guide.">3</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan">How to Develop a Data Management and Sharing Plan</a> <span id="id12">[<a class="reference internal" href="#id26" title="S Jones. How to develop a data management and sharing plan. dcc how-to guides. URL: https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan.">2</a>]</span></p></li>
+<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/planning">Data life cycle: Planning</a> <span id="id13">[<a class="reference internal" href="#id19" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
+</ol>
+<div class="section" id="digital-training-from-the-university-of-manchester-library">
+<h4>Digital Training from The University of Manchester Library<a class="headerlink" href="#digital-training-from-the-university-of-manchester-library" title="Permalink to this headline">#</a></h4>
+<p>This training is available open and free online for anyone and not limited to PGR internal to the University of Manchester.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data-explained/">Research data explained, My Research Essentials</a></p></li>
+<li><p><a class="reference external" href="https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data/">Research data management, My Research Essentials</a></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id14">
+<dl class="citation">
+<dt class="label" id="id19"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id7">3</a>,<a href="#id13">4</a>)</span></dt>
+<dd><p>ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: <a class="reference external" href="https://rdmkit.elixir-europe.org/">https://rdmkit.elixir-europe.org/</a>.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id12">2</a></span></dt>
+<dd><p>S Jones. How to develop a data management and sharing plan. dcc how-to guides. URL: <a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan">https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan</a>.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id11">3</a></span></dt>
+<dd><p>OpenAIRE. Data formats for preservation. URL: <a class="reference external" href="https://www.openaire.eu/data-formats-preservation-guide">https://www.openaire.eu/data-formats-preservation-guide</a>.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id10">4</a></span></dt>
+<dd><p>OpenAIRE. Guides for researchers: how to deal with non-digital data. URL: <a class="reference external" href="https://www.openaire.eu/non-digital-data-guide">https://www.openaire.eu/non-digital-data-guide</a>.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id9">5</a></span></dt>
+<dd><p>OpenAIRE. Raw data, backup and versioning. URL: <a class="reference external" href="https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING">https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING</a>.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
+<dd><p>Anja Perry. Data management plans and data management costs. <a class="reference external" href="https://doi.org/10.5281/zenodo.7759355">doi:10.5281/zenodo.7759355</a>.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>Madeleine Pownall, Flávio Azevedo, Laura M. König, Hannah R. Slack, Thomas Rhys Evans, Zoe Flack, Sandra Grinschgl, Mahmoud M. Elsherif, Katie A. Gilligan-Lee, Catia M. F. de Oliveira, Biljana Gjoneska, Tamara Kalandadze, Katherine Button, Sarah Ashcroft-Jones, Jenny Terry, Nihan Albayrak-Aydemir, Filip Děchtěrenko, Shilaan Alzahawi, Bradley J. Baker, Merle-Marie Pittelkow, Lydia Riedl, Kathleen Schmidt, Charlotte R. Pennington, John J. Shaw, Timo Lüke, Matthew C. Makel, Helena Hartmann, Mirela Zaneva, Daniel Walker, Steven Verheyen, Daniel Cox, Jennifer Mattschey, Tom Gallagher-Mitchell, Peter Branney, Yanna Weisberg, Kamil Izydorczak, Ali H. Al-Hoorie, Ann-Marie Creaven, Suzanne L. K. Stewart, Kai Krautter, Karen Matvienko-Sikar, Samuel J. Westwood, Patr\'ıcia Arriaga, Meng Liu, Myriam A. Baum, Tobias Wingen, Robert M. Ross, Aoife O\textquotesingle Mahony, Agata Bochynska, Michelle Jamieson, Myrthe Vel Tromp, Siu Kit Yeung, Martin R. Vasilev, Amélie Gourdon-Kanhukamwe, Leticia Micheli, Markus Konkol, David Moreau, James E. Bartlett, Kait Clark, Gwen Brekelmans, Theofilos Gkinopoulos, Samantha L. Tyler, Jan Philipp Röer, Zlatomira G. Ilchovska, Christopher R. Madan, Olly Robertson, Bethan J. Iley, Samuel Guay, Martina Sladekova, and Shanu Sadhwani. Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes. <em>Royal Society Open Science</em>, 2023. <a class="reference external" href="https://doi.org/https://doi.org/10.1098/rsos.221255">doi:https://doi.org/10.1098/rsos.221255</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id3">8</a></span></dt>
+<dd><p>Engineering &amp; Physical Sciences Research Council, UK Research and Innovation. Policy framework on research data. principles of epsrc research data policy framework. URL: <a class="reference external" href="https://www.ukri.org/about-us/epsrc/our-policies-and-standards/policy-framework-on-research-data/principles/">https://www.ukri.org/about-us/epsrc/our-policies-and-standards/policy-framework-on-research-data/principles/</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
+<dd><p>Science and Technology Facilities Council, UK Research and Innovation. Data management plan. URL: <a class="reference external" href="https://www.ukri.org/councils/stfc/guidance-for-applicants/what-to-include-in-your-proposal/data-management-plan/">https://www.ukri.org/councils/stfc/guidance-for-applicants/what-to-include-in-your-proposal/data-management-plan/</a>.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id3">10</a></span></dt>
+<dd><p>Science and Technology Facilities Council, UK Research and Innovation. Stfc scientific data policy. URL: <a class="reference external" href="https://www.ukri.org/publications/stfc-scientific-data-policy/">https://www.ukri.org/publications/stfc-scientific-data-policy/</a>.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">11</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. <a class="reference external" href="https://doi.org/10.5281/zenodo.3233853">doi:10.5281/zenodo.3233853</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>,<a href="#id7">3</a>)</span></dt>
+<dd><p>UK Data Service. Research data lifecycle. URL: <a class="reference external" href="https://www.youtube.com/watch?v=-wjFMMQD3UA">https://www.youtube.com/watch?v=-wjFMMQD3UA</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id3">13</a></span></dt>
+<dd><p>UK Research and Innovation. Publishing your research findings. making your research data open. URL: <a class="reference external" href="https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/">https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./rdm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rdm-intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dir-tree.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-guide">About this guide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management-planning">Data Management Planning</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-research-data-lifecycle">The research data lifecycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-research-data-management-plan">What is a research data management plan?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-to-write-a-data-management-plan">Reasons to write a Data Management Plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-start">Before you start</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-research-data-management-plan">Writing a research data management plan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-write-a-research-data-management-plan">When to write a research data management plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-update-a-research-data-management-plan">When to update a research data management plan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-research-data-lifecycle">Your research data lifecycle</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">Data collection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data analysis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-storage">Data storage</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-protection">Data protection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-ownership">Data ownership</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sharing">Data sharing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-management-plans">Example data management plans</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dmponline">DMPonline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dmptool">DMPtool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#argos-openaire-data-management-planning-tool">ARGOS - OpenAIRE Data Management Planning Tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#royce-partner-institutional-guidance">Royce partner institutional guidance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-cambridge">University of Cambridge</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#imperial-college-london">Imperial College London</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-leeds">University of Leeds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-liverpool">University of Liverpool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-university-of-manchester">The University of Manchester</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#university-of-oxford">University of Oxford</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-university-of-sheffield">The University of Sheffield</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-training-from-the-university-of-manchester-library">Digital Training from The University of Manchester Library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Data Curators @ Royce
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 05 Jul 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
