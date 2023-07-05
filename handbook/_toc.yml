@@ -7,6 +7,8 @@ parts:
 - caption: Research Data Management
   chapters:
   - file: rdm/rdm-intro
+  - file: rdm/rdmp-guide
+    title: Reasearch Data Management Plan Writing Guide
   - file: rdm/dir-tree
   - file: rdm/git
     sections:
