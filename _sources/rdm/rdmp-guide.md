@@ -141,24 +141,24 @@ Data collection should cover what data will be collected, or created, how it wil
 Data can comprise
 
 - Physical data:
-    - What physical data is going to be collected, including:
-        - Samples from raw materials
-        - Sample receipt and modification from industrial partners
-    - How the physical data will be collected or created:
-        - The equipment used to create the data
-        - The physical size of the data (if applicable)
+  - What physical data is going to be collected, including:
+      - Samples from raw materials
+      - Sample receipt and modification from industrial partners
+  - How the physical data will be collected or created:
+      - The equipment used to create the data
+      - The physical size of the data (if applicable)
 - Digital data:
-    - What digital data is going to be collected including:
-        - generation of novel data from:
-            - simulated data
-            - data captured from measurement equipment
-            - computer code, including software packages and analysis scripts
-        - reuse of pre-existing in-group data
-        - sourcing data from open (or closed sources)
-    - How the digital data will be collected:
-        - The equipment used to collect or create it
-        - The file formats associated with the data, and whether they are proprietary
-        - The volume of data including individual file size and the estimated amount generated
+  - What digital data is going to be collected including:
+      - generation of novel data from:
+          - simulated data
+          - data captured from measurement equipment
+          - computer code, including software packages and analysis scripts
+      - reuse of pre-existing in-group data
+      - sourcing data from open (or closed sources)
+  - How the digital data will be collected:
+      - The equipment used to collect or create it
+      - The file formats associated with the data, and whether they are proprietary
+      - The volume of data including individual file size and the estimated amount generated
 
 #### Data processing
 
@@ -206,22 +206,22 @@ Data storage outlines how you will be storing the data following collection. Dat
 preservation, archiving, retention
 
 - Storage:
-    - Where the data will be stored
-    - How the data will be backed up, including any data loss mitigation and duplicate data storage systems
+  - Where the data will be stored
+  - How the data will be backed up, including any data loss mitigation and duplicate data storage systems
     - How much storage space is required
 - Access:
-    - Who has access to the data
-    - How the approved users will access the data
+  - Who has access to the data
+  - How the approved users will access the data
 - Documentation and data quality
-    - A file naming convention to adopt across all files for findability
-    - How directories the data is kept in will be structured for findability
-    - Metadata accompanying the data such as data dictionaries, README files
-    - Documentation post-project for data archiving
+  - A file naming convention to adopt across all files for findability
+  - How directories the data is kept in will be structured for findability
+  - Metadata accompanying the data such as data dictionaries, README files
+  - Documentation post-project for data archiving
 - Preservation, archiving and retention
-    - Where and how the data will be stored after the end of the project
-    - Whether the data will be reused
-    - How long the data will be retained for
-    - Data destruction plans
+  - Where and how the data will be stored after the end of the project
+  - Whether the data will be reused
+  - How long the data will be retained for
+  - Data destruction plans
 This important as both physical and digital data take up physical space, so outlining how long the data will be retained for and any plans for reuse will help understand the long-term storage needs
 
 #### Data protection
@@ -239,21 +239,21 @@ Data sharing covers how you will be sharing your data internally, across collabo
 Data sharing will outline:
 
 - Data sharing procedures
-- Software to facilitate data sharing procedures 
+- Software to facilitate data sharing procedures
 - Who will be granted access to data sharing spaces
-- hether web-apps such as Zendto or Privnote will be used to share data across:
-    - collaborators at other institutions
-    - industrial partners
+- Whether web-apps such as Zendto or Privnote will be used to share data across:
+  - collaborators at other institutions
+  - industrial partners
 - Collaborations procedures across multi-institution projects
 - Open data sharing such as:
-    - Depositing the data on open data repositories, such as Zenodo, Figshare, or institutional repositories
-    - Transforming proprietary format data to an open format prior to release
+  - Depositing the data on open data repositories, such as Zenodo, Figshare, or institutional repositories
+  - Transforming proprietary format data to an open format prior to release
 - Open access publishing plans in research journals
 - Code sharing, such as software, and data analysis and visualisation scripts on code repositories
 - Documentation describing the data such as:
-    - README files
-    - Data dictionaries
-    - Package requirements for recreating coding environments
+  - README files
+  - Data dictionaries
+  - Package requirements for recreating coding environments
 
 ::: {admonition} Metadata
 :class: caution
