@@ -1,47 +1,58 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Get started with Jupyter Book &#8212; Data Management Handbook</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -49,8 +60,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script src="../_static/analytics_script.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -58,596 +72,396 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'team_tutorials/how-to-install-jb';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Updating this book" href="contribution-workflow.html" />
     <link rel="prev" title="Contributing to this book" href="notes-on-jb.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo_royce_banner.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Management Handbook</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Research Data Management
- </span>
-</p>
+    
+    
+    <img src="../_static/logo_royce_banner.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_royce_banner.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../rdm/rdm-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rdm/dir-tree.html">
-   The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     tree
-    </span>
-   </code>
-   function
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../rdm/git.html">
-   Version Control
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rdm/git-how-to-install-windows.html">
-     Git Bash for Workshops
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdm-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdmp-guide.html">Reasearch Data Management Plan Writing Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rdm/git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rdm/git-how-to-install-windows.html">Git Bash for Workshops</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Open Research
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Open Research</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../open-research/open-research-resources.html">
-   Open Research Articles
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../open-research/case-for-open-research.html">
-     The Case for Open Research
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/open-research-resources.html">Open Research Articles</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-research/case-for-open-research.html">The Case for Open Research</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Team Tutorials
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="work-on-this-book.html">
-   Get started with this guide
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="notes-on-jb.html">
-     Contributing to this book
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Get started with Jupyter Book
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="contribution-workflow.html">
-     Updating this book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="work-on-this-book.html">Get started with this guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="notes-on-jb.html">Contributing to this book</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Get started with Jupyter Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution-workflow.html">Updating this book</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Events
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../misc_org/appointments.html">
-   Consult with us
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../misc_org/events.html">
-   Events
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../workshops/workshops.html">
-   Workshops
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../workshops/git-intro.html">
-     Version Control with Git Workshop
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bibliography and Useful Links
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Events</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../bib-util/bibliography.html">
-   Blibliography
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../bib-util/useful-interesting.html">
-   Utilities
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography and Useful Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/bibliography.html">Blibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/useful-interesting.html">Utilities</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/team_tutorials/how-to-install-jb.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fteam_tutorials/how-to-install-jb.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/team_tutorials/how-to-install-jb.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fteam_tutorials/how-to-install-jb.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/team_tutorials/how-to-install-jb.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/team_tutorials/how-to-install-jb.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-git-bash">
-   Install Git Bash
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-anaconda">
-   Get Anaconda
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-anaconda">
-     Download Anaconda
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-anaconda">
-     Install Anaconda
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#edit-your-path-environment-variables">
-     Edit your PATH environment variables
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conda-on-git-bash">
-   Conda on Git Bash
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-pick-your-favourite-ide">
-   (Optional) Pick your favourite IDE
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-the-jupyter-book-environment">
-   Install the Jupyter Book Environment
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-and-install-the-environment">
-     Download and install the environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-that-your-environment-works">
-     Check that your environment works
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#check-that-jupyter-book-works">
-   Check that Jupyter Book works
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clone-the-repo-and-start-contributing">
-   Clone the Repo and start contributing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-workflow-for-contributing">
-   A workflow for contributing
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Get started with Jupyter Book</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-git-bash">
-   Install Git Bash
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#get-anaconda">
-   Get Anaconda
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-anaconda">
-     Download Anaconda
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-anaconda">
-     Install Anaconda
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#edit-your-path-environment-variables">
-     Edit your PATH environment variables
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conda-on-git-bash">
-   Conda on Git Bash
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-pick-your-favourite-ide">
-   (Optional) Pick your favourite IDE
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-the-jupyter-book-environment">
-   Install the Jupyter Book Environment
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-and-install-the-environment">
-     Download and install the environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-that-your-environment-works">
-     Check that your environment works
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#check-that-jupyter-book-works">
-   Check that Jupyter Book works
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clone-the-repo-and-start-contributing">
-   Clone the Repo and start contributing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-workflow-for-contributing">
-   A workflow for contributing
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Get started with Jupyter Book</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-bash">Install Git Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-anaconda">Get Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-anaconda">Download Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-anaconda">Install Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-your-path-environment-variables">Edit your PATH environment variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-on-git-bash">Conda on Git Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-pick-your-favourite-ide">(Optional) Pick your favourite IDE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-jupyter-book-environment">Install the Jupyter Book Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-environment">Download and install the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-your-environment-works">Check that your environment works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-jupyter-book-works">Check that Jupyter Book works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-repo-and-start-contributing">Clone the Repo and start contributing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-workflow-for-contributing">A workflow for contributing</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="get-started-with-jupyter-book">
-<h1>Get started with Jupyter Book<a class="headerlink" href="#get-started-with-jupyter-book" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="get-started-with-jupyter-book">
+<h1>Get started with Jupyter Book<a class="headerlink" href="#get-started-with-jupyter-book" title="Permalink to this heading">#</a></h1>
 <p>This guide is supposed to provide start to end instructions on contributing to this web-based handbook on Windows 10 OS. Feel free to read this out of sequence and focus on the sections that are relevant to you.</p>
 <section id="install-git-bash">
-<h2>Install Git Bash<a class="headerlink" href="#install-git-bash" title="Permalink to this headline">#</a></h2>
+<h2>Install Git Bash<a class="headerlink" href="#install-git-bash" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="get-anaconda">
-<h2>Get Anaconda<a class="headerlink" href="#get-anaconda" title="Permalink to this headline">#</a></h2>
-<p>At the time of writing this, the Jupyter Book package has been tested with <a class="reference external" href="https://jupyterbook.org/en/stable/advanced/windows.html">Python 3.7 on Windows 10</a><a class="footnote-reference brackets" href="#note-on-lsw" id="id1">1</a>, with the latest Python version being 3.10.<br />
+<h2>Get Anaconda<a class="headerlink" href="#get-anaconda" title="Permalink to this heading">#</a></h2>
+<p>At the time of writing this, the Jupyter Book package has been tested with <a class="reference external" href="https://jupyterbook.org/en/stable/advanced/windows.html">Python 3.7 on Windows 10</a><a class="footnote-reference brackets" href="#note-on-lsw" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, with the latest Python version being 3.10.<br />
 We will use Anaconda as our package manager to specify which version of Python we want to run on.</p>
 <section id="download-anaconda">
-<h3>Download Anaconda<a class="headerlink" href="#download-anaconda" title="Permalink to this headline">#</a></h3>
+<h3>Download Anaconda<a class="headerlink" href="#download-anaconda" title="Permalink to this heading">#</a></h3>
 <p>To download Anaconda, please visit the Anaconda <a class="reference external" href="https://www.anaconda.com/products/distribution">product page</a>, there you will find the appropriate distribution for your system. Usually, the download prompt shown below should have recognised your system, if not navigate to the <a class="reference external" href="https://www.anaconda.com/products/distribution#Downloads">bottom of the page</a> or to the <a class="reference external" href="https://repo.anaconda.com/archive/">Anaconda archive</a> to find the appropriate distribution for your system.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>We have tested downloading on Google Chrome, Microsoft Edge and Firefox Internet Browsers. On Chrome and Edge, it might appear as if the download did not start. However, if you navigate to menu (<i class="bi bi-three-dots-vertical"></i>) → downloads you will find the download progressing<a class="footnote-reference brackets" href="#safari" id="id2">2</a>.</p>
+<p>We have tested downloading on Google Chrome, Microsoft Edge and Firefox Internet Browsers. On Chrome and Edge, it might appear as if the download did not start. However, if you navigate to menu (<i class="bi bi-three-dots-vertical"></i>) → downloads you will find the download progressing<a class="footnote-reference brackets" href="#safari" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 </div>
 <img alt="../_images/anaconda-webpage-download.jpg" class="center" id="img-anaconda-download" src="../_images/anaconda-webpage-download.jpg" />
 <p>The Anaconda download display</p>
 </section>
 <section id="install-anaconda">
-<h3>Install Anaconda<a class="headerlink" href="#install-anaconda" title="Permalink to this headline">#</a></h3>
+<h3>Install Anaconda<a class="headerlink" href="#install-anaconda" title="Permalink to this heading">#</a></h3>
 <p>Locate the Anaconda installation file, this should be a <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file if you are on Windows. Usually, it should be stored, by default settings in your internet browser, in the Downloads folder.</p>
 <p>Steps:</p>
-<ol>
+<ol class="arabic">
 <li><p>Run the installer</p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Next</span></code></p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">Agree</span></code> in the License Agreement</p></li>
@@ -666,8 +480,8 @@ If you are using a machine provided by the University of Manchester do not insta
 </ol>
 </section>
 <section id="edit-your-path-environment-variables">
-<h3>Edit your PATH environment variables<a class="headerlink" href="#edit-your-path-environment-variables" title="Permalink to this headline">#</a></h3>
-<ol>
+<h3>Edit your PATH environment variables<a class="headerlink" href="#edit-your-path-environment-variables" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
 <li><p>Begin with your Windows start menu (<i class="bi bi-windows"></i>)</p></li>
 <li><p>Type in <code class="docutils literal notranslate"><span class="pre">env</span></code>, you should see <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">the</span> <span class="pre">system</span> <span class="pre">environment</span> <span class="pre">variables</span></code> appear as the top option</p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">the</span> <span class="pre">system</span> <span class="pre">environment</span> <span class="pre">variables</span></code></p></li>
@@ -685,21 +499,21 @@ If you are using a machine provided by the University of Manchester do not insta
 </section>
 </section>
 <section id="conda-on-git-bash">
-<h2>Conda on Git Bash<a class="headerlink" href="#conda-on-git-bash" title="Permalink to this headline">#</a></h2>
+<h2>Conda on Git Bash<a class="headerlink" href="#conda-on-git-bash" title="Permalink to this heading">#</a></h2>
 <p>To check that Anaconda is properly installed on Git Bash follow the steps outlined below:</p>
-<ol>
+<ol class="arabic">
 <li><p>Open a Git Bash terminal</p></li>
 <li><p>Type in <code class="docutils literal notranslate"><span class="pre">conda</span></code> and press return (<i class="bi bi-arrow-return-left"></i>)</p></li>
 <li><p>If you get a menu like the one below then go to step 5, if not follow on from step 4</p>
 <img alt="../_images/git-bash-conda-check.jpg" src="../_images/git-bash-conda-check.jpg" />
 </li>
 <li><p>There are two ways you can proceed with this:</p>
-<ol>
+<ol class="arabic">
 <li><p>First way:</p>
-<ol>
+<ol class="arabic">
 <li><p>Open up <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> with your choice text editor (we will use notepad), this should be located in <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;username&gt;</span></code></p></li>
 <li><p>If you can not locate you might need to turn on hidden file visibility:</p>
-<ol>
+<ol class="arabic">
 <li><p>On the top ribbon pane of <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Explorer</span></code> head to the <code class="docutils literal notranslate"><span class="pre">View</span></code> tab and check the box with <code class="docutils literal notranslate"><span class="pre">Hidden</span> <span class="pre">items</span></code> next to it</p>
 <img alt="../_images/hidden-file-visibility.jpg" src="../_images/hidden-file-visibility.jpg" />
 </li>
@@ -710,7 +524,7 @@ If you are using a machine provided by the University of Manchester do not insta
 </ol>
 </li>
 <li><p>The second way:</p>
-<ol>
+<ol class="arabic">
 <li><p>Open up Git Bash and type, replacing <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> with yours:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;. /c/Users/&lt;username&gt;/Anaconda3/etc/profile.d/conda.sh&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">bashrc</span>
 </pre></div>
@@ -729,34 +543,34 @@ If you are using a machine provided by the University of Manchester do not insta
 </ol>
 </section>
 <section id="optional-pick-your-favourite-ide">
-<h2>(Optional) Pick your favourite IDE<a class="headerlink" href="#optional-pick-your-favourite-ide" title="Permalink to this headline">#</a></h2>
-<p>Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a class="reference external" href="https://www.rstudio.com/products/rstudio/">RStudio</a>, to text editors such as <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a> accompanied by a detached terminal window<a class="footnote-reference brackets" href="#text-editors" id="id3">3</a>. For what we demonstrate here we will use <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.
+<h2>(Optional) Pick your favourite IDE<a class="headerlink" href="#optional-pick-your-favourite-ide" title="Permalink to this heading">#</a></h2>
+<p>Integrated Development Environments (IDE) can be a very personal thing. Over the years some of the people on our team have used several setups from <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a class="reference external" href="https://www.rstudio.com/products/rstudio/">RStudio</a>, to text editors such as <a class="reference external" href="https://www.sublimetext.com/">Sublime Text</a> accompanied by a detached terminal window<a class="footnote-reference brackets" href="#text-editors" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. For what we demonstrate here we will use <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>.
 If you are comfortable with your set up we do not recommend you change anything.</p>
 </section>
 <section id="install-the-jupyter-book-environment">
-<h2>Install the Jupyter Book Environment<a class="headerlink" href="#install-the-jupyter-book-environment" title="Permalink to this headline">#</a></h2>
+<h2>Install the Jupyter Book Environment<a class="headerlink" href="#install-the-jupyter-book-environment" title="Permalink to this heading">#</a></h2>
 <section id="download-and-install-the-environment">
-<h3>Download and install the environment<a class="headerlink" href="#download-and-install-the-environment" title="Permalink to this headline">#</a></h3>
+<h3>Download and install the environment<a class="headerlink" href="#download-and-install-the-environment" title="Permalink to this heading">#</a></h3>
 <p id="env-download-loc">Download the <a class="reference external" href="https://jupyterbook.org">Jupyter Book</a> environment by picture below, right-click and select <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">link</span> <span class="pre">as...</span></code>:<br />
 <strong><a href="../required_packages/env.yaml" download>Anaconda Environment</a></strong></p>
-<ol>
+<ol class="arabic">
 <li><p>Start up <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Navigator</span></code> (depending on your system this might take some time and open a few dialog boxes)</p></li>
 <li><p>On the left-hand pane navigate to <code class="docutils literal notranslate"><span class="pre">Environments</span></code> (you might have to wait a bit again)</p></li>
 <li><p>Next to the menu pane you will see the environments list, at the bottom you will see a menu with environment creating options, click <code class="docutils literal notranslate"><span class="pre">Import</span></code></p>
 <img alt="../_images/conda-navigator-env.jpg" src="../_images/conda-navigator-env.jpg" />
-<p>An <a class="reference external" href="#import-gif">animation</a> showing step 4-7 can be found below</p>
+<p>An <span class="xref myst">animation</span> showing step 4-7 can be found below</p>
 </li>
 <li><p>Choose to <strong>Import from:</strong> your <code class="docutils literal notranslate"><span class="pre">Local</span> <span class="pre">drive</span></code></p></li>
-<li><p>Find the location where you saved the <a class="reference external" href="#env-download-loc">environment</a> you saved from this page</p></li>
+<li><p>Find the location where you saved the <span class="xref myst">environment</span> you saved from this page</p></li>
 <li><p>(Optional) Specify a <strong>New environment name:</strong></p></li>
 <li><p>Click on <strong>Import</strong> and you are done, you just have to wait for all the packages to download</p></li>
 </ol>
 <img alt="../_images/anaconda-env.gif" class="center" id="import-gif" src="../_images/anaconda-env.gif" />
 </section>
 <section id="check-that-your-environment-works">
-<h3>Check that your environment works<a class="headerlink" href="#check-that-your-environment-works" title="Permalink to this headline">#</a></h3>
+<h3>Check that your environment works<a class="headerlink" href="#check-that-your-environment-works" title="Permalink to this heading">#</a></h3>
 <p>The steps outlined below will help you check if you have installed the environment correctly:</p>
-<ol>
+<ol class="arabic">
 <li><p>Open up your <strong>Terminal</strong> application, we will use Git Bash to demonstrate</p></li>
 <li><p>Type the following into your terminal application replacing <code class="docutils literal notranslate"><span class="pre">your-env-name</span></code> with the name you have defined for your environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">your</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">name</span>
@@ -774,16 +588,16 @@ If you are comfortable with your set up we do not recommend you change anything.
 </section>
 </section>
 <section id="check-that-jupyter-book-works">
-<h2>Check that Jupyter Book works<a class="headerlink" href="#check-that-jupyter-book-works" title="Permalink to this headline">#</a></h2>
+<h2>Check that Jupyter Book works<a class="headerlink" href="#check-that-jupyter-book-works" title="Permalink to this heading">#</a></h2>
 <p>You should have now have successfully installed all you need to get started with Jupyter Book, as outlined above. We will follow a simple exercise to test whether it runs on your machine.<br />
-Open up a terminal and activate your environment as outlines in steps 1 - 3 <a class="reference external" href="#check-that-your-environment-works">above</a>, and type in the code below, press return (<i class="bi bi-arrow-return-left"></i>) and the Jupyter Book help menu should show appear:</p>
+Open up a terminal and activate your environment as outlines in steps 1 - 3 <span class="xref myst">above</span>, and type in the code below, press return (<i class="bi bi-arrow-return-left"></i>) and the Jupyter Book help menu should show appear:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
 </pre></div>
 </div>
 <img alt="../_images/check-jb-install.gif" src="../_images/check-jb-install.gif" />
 </section>
 <section id="clone-the-repo-and-start-contributing">
-<h2>Clone the Repo and start contributing<a class="headerlink" href="#clone-the-repo-and-start-contributing" title="Permalink to this headline">#</a></h2>
+<h2>Clone the Repo and start contributing<a class="headerlink" href="#clone-the-repo-and-start-contributing" title="Permalink to this heading">#</a></h2>
 <p>You can find a condensed version in the <a class="reference external" href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/blob/main/README.md">README</a> accompanying the repository this handbook is hosted on.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -792,7 +606,7 @@ If not you are not familiar with Git please follow one of the guides we recommen
 A more in-depth version of steps 3 - 7 can be found on the <a class="reference internal" href="contribution-workflow.html"><span class="doc std std-doc">next page</span></a>.</p>
 </div>
 <p>Follow these steps to clone the repository to your local drive and push updates:</p>
-<ol>
+<ol class="arabic">
 <li><p>Depending on if you have set up SSH-keys on your machine, or not, choose how you want to clone the repository on the page under the green <code class="docutils literal notranslate"><span class="pre">Code</span></code> button <span class="badge text-bg-success">Code <i class="bi bi-caret-down-fill"></i></span> and press the clone (<i class="fa-regular fa-clone"></i>) button to copy the line to your clipboard</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -800,7 +614,7 @@ A more in-depth version of steps 3 - 7 can be found on the <a class="reference i
 </div>
 </li>
 <li><p>Decided on a location (2 ways):</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Open up a terminal window and navigate to a directory you want to store this book in<br />
 <strong>OR</strong></p></li>
 <li><p>Navigate to the directory (in File Explorer) you want to store this book in, right-click, and select <code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">Bash</span> <span class="pre">here</span></code></p></li>
@@ -822,20 +636,21 @@ A more in-depth version of steps 3 - 7 can be found on the <a class="reference i
 </ol>
 </section>
 <section id="a-workflow-for-contributing">
-<h2>A workflow for contributing<a class="headerlink" href="#a-workflow-for-contributing" title="Permalink to this headline">#</a></h2>
+<h2>A workflow for contributing<a class="headerlink" href="#a-workflow-for-contributing" title="Permalink to this heading">#</a></h2>
 <p>We will discuss the workflow to push updates in the next page <a class="reference internal" href="contribution-workflow.html"><span class="doc std std-doc"><i class="bi bi-arrow-right"></i></span></a></p>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="note-on-lsw"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Of course you can bypass most of this guide and use the Linux Subsystem on Windows and if you prefer <code class="docutils literal notranslate"><span class="pre">pip</span></code> as your package and virtual environment manager.</p>
-</dd>
-<dt class="label" id="safari"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>We are not able to test this on the Safari web browser, currently. If you are able to help feel free to contribute to this guide.</p>
-</dd>
-<dt class="label" id="text-editors"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>If you want to play around with different text editors, GitHub maintains a list of free open-source text editors <a class="reference external" href="https://github.com/collections/text-editors">here</a>, and you can find some more information on Wikipedia <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_text_editors">here</a>.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="note-on-lsw" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Of course you can bypass most of this guide and use the Linux Subsystem on Windows and if you prefer <code class="docutils literal notranslate"><span class="pre">pip</span></code> as your package and virtual environment manager.</p>
+</aside>
+<aside class="footnote brackets" id="safari" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>We are not able to test this on the Safari web browser, currently. If you are able to help feel free to contribute to this guide.</p>
+</aside>
+<aside class="footnote brackets" id="text-editors" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>If you want to play around with different text editors, GitHub maintains a list of free open-source text editors <a class="reference external" href="https://github.com/collections/text-editors">here</a>, and you can find some more information on Wikipedia <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_text_editors">here</a>.</p>
+</aside>
 </section>
 </section>
 
@@ -859,51 +674,124 @@ A more in-depth version of steps 3 - 7 can be found on the <a class="reference i
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notes-on-jb.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Contributing to this book</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notes-on-jb.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Contributing to this book</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="contribution-workflow.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="contribution-workflow.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Updating this book</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Data Curators @ Royce<br/>
-  
-      &copy; Copyright 2022.<br/>
-    Last updated on 24 Feb 2023.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git-bash">Install Git Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-anaconda">Get Anaconda</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-anaconda">Download Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-anaconda">Install Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-your-path-environment-variables">Edit your PATH environment variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-on-git-bash">Conda on Git Bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-pick-your-favourite-ide">(Optional) Pick your favourite IDE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-jupyter-book-environment">Install the Jupyter Book Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-install-the-environment">Download and install the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-your-environment-works">Check that your environment works</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-jupyter-book-works">Check that Jupyter Book works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-repo-and-start-contributing">Clone the Repo and start contributing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-workflow-for-contributing">A workflow for contributing</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Data Curators @ Royce
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 05 Jul 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

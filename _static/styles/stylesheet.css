@@ -68,13 +68,13 @@ img.center {
 
 /* CUSTOM CSS RULES FOR OVERRIDING SPHINX */
 
-#site-navigation {
+div.bd-sidebar-primary {
     background-color: rgb(0,161,154);
     /* background-color: #00A79D; */
 }
 
-#site-navigation h1.site-logo {
-    color: #ffffff;
+#bd-docs-nav .caption-text {
+    color: rgb(112,112,113);
     margin: .5em .325em 0;
     text-align: left;
 }
@@ -83,23 +83,23 @@ nav.bd-links p.caption {
     color: rgb(112,112,113);
 }
 
-#site-navigation nav ul.nav li a:hover {
+#bd-docs-nav ul.nav li a:hover {
     color: rgb(255,209,0)
 }
 
-#site-navigation nav ul.nav li.active>a {
+#bd-docs-nav ul.nav li.active>a {
     color: rgb(255,209,0)
 }
 
-#site-navigation div.navbar_extra_footer {
+#bd-docs-nav div.navbar_extra_footer {
     color: #ffffff
 }
 
-#site-navigation div.navbar_extra_footer a {
+#bd-docs-nav div.navbar_extra_footer a {
     color: rgb(255,209,0)
 }
 
-#site-navigation nav ul.nav li a, #site-navigation nav ul.nav ul li a {
+nav.bd-links li > a {
     color: #ffffff
 }
 

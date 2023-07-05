@@ -1,47 +1,58 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Updating this book &#8212; Data Management Handbook</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -49,8 +60,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script src="../_static/analytics_script.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -58,642 +72,393 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'team_tutorials/contribution-workflow';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Consult with us" href="../misc_org/appointments.html" />
     <link rel="prev" title="Get started with Jupyter Book" href="how-to-install-jb.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo_royce_banner.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Data Management Handbook</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Research Data Management
- </span>
-</p>
+    
+    
+    <img src="../_static/logo_royce_banner.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_royce_banner.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../rdm/rdm-intro.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../rdm/dir-tree.html">
-   The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     tree
-    </span>
-   </code>
-   function
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../rdm/git.html">
-   Version Control
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rdm/git-how-to-install-windows.html">
-     Git Bash for Workshops
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdm-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdmp-guide.html">Reasearch Data Management Plan Writing Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rdm/git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rdm/git-how-to-install-windows.html">Git Bash for Workshops</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Open Research
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Open Research</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../open-research/open-research-resources.html">
-   Open Research Articles
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../open-research/case-for-open-research.html">
-     The Case for Open Research
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/open-research-resources.html">Open Research Articles</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-research/case-for-open-research.html">The Case for Open Research</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Team Tutorials
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="work-on-this-book.html">
-   Get started with this guide
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="notes-on-jb.html">
-     Contributing to this book
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="how-to-install-jb.html">
-     Get started with Jupyter Book
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Updating this book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="work-on-this-book.html">Get started with this guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="notes-on-jb.html">Contributing to this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-install-jb.html">Get started with Jupyter Book</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Updating this book</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Events
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../misc_org/appointments.html">
-   Consult with us
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../misc_org/events.html">
-   Events
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../workshops/workshops.html">
-   Workshops
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../workshops/git-intro.html">
-     Version Control with Git Workshop
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bibliography and Useful Links
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Events</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../bib-util/bibliography.html">
-   Blibliography
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../bib-util/useful-interesting.html">
-   Utilities
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography and Useful Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/bibliography.html">Blibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/useful-interesting.html">Utilities</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/team_tutorials/contribution-workflow.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fteam_tutorials/contribution-workflow.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/team_tutorials/contribution-workflow.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fteam_tutorials/contribution-workflow.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/team_tutorials/contribution-workflow.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/team_tutorials/contribution-workflow.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-hierarchy-primer">
-   File hierarchy primer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#work-on-this-handbook-locally">
-   Work on this handbook locally
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-the-repository">
-     Clone the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#activate-your-environment">
-     Activate your environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-environment-is-working">
-     Check the environment is working
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#start-working-on-your-branch">
-     Start working on your branch
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-files">
-     Create files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#index-the-new-files">
-     Index the new files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#build-the-book">
-     Build the book
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#update-live-handbook">
-   Update live handbook
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-files-to-the-git-tree-and-commit-your-changes">
-     Add files to the git tree and commit your changes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-and-commit-a-bulk-of-files">
-       Add and commit a bulk of files
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#push-changes-to-the-repository">
-     Push changes to the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-pull-request-on-the-repository">
-     Create a pull request on the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">
-     Check the book builds on our GitHub repository
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#update-your-local-repo">
-   Update your local repo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-fetch-pull">
-     Git fetch-pull
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-delete-your-branch">
-     (Optional) Delete your branch
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Updating this book</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-hierarchy-primer">
-   File hierarchy primer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#work-on-this-handbook-locally">
-   Work on this handbook locally
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clone-the-repository">
-     Clone the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#activate-your-environment">
-     Activate your environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-environment-is-working">
-     Check the environment is working
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#start-working-on-your-branch">
-     Start working on your branch
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-files">
-     Create files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#index-the-new-files">
-     Index the new files
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#build-the-book">
-     Build the book
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#update-live-handbook">
-   Update live handbook
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-files-to-the-git-tree-and-commit-your-changes">
-     Add files to the git tree and commit your changes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-and-commit-a-bulk-of-files">
-       Add and commit a bulk of files
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#push-changes-to-the-repository">
-     Push changes to the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-pull-request-on-the-repository">
-     Create a pull request on the repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">
-     Check the book builds on our GitHub repository
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#update-your-local-repo">
-   Update your local repo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-fetch-pull">
-     Git fetch-pull
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-delete-your-branch">
-     (Optional) Delete your branch
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Updating this book</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-hierarchy-primer">File hierarchy primer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-on-this-handbook-locally">Work on this handbook locally</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-repository">Clone the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-your-environment">Activate your environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-environment-is-working">Check the environment is working</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-working-on-your-branch">Start working on your branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-files">Create files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-the-new-files">Index the new files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">Build the book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-live-handbook">Update live handbook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-files-to-the-git-tree-and-commit-your-changes">Add files to the git tree and commit your changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-and-commit-a-bulk-of-files">Add and commit a bulk of files</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-changes-to-the-repository">Push changes to the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pull-request-on-the-repository">Create a pull request on the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">Check the book builds on our GitHub repository</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-your-local-repo">Update your local repo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-fetch-pull">Git fetch-pull</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-delete-your-branch">(Optional) Delete your branch</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="updating-this-book">
-<h1>Updating this book<a class="headerlink" href="#updating-this-book" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="updating-this-book">
+<h1>Updating this book<a class="headerlink" href="#updating-this-book" title="Permalink to this heading">#</a></h1>
 <p>This page outlines a simple workflow for creating, updating, and “pushing” content to this book.<br />
 This guide assumes some familiarity with Git, and GitHub but will try to cover all the steps.</p>
 <section id="file-hierarchy-primer">
-<h2>File hierarchy primer<a class="headerlink" href="#file-hierarchy-primer" title="Permalink to this headline">#</a></h2>
+<h2>File hierarchy primer<a class="headerlink" href="#file-hierarchy-primer" title="Permalink to this heading">#</a></h2>
 <p>How the handbook is structured is governed by the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> table of contents file in the <code class="docutils literal notranslate"><span class="pre">/handbook</span></code> directory. The handbook is arranged in parts, defined with <code class="docutils literal notranslate"><span class="pre">captions</span></code>, each part is then arranged in chapters, defined by the directory and filename of the the markdown document to be rendered.<br />
 To keep everything tidy each part has a directory, and larger chapters within each part have their own directory within the respective part directories.</p>
 </section>
 <section id="work-on-this-handbook-locally">
-<h2>Work on this handbook locally<a class="headerlink" href="#work-on-this-handbook-locally" title="Permalink to this headline">#</a></h2>
+<h2>Work on this handbook locally<a class="headerlink" href="#work-on-this-handbook-locally" title="Permalink to this heading">#</a></h2>
 <section id="clone-the-repository">
-<h3>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Permalink to this headline">#</a></h3>
+<h3>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Permalink to this heading">#</a></h3>
 <p>Choose an area on your local (usually C) drive. Optionally, you can choose the target directory to work in.
 Run the following to clone the repository locally:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Data</span><span class="o">-</span><span class="n">Curators</span><span class="o">-</span><span class="n">Royce</span><span class="o">-</span><span class="n">Institute</span><span class="o">/</span><span class="n">royce</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">handbook</span><span class="o">.</span><span class="n">git</span> <span class="n">path</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">target</span><span class="o">-</span><span class="n">directory</span>
@@ -701,14 +466,14 @@ Run the following to clone the repository locally:</p>
 </div>
 </section>
 <section id="activate-your-environment">
-<h3>Activate your environment<a class="headerlink" href="#activate-your-environment" title="Permalink to this headline">#</a></h3>
+<h3>Activate your environment<a class="headerlink" href="#activate-your-environment" title="Permalink to this heading">#</a></h3>
 <p>Activate your virtual environment for building the <a class="reference external" href="https://jupyterbook.org">Jupyter Book</a> in the <code class="docutils literal notranslate"><span class="pre">royce-data-handbook</span></code> directory that will be cloned to your chosen directory.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">your</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">name</span>
 </pre></div>
 </div>
 </section>
 <section id="check-the-environment-is-working">
-<h3>Check the environment is working<a class="headerlink" href="#check-the-environment-is-working" title="Permalink to this headline">#</a></h3>
+<h3>Check the environment is working<a class="headerlink" href="#check-the-environment-is-working" title="Permalink to this heading">#</a></h3>
 <p>Type in the following to check that your environment is working as it should:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
 </pre></div>
@@ -716,7 +481,7 @@ Run the following to clone the repository locally:</p>
 <p>You should get the Jupyter Book help menu</p>
 </section>
 <section id="start-working-on-your-branch">
-<h3>Start working on your branch<a class="headerlink" href="#start-working-on-your-branch" title="Permalink to this headline">#</a></h3>
+<h3>Start working on your branch<a class="headerlink" href="#start-working-on-your-branch" title="Permalink to this heading">#</a></h3>
 <p>Create a new branch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
@@ -727,18 +492,18 @@ Run the following to clone the repository locally:</p>
 </div>
 </section>
 <section id="create-files">
-<h3>Create files<a class="headerlink" href="#create-files" title="Permalink to this headline">#</a></h3>
+<h3>Create files<a class="headerlink" href="#create-files" title="Permalink to this heading">#</a></h3>
 <p>Create the markdown file (<code class="docutils literal notranslate"><span class="pre">your-filename.md</span></code>)that will contain your article in the relevant folder, or make a new folder if you are defining a new section.</p>
 </section>
 <section id="index-the-new-files">
-<h3>Index the new files<a class="headerlink" href="#index-the-new-files" title="Permalink to this headline">#</a></h3>
+<h3>Index the new files<a class="headerlink" href="#index-the-new-files" title="Permalink to this heading">#</a></h3>
 <p>To index the new files you will have to add them and their relative path to the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file.
 Our table of contents follows a parts → chapters → sections hierarchical structure.</p>
 <img alt="../_images/tableofcontents.jpg" src="../_images/tableofcontents.jpg" />
 <p>A chapter can be a standalone page or comprise of sub-pages like with the <em><strong>Team Tutorials</strong></em> part, having a chapter defined in the file <code class="docutils literal notranslate"><span class="pre">work-on-this-book.md</span></code>, comprised of the sections <code class="docutils literal notranslate"><span class="pre">notes-on-jb.md</span></code>, <code class="docutils literal notranslate"><span class="pre">how-to-install-jb.md</span></code> and <code class="docutils literal notranslate"><span class="pre">contribution-workflow.md</span></code> (the file that is page is written in!)<br />
 You can find out more in the official Jupyter Book documentation, <a class="reference external" href="https://jupyterbook.org/customize/toc.html">here</a>.<br />
 <strong>Let’s define a file in the Research Data Management part</strong></p>
-<ol>
+<ol class="arabic">
 <li><p>Open the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file - this is in the <code class="docutils literal notranslate"><span class="pre">handbook/</span></code> folder</p></li>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">caption:</span> <span class="pre">Research</span> <span class="pre">Data</span> <span class="pre">Management</span></code></p></li>
 <li><p>Scroll to where the new <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">caption</span></code> defining the next part is.</p></li>
@@ -761,7 +526,7 @@ You can find out more in the official Jupyter Book documentation, <a class="refe
 </ol>
 </section>
 <section id="build-the-book">
-<h3>Build the book<a class="headerlink" href="#build-the-book" title="Permalink to this headline">#</a></h3>
+<h3>Build the book<a class="headerlink" href="#build-the-book" title="Permalink to this heading">#</a></h3>
 <p>Navigate to the directory where our <code class="docutils literal notranslate"><span class="pre">handbook/</span></code> folder is located and type the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">handbook</span><span class="o">/</span>
 </pre></div>
@@ -770,7 +535,7 @@ You can find out more in the official Jupyter Book documentation, <a class="refe
 </section>
 </section>
 <section id="update-live-handbook">
-<h2>Update live handbook<a class="headerlink" href="#update-live-handbook" title="Permalink to this headline">#</a></h2>
+<h2>Update live handbook<a class="headerlink" href="#update-live-handbook" title="Permalink to this heading">#</a></h2>
 <p>To check which files are tracked or untracked (usually new files in the root directory) in your git tree, type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
@@ -778,9 +543,9 @@ You can find out more in the official Jupyter Book documentation, <a class="refe
 <p>You will get a terminal output like so:</p>
 <img alt="../_images/git-track.jpg" src="../_images/git-track.jpg" />
 <section id="add-files-to-the-git-tree-and-commit-your-changes">
-<h3>Add files to the git tree and commit your changes<a class="headerlink" href="#add-files-to-the-git-tree-and-commit-your-changes" title="Permalink to this headline">#</a></h3>
+<h3>Add files to the git tree and commit your changes<a class="headerlink" href="#add-files-to-the-git-tree-and-commit-your-changes" title="Permalink to this heading">#</a></h3>
 <p>We will follow these basic rules for adding files and committing changes to the git repository:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>If you have added a new file add and commit individually</p></li>
 <li><p>If you have changed a file add and commit individually</p></li>
 <li><p>If a bulk of files such as the build files have been generated then add them and commit them in one go</p></li>
@@ -799,7 +564,7 @@ You can find out more in the official Jupyter Book documentation, <a class="refe
 <p>The commit message is important for your reviewer to understand what you did, so try to keep it short but descriptive</p>
 </div>
 <section id="add-and-commit-a-bulk-of-files">
-<h4>Add and commit a bulk of files<a class="headerlink" href="#add-and-commit-a-bulk-of-files" title="Permalink to this headline">#</a></h4>
+<h4>Add and commit a bulk of files<a class="headerlink" href="#add-and-commit-a-bulk-of-files" title="Permalink to this heading">#</a></h4>
 <p>Once you have added and committed your individual files, check that you have not left out anything important by checking what has been tracked and not.<br />
 Type the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
@@ -817,7 +582,7 @@ To bulk add files, type:</p>
 </section>
 </section>
 <section id="push-changes-to-the-repository">
-<h3>Push changes to the repository<a class="headerlink" href="#push-changes-to-the-repository" title="Permalink to this headline">#</a></h3>
+<h3>Push changes to the repository<a class="headerlink" href="#push-changes-to-the-repository" title="Permalink to this heading">#</a></h3>
 <p>To push changes to the remote repository on GitHub, type the following (make sure you are in your branch):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
 </pre></div>
@@ -828,7 +593,7 @@ To bulk add files, type:</p>
 </div>
 </section>
 <section id="create-a-pull-request-on-the-repository">
-<h3>Create a pull request on the repository<a class="headerlink" href="#create-a-pull-request-on-the-repository" title="Permalink to this headline">#</a></h3>
+<h3>Create a pull request on the repository<a class="headerlink" href="#create-a-pull-request-on-the-repository" title="Permalink to this heading">#</a></h3>
 <p>Now that you pushed your branch to the remote repository head to the repository URL, <a class="reference external" href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook"></a>. You will see a message like,</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">has</span> <span class="n">recent</span> <span class="n">pushes</span> <span class="o">...</span>
 </pre></div>
@@ -838,17 +603,17 @@ You will be redirected to the <strong>Open a pull request</strong> page. Give it
 <img alt="../_images/pull-request.jpg" src="../_images/pull-request.jpg" />
 </section>
 <section id="check-the-book-builds-on-our-github-repository">
-<h3>Check the book builds on our GitHub repository<a class="headerlink" href="#check-the-book-builds-on-our-github-repository" title="Permalink to this headline">#</a></h3>
+<h3>Check the book builds on our GitHub repository<a class="headerlink" href="#check-the-book-builds-on-our-github-repository" title="Permalink to this heading">#</a></h3>
 <p>We have set up a workflow that builds the contents of the book on the repository side to check that everything works well before the handbook on your branch is merged, built and deployed to GitHub Pages.
 Check that it does build on the remote repository:</p>
 <img alt="../_images/pr-check.jpg" src="../_images/pr-check.jpg" />
 </section>
 </section>
 <section id="update-your-local-repo">
-<h2>Update your local repo<a class="headerlink" href="#update-your-local-repo" title="Permalink to this headline">#</a></h2>
+<h2>Update your local repo<a class="headerlink" href="#update-your-local-repo" title="Permalink to this heading">#</a></h2>
 <p>Once your branch has been merged move to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and do the fetch-pull-delete procedure we will explain below.</p>
 <section id="git-fetch-pull">
-<h3>Git fetch-pull<a class="headerlink" href="#git-fetch-pull" title="Permalink to this headline">#</a></h3>
+<h3>Git fetch-pull<a class="headerlink" href="#git-fetch-pull" title="Permalink to this heading">#</a></h3>
 <p>Move to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
 </pre></div>
@@ -863,7 +628,7 @@ Check that it does build on the remote repository:</p>
 </div>
 </section>
 <section id="optional-delete-your-branch">
-<h3>(Optional) Delete your branch<a class="headerlink" href="#optional-delete-your-branch" title="Permalink to this headline">#</a></h3>
+<h3>(Optional) Delete your branch<a class="headerlink" href="#optional-delete-your-branch" title="Permalink to this heading">#</a></h3>
 <p>To keep everything tidy we recommend that you delete your local branch that was just merged to the remote repository. We will be doing the same on the remote side so that only the <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branches exist on the remote repository.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
@@ -892,51 +657,133 @@ Check that it does build on the remote repository:</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="how-to-install-jb.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Get started with Jupyter Book</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="how-to-install-jb.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Get started with Jupyter Book</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../misc_org/appointments.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../misc_org/appointments.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Consult with us</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Data Curators @ Royce<br/>
-  
-      &copy; Copyright 2022.<br/>
-    Last updated on 24 Feb 2023.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-hierarchy-primer">File hierarchy primer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-on-this-handbook-locally">Work on this handbook locally</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-repository">Clone the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-your-environment">Activate your environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-environment-is-working">Check the environment is working</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-working-on-your-branch">Start working on your branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-files">Create files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-the-new-files">Index the new files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-book">Build the book</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-live-handbook">Update live handbook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-files-to-the-git-tree-and-commit-your-changes">Add files to the git tree and commit your changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-and-commit-a-bulk-of-files">Add and commit a bulk of files</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-changes-to-the-repository">Push changes to the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pull-request-on-the-repository">Create a pull request on the repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-book-builds-on-our-github-repository">Check the book builds on our GitHub repository</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-your-local-repo">Update your local repo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-fetch-pull">Git fetch-pull</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-delete-your-branch">(Optional) Delete your branch</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Data Curators @ Royce
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 05 Jul 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
