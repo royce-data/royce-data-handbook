@@ -11,7 +11,7 @@ A research data management plan (DMP) is a living document, i.e. continually edi
 ```{figure} /images/rdmp-guide/elixir_rdmkit_lifecycle.svg
 ---
 align: center
-figwidth: 400px
+figwidth: 350px
 name: fig-rdmlifecycle
 ---
 The research data lifecycle as illustrated in the ELIXIR RDMkit
@@ -98,11 +98,9 @@ A data management plan outlines the research data lifecycle **before** the data 
 
 The [Turing Way Handbook](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#what-is-data) defines data as
 
-```{epigraph}
-Data are objects that you use and produce during your research life cycle, encompassing datasets, software, code, workflow, models, figures, tables, images and videos, interviews, articles. Data are your research asset.
-
--- The Turing Way Community
-```
+>
+> Data are objects that you use and produce during your research life cycle, encompassing datasets, software, code, workflow, models, figures, tables, images and videos, interviews, articles. Data are your research asset.
+>
 
 for materials science and engineering we might want to expand this definition, specifically when it comes to physical data, and include materials and samples as data.
 
@@ -124,7 +122,7 @@ for materials science and engineering we might want to expand this definition, s
 ```{figure} /images/rdmp-guide/rdmp_update_workflow.png
 ---
 align: center
-figwidth: 400px
+figwidth: 350px
 name: fig-rdmpupdate
 ---
 When to write or update your data management plan
