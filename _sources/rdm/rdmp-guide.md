@@ -98,9 +98,11 @@ A data management plan outlines the research data lifecycle **before** the data 
 
 The [Turing Way Handbook](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#what-is-data) defines data as
 
->
-> Data are objects that you use and produce during your research life cycle, encompassing datasets, software, code, workflow, models, figures, tables, images and videos, interviews, articles. Data are your research asset.
->
+```{epigraph}
+Data are objects that you use and produce during your research life cycle, encompassing datasets, software, code, workflow, models, figures, tables, images and videos, interviews, articles. Data are your research asset.
+
+-- The Turing Way Community
+```
 
 for materials science and engineering we might want to expand this definition, specifically when it comes to physical data, and include materials and samples as data.
 
@@ -372,9 +374,9 @@ This training is available open and free online for anyone and not limited to PG
 1. [Research data explained, My Research Essentials](https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data-explained/)
 2. [Research data management, My Research Essentials](https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data/)
 
-## References
+<!-- ## References
 
 ```{bibliography}
 :style: plain
 :filter: docname in docnames
-```
+``` -->
