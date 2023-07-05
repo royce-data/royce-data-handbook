@@ -8,7 +8,7 @@ parts:
   chapters:
   - file: rdm/rdm-intro
   - file: rdm/rdmp-guide
-    title: Reasearch Data Management Plan Writing Guide
+    title: DMP Guide
   - file: rdm/dir-tree
   - file: rdm/git
     sections:
