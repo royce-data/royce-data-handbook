@@ -19,6 +19,12 @@ parts:
   - file: open-research/open-research-resources
     sections:
     - file: open-research/case-for-open-research
+- caption: Ampletracks
+  chapters:
+  - file: ampletracks/ampletracks_landing_page.md
+  - file: ampletracks/ampletracks_guides.md
+    sections:
+    - file: ampletracks/ampletracks_user_guide.md
 - caption: Team Tutorials
   chapters:
   - file: team_tutorials/work-on-this-book
