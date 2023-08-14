@@ -58,6 +58,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js"></script>
+    <script src="https://kit.fontawesome.com/17024ac628.js"></script>
     <script src="../_static/analytics_script.js"></script>
     <script src="../_static/rdmp_mermaid_config.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -159,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdmp-guide.html">Reasearch Data Management Plan Writing Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdmp-guide.html">DMP Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="git-how-to-install-windows.html">Git Bash for Workshops</a></li>
@@ -173,9 +175,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ampletracks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ampletracks/ampletracks_landing_page.html">What is Ampletracks?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ampletracks/ampletracks_guides.html">Ampletracks Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_user_guide.html">Ampletracks User Guide</a></li>
+</ul>
+</li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../team_tutorials/work-on-this-book.html">Get started with this guide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../team_tutorials/work-on-this-book.html">Get started with this guide</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../team_tutorials/notes-on-jb.html">Contributing to this book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../team_tutorials/how-to-install-jb.html">Get started with Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../team_tutorials/contribution-workflow.html">Updating this book</a></li>
@@ -186,7 +196,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
 </ul>
 </li>
@@ -498,7 +508,7 @@ By Data Curators @ Royce
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 05 Jul 2023.
+  Last updated on 14 Aug 2023.
   <br/>
 </p>
   </div>
