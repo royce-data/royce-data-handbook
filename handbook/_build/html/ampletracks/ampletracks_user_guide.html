@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampletracks User Guide &#8212; Data Management Handbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js"></script>
+    <script src="https://kit.fontawesome.com/17024ac628.js"></script>
+    <script src="../_static/analytics_script.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ampletracks/ampletracks_user_guide';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ampletracks Tutorials" href="ampletracks_tutorials.html" />
+    <link rel="prev" title="Ampletracks Guides" href="ampletracks_guides.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_royce_banner.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_royce_banner.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdm-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdmp-guide.html">DMP Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rdm/git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rdm/git-how-to-install-windows.html">Git Bash for Workshops</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Open Research</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/open-research-resources.html">Open Research Articles</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-research/case-for-open-research.html">The Case for Open Research</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ampletracks</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ampletracks_landing_page.html">What is Ampletracks?</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ampletracks_guides.html">Ampletracks Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ampletracks <em>User</em> Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ampletracks_tutorials.html">Ampletracks Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_user_tutorial.html">Ampletracks <em>User</em> Tutorials</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../team_tutorials/work-on-this-book.html">Get started with this guide</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/notes-on-jb.html">Contributing to this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/how-to-install-jb.html">Get started with Jupyter Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/contribution-workflow.html">Updating this book</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Events</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography and Useful Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/bibliography.html">Blibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/useful-interesting.html">Utilities</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/ampletracks/ampletracks_user_guide.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fampletracks/ampletracks_user_guide.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ampletracks/ampletracks_user_guide.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ampletracks User Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-ampletracks">Navigating Ampletracks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-interface">User interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">Logging in</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#records-lists">Records Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-permissions">User permissions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#records">Records</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-records">Sample Records</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sample-record">Creating a Sample Record</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#add-sample-record-details">Add Sample Record details</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sub-sample-record">Creating a ‘Sub’-Sample Record</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-a-record">Editing a Record</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-qr-code-to-a-pre-existing-record">Adding a QR code to a pre-existing record</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-records">Dataset Records</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment-records">Equipment Records</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#record-relationships">Record Relationships</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="section" id="ampletracks-user-guide">
+<h1>Ampletracks <em>User</em> Guide<a class="headerlink" href="#ampletracks-user-guide" title="Permalink to this headline">#</a></h1>
+<p>The following guide relates to using a version of Ampletracks built for the Henry Royce Institute, which is hosted by us, and can be found on the website <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a>. We cannot guarantee that this guide will describe the user experience and explain how to use any externally hosted version of Ampletracks.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#navigating-ampletracks" id="id1">Navigating Ampletracks</a></p>
+<ul>
+<li><p><a class="reference internal" href="#user-interface" id="id2">User interface</a></p>
+<ul>
+<li><p><a class="reference internal" href="#logging-in" id="id3">Logging in</a></p></li>
+<li><p><a class="reference internal" href="#records-lists" id="id4">Records Lists</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#user-permissions" id="id5">User permissions</a></p></li>
+<li><p><a class="reference internal" href="#records" id="id6">Records</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sample-records" id="id7">Sample Records</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-a-sample-record" id="id8">Creating a Sample Record</a></p>
+<ul>
+<li><p><a class="reference internal" href="#add-sample-record-details" id="id9">Add Sample Record details</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#creating-a-sub-sample-record" id="id10">Creating a ‘Sub’-Sample Record</a></p></li>
+<li><p><a class="reference internal" href="#editing-a-record" id="id11">Editing a Record</a></p></li>
+<li><p><a class="reference internal" href="#adding-a-qr-code-to-a-pre-existing-record" id="id12">Adding a QR code to a pre-existing record</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#dataset-records" id="id13">Dataset Records</a></p></li>
+<li><p><a class="reference internal" href="#equipment-records" id="id14">Equipment Records</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#record-relationships" id="id15">Record Relationships</a></p></li>
+</ul>
+</div>
+<div class="section" id="navigating-ampletracks">
+<h2><a class="toc-backref" href="#id1">Navigating Ampletracks</a><a class="headerlink" href="#navigating-ampletracks" title="Permalink to this headline">#</a></h2>
+<div class="section" id="user-interface">
+<h3><a class="toc-backref" href="#id2">User interface</a><a class="headerlink" href="#user-interface" title="Permalink to this headline">#</a></h3>
+<div class="section" id="logging-in">
+<h4><a class="toc-backref" href="#id3">Logging in</a><a class="headerlink" href="#logging-in" title="Permalink to this headline">#</a></h4>
+<p>When connecting to <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> you will be greeted with a log-in page.</p>
+<ol class="arabic simple">
+<li><p>Input your personal log-in details (items 1 and 2 in <a class="reference internal" href="#login-page"><span class="std std-numref">Fig. 3</span></a>)</p></li>
+<li><p>Click Login (item 4 in <a class="reference internal" href="#login-page"><span class="std std-numref">Fig. 3</span></a>)</p></li>
+<li><p>You now have logged in to the <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> app</p></li>
+</ol>
+<div class="figure align-default" id="login-page">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_login_page.png"><img alt="../_images/royce_ampletracks_login_page.png" src="../_images/royce_ampletracks_login_page.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">The Royce Ampletracks Login page.</span><a class="headerlink" href="#login-page" title="Permalink to this image">#</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you will be using <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> frequently, and are on a private machine that only you have access to then we suggest choosing (<i class="fa-sharp fa-regular fa-square-check"></i> item 3 in <a class="reference internal" href="#login-page"><span class="std std-numref">Fig. 3</span></a>) <em>Keep me logged in for next 7 days</em></p>
+</div>
+</div>
+<div class="section" id="records-lists">
+<h4><a class="toc-backref" href="#id4">Records Lists</a><a class="headerlink" href="#records-lists" title="Permalink to this headline">#</a></h4>
+<p>Once you are logged into the <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> app you will be within a Records list. If this is not your first time logging in you will be taken to the Records list of the Record type you were viewing when you were last logged into the <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> app.</p>
+<p>Important areas in <a class="reference internal" href="#records-list"><span class="std std-numref">Fig. 4</span></a> are marked with numbers:</p>
+<ul class="simple">
+<li><p><em><strong>Item 1</strong></em> will direct you to the <em>Records listings</em> (where we currently are)</p></li>
+<li><p><em><strong>Item 2</strong></em> will allow you to switch between <em>Record Types</em> lists via dropdown menu</p></li>
+<li><p><em><strong>Item 3</strong></em> allows you to scan a physical QR code label that is related to a sample. To learn more about QR code labels, please refer to …</p></li>
+<li><p><em><strong>Item 4</strong></em> will take you to the account management page, where you can change account details such as your password, and contact details</p></li>
+<li><p><em><strong>Item 5</strong></em> will allow you to add a new record of the Record list you are currently viewing, please refer to sections <a class="reference internal" href="#create-sample"><span class="std std-ref">Creating a Sample Record</span></a>, <a class="reference internal" href="#create-child-sample"><span class="std std-ref">Creating a ‘Sub’-Sample Record</span></a>, <a class="reference internal" href="#create-dataset"><span class="std std-ref">Dataset Records</span></a> to learn how to create records</p></li>
+</ul>
+<div class="figure align-default" id="records-list">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_UI.png"><img alt="../_images/royce_ampletracks_UI.png" src="../_images/royce_ampletracks_UI.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">The Records list for the <em>Sample Record Type</em> on Royce Ampletracks.</span><a class="headerlink" href="#records-list" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="user-permissions">
+<h2><a class="toc-backref" href="#id5">User permissions</a><a class="headerlink" href="#user-permissions" title="Permalink to this headline">#</a></h2>
+<p>When requesting an account on <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> you will usually be given a ‘<em>User</em>’ role. This grants you usage of all of the basic capabilities <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a>.</p>
+<p>As a ‘<em>User</em>’, you will be able to:</p>
+<ol class="arabic">
+<li><p>Create the Record Types ‘<em>Sample; Dataset; Equipment; Experiment; Analysis Tool; Sub Project</em>’</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Record Types you have been given access to will vary. We consider <em>Sample</em>, <em>Dataset</em> and <em>Equipment</em> to be the essential building block records of a <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a> workflow.</p>
+</div>
+</li>
+<li><p>Edit the Record Types ‘<em>Sample; Dataset; Equipment; Experiment; Analysis Tool; Sub Project</em>’ <strong>owned</strong> by you (i.e. your user)</p></li>
+<li><p>Delete the Record Types ‘<em>Sample; Dataset; Experiment; Analysis Tool; Sub Project</em>’ <strong>owned</strong> by you (i.e. your user)</p></li>
+<li><p>View the Record Types ‘<em>Sample; Dataset; Equipment; Experiment; Analysis Tool; Sub Project</em>’ <strong>owned</strong> by anyone on <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a></p></li>
+<li><p>List the Record Types ‘<em>Sample; Dataset; Equipment; Experiment; Analysis Tool; Sub Project</em>’ <strong>owned</strong> by anyone on <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a></p></li>
+<li><p>Create relationships between Records owned by anyone and records owned by you on <a class="reference external" href="https://royce.ampletracks.com/">royce.ampletracks.com</a></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You might find yourself using some record types more than others. Not every workflow will need to include all record types.</p>
+</div>
+</div>
+<div class="section" id="records">
+<span id="create-records"></span><h2><a class="toc-backref" href="#id6">Records</a><a class="headerlink" href="#records" title="Permalink to this headline">#</a></h2>
+<p>Ampletracks allows the <em>User</em> to create <em>Records</em> to index digital representations of physical and digital objects, and fill them with detailed metadata about those objects.</p>
+<p>Using Ampletracks as a Sample Tracking app relies on 3 types of <em>Records</em> and 3 types of relationships, both intrisic and extrinsic.</p>
+<p><a class="reference internal" href="#ampletracks-simple-workflow"><span class="std std-numref">Fig. 5</span></a> illustrates the 3 types of records with 2 of those extrinsic relationships. The <em>Record</em> <em><strong>Sample</strong></em>, a digital representation adn metadatat record of a physical object, is related to a <em>Record</em> <em><strong>Dataset</strong></em> that is created by acquiring data about that <em><strong>Sample</strong></em> on a piece of measurement equipment. The <em>Record</em> <em><strong>Dataset</strong></em> is related to the <em>Record</em> <em><strong>Equipment</strong></em> that was used to acquire that dataset.</p>
+<div class="figure align-default" id="ampletracks-simple-workflow">
+<a class="reference internal image-reference" href="../_images/ampletracks_workflow_simple.png"><img alt="../_images/ampletracks_workflow_simple.png" src="../_images/ampletracks_workflow_simple.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The basic Ampletracks <em>Record</em> indexing and <em>Record Type</em> to <em>Record Type</em> relationship workflow</span><a class="headerlink" href="#ampletracks-simple-workflow" title="Permalink to this image">#</a></p>
+</div>
+<p><a class="reference internal" href="#ampletracks-simple-workflow-extended"><span class="std std-numref">Fig. 6</span></a> illustrates the same relationships illustrated in <a class="reference internal" href="#ampletracks-simple-workflow"><span class="std std-numref">Fig. 5</span></a> with the intrinsic <em>Record</em> to <em>Child Record</em> relationship in the <em><strong>Sample</strong></em> <em>Record</em>.</p>
+<div class="figure align-default" id="ampletracks-simple-workflow-extended">
+<a class="reference internal image-reference" href="../_images/ampletracks_workflow_simple_with_children.png"><img alt="../_images/ampletracks_workflow_simple_with_children.png" src="../_images/ampletracks_workflow_simple_with_children.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">The basic Ampletracks workflow, with the intrinsic <em>Record</em> to <em>Child Record</em> relationship</span><a class="headerlink" href="#ampletracks-simple-workflow-extended" title="Permalink to this image">#</a></p>
+</div>
+<div class="section" id="sample-records">
+<h3><a class="toc-backref" href="#id7">Sample Records</a><a class="headerlink" href="#sample-records" title="Permalink to this headline">#</a></h3>
+<p>Sample records are digital representations of physical objects. These physical objects are laboratory samples, be it metals, batches of powder, coatings on substrates, or chemicals. Ampletracks has an inbuilt intrinsic <em>Record</em> to <em>Child Record</em> relationship, which can be utilised to relate ‘master’ samples, such as a large batch of power, or a large ingot of metal to ‘sub-samples’ such as a decant of powder taken for a specific measurement, or an ingot cutoff, respectively. This allows a <em>User</em> to keep a registry of the history of everything that has been ‘done’ to a sample, whether synthesized in lab, or received from a research partner.</p>
+<div class="section" id="creating-a-sample-record">
+<span id="create-sample"></span><h4><a class="toc-backref" href="#id8">Creating a Sample Record</a><a class="headerlink" href="#creating-a-sample-record" title="Permalink to this headline">#</a></h4>
+<p>To create a <em><strong>Sample</strong></em> <em>Record</em>:</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Records</em> listing, <strong>item 1</strong> in <a class="reference internal" href="#records-list"><span class="std std-numref">Fig. 4</span></a></p></li>
+<li><p>Hover over the dropdown menu in <strong>item 2</strong> of <a class="reference internal" href="#records-list"><span class="std std-numref">Fig. 4</span></a></p></li>
+<li><p>Choose ‘Sample’, as illustrated in <a class="reference internal" href="#record-switch"><span class="std std-numref">Fig. 7</span></a></p></li>
+<li><p>Click on the ‘Add Sample’ button, <strong>item 5</strong> in <a class="reference internal" href="#records-list"><span class="std std-numref">Fig. 4</span></a></p></li>
+</ol>
+<div class="figure align-default" id="record-switch">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_record_switch.png"><img alt="../_images/royce_ampletracks_record_switch.png" src="../_images/royce_ampletracks_record_switch.png" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The Ampletracks <em>Record</em> listing switch menu</span><a class="headerlink" href="#record-switch" title="Permalink to this image">#</a></p>
+</div>
+<div class="section" id="add-sample-record-details">
+<span id="add-sample-details"></span><h5><a class="toc-backref" href="#id9">Add Sample Record details</a><a class="headerlink" href="#add-sample-record-details" title="Permalink to this headline">#</a></h5>
+<p>At the top of the <strong>Sample</strong> <em>Record</em> form, shown in <a class="reference internal" href="#sample-form-top"><span class="std std-numref">Fig. 8</span></a>, you will see some general fields inbuilt into each <em>Record Type</em>.</p>
+<div class="figure align-default" id="sample-form-top">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_sample_form_top.png"><img alt="../_images/royce_ampletracks_sample_form_top.png" src="../_images/royce_ampletracks_sample_form_top.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The Ampletracks <em><strong>Sample</strong></em> <em>Record</em> form Top</span><a class="headerlink" href="#sample-form-top" title="Permalink to this image">#</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Sample</strong> <em>Record</em> form is quite extensive, although not all fields are mandatory, as it is we will not be able to show the full form on this page.</p>
+</div>
+<ul>
+<li><p><strong>Item 1</strong> allows you to save the record as you go, save and close, or back out of record creation, or editing</p></li>
+<li><p><strong>Item</strong> 2 allows you to add relationships to pre-existing <em>Records</em>, or create a new <em>Record</em> based on the <em>Record Type</em> of the <em>Relationship</em> you are wanting to specify</p></li>
+<li><p><strong>Item 3</strong> is where the owner is specified, this is by Default, the <em>User</em> creating the <em>Record</em></p></li>
+<li><p><strong>Item 4</strong> is where the <em>Project</em> (or Grant) a <em>User</em> belongs to is specified</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>A <em>User</em> can belong to several <em>Projects</em>. Take care to specify the correct <em>Project</em> a <em>Record</em> belongs to.</p>
+</div>
+</li>
+<li><p><strong>Item 5</strong> is where a <em>User</em> can add, remove, or create new QR code labels. Each label has a unique number that identifies it, which is distinct and not related to the <em>Record</em> ID. You can see this difference in <strong>item 3</strong> of <a class="reference internal" href="#add-child-sample"><span class="std std-numref">Fig. 10</span></a> We will look at QR codes in Section <a class="reference internal" href="#add-qr"><span class="std std-ref">Adding a QR code to a pre-existing record</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#sample-form-extended"><span class="std std-numref">Fig. 9</span></a> shows most of the <strong>Sample</strong> <em>Record</em> form that a <em>User</em> would fill in with details about the sample</p>
+<div class="figure align-default" id="sample-form-extended">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_sample_form_extended.png"><img alt="../_images/royce_ampletracks_sample_form_extended.png" src="../_images/royce_ampletracks_sample_form_extended.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The Ampletracks <em><strong>Sample</strong></em> <em>Record</em> form</span><a class="headerlink" href="#sample-form-extended" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="creating-a-sub-sample-record">
+<span id="create-child-sample"></span><h4><a class="toc-backref" href="#id10">Creating a ‘Sub’-Sample Record</a><a class="headerlink" href="#creating-a-sub-sample-record" title="Permalink to this headline">#</a></h4>
+<p>The following can be referred to when creating Sub-<em>Records</em> (<em>Child Records</em>) of any <em>Record Type</em>.</p>
+<div class="figure align-default" id="add-child-sample">
+<a class="reference internal image-reference" href="../_images/royce_ampletracks_add_child_cog.png"><img alt="../_images/royce_ampletracks_add_child_cog.png" src="../_images/royce_ampletracks_add_child_cog.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">The Ampletracks <strong>Sample</strong> <em>Record</em> form</span><a class="headerlink" href="#add-child-sample" title="Permalink to this image">#</a></p>
+</div>
+<p>To create a <strong>Sub-Sample</strong> (<em>Child</em>) <em>Record</em>, you must first create a <strong>Sample</strong> <em>Record</em>. Following that,</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Record</em> listing of the <em>Record Type</em> of interest</p></li>
+<li><p>Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the <em>Record</em> of interest, illustrated in <strong>item 1</strong> of <a class="reference internal" href="#add-child-sample"><span class="std std-numref">Fig. 10</span></a></p></li>
+<li><p>You will then see a hover menu, <strong>item 2</strong> of <a class="reference internal" href="#add-child-sample"><span class="std std-numref">Fig. 10</span></a></p></li>
+<li><p>Click on ‘Add Child’</p></li>
+<li><p>You will be redirected to a <em>Child Record</em> form, with some inherited fields already filled in</p></li>
+</ol>
+</div>
+<div class="section" id="editing-a-record">
+<span id="edit-record"></span><h4><a class="toc-backref" href="#id11">Editing a Record</a><a class="headerlink" href="#editing-a-record" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="adding-a-qr-code-to-a-pre-existing-record">
+<span id="add-qr"></span><h4><a class="toc-backref" href="#id12">Adding a QR code to a pre-existing record</a><a class="headerlink" href="#adding-a-qr-code-to-a-pre-existing-record" title="Permalink to this headline">#</a></h4>
+</div>
+</div>
+<div class="section" id="dataset-records">
+<span id="create-dataset"></span><h3><a class="toc-backref" href="#id13">Dataset Records</a><a class="headerlink" href="#dataset-records" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="equipment-records">
+<span id="create-equipment"></span><h3><a class="toc-backref" href="#id14">Equipment Records</a><a class="headerlink" href="#equipment-records" title="Permalink to this headline">#</a></h3>
+</div>
+</div>
+<div class="section" id="record-relationships">
+<h2><a class="toc-backref" href="#id15">Record Relationships</a><a class="headerlink" href="#record-relationships" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ampletracks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ampletracks_guides.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ampletracks Guides</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ampletracks_tutorials.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ampletracks Tutorials</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-ampletracks">Navigating Ampletracks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-interface">User interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-in">Logging in</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#records-lists">Records Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-permissions">User permissions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#records">Records</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-records">Sample Records</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sample-record">Creating a Sample Record</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#add-sample-record-details">Add Sample Record details</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sub-sample-record">Creating a ‘Sub’-Sample Record</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-a-record">Editing a Record</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-qr-code-to-a-pre-existing-record">Adding a QR code to a pre-existing record</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-records">Dataset Records</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment-records">Equipment Records</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#record-relationships">Record Relationships</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Data Curators @ Royce
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 15 Aug 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

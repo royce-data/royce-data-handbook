@@ -13,6 +13,7 @@ parse:
     executable_books: '[The Executable Books Project](https://executablebooks.org/)'
     royce_institute: '[Royce Institute](https://royce.ac.uk)'
     data_curators: '[Data Curation Team](https://royce.ac.uk/data-curation)'
+    royce_ampletracks: '[royce.ampletracks.com](https://royce.ampletracks.com/)'
   myst_enable_extensions:
     - substitution
     - colon_fence
@@ -60,6 +61,7 @@ sphinx:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     - https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
     - https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js
-    # - https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js
+    - https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js
+    - https://kit.fontawesome.com/17024ac628.js
     # - rdmp_mermaid_config.js
     html_last_updated_fmt: "%d %b %Y"

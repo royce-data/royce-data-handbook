@@ -1,0 +1,4 @@
+# Ampletracks Guides
+
+:::{tableofcontents}
+:::
