@@ -160,7 +160,13 @@ The following can be referred to when creating Sub-*Records* (*Child Records*) o
 The Ampletracks **Sample** *Record* form
 :::
 
-To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample** *Record*. Following that,
+To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample** *Record*. Following that, there are **two ways** to create a *Child Record*, creating it from the *Record* listing or from within the *Record*.
+
+:::{hint}
+You can create a *Child Record*  for any *Record* within a *Record Family Tree*, i.e. you can create a *Child Record* of a *Child Record*.
+:::
+
+##### Create a *Child* from a *Record* listing
 
 1. Navigate to the *Record* listing of the *Record Type* of interest
 2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
@@ -168,18 +174,90 @@ To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample*
 4. Click on 'Add Child'
 5. You will be redirected to a *Child Record* form, with some inherited fields already filled in
 
+##### Create a *Child* from within the *Parent record*
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_child_from_record.png
+:name: add-child-from-record
+:width: 90%
+
+Adding a Child from *Record* View
+:::
+
+
 (edit-record)=
 #### Editing a Record
 
+:::{figure} ../images/ampletracks/royce_ampletracks_edit_record_mode.png
+:name: edit-record-mode
+:width: 90%
 
+The Ampletracks Edit *Record* mode
+:::
 
-(add-qr)=
-#### Adding a QR code to a pre-existing record
+You can enter the *Record* editing mode for any *Record* that your *User* owns (this excludes **Equipment** *Records* where you need to have elevated permissions to edit beyond creating them).
+
+There are **two ways** to access the *Record* editing mode. Either from the *Records* listing or from within the *Record*.
+
+##### Access edit mode from the *Record* listing
+
+1. Navigate to the *Record* listing of the *Record Type* of interest
+2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
+3. You will then see a hover menu, **item 2** of {numref}`add-child-sample`
+4. Click on 'Edit'
+5. You will be redirected to the Edit *Record* form, shown in {numref}`edit-record-mode`
+6. To save changes whilst editing click ***Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
+
+##### Access edit mode from the *Record*
+
+1. Navigate to the *Record* listing of the *Record Type* of interest
+2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
+3. You will then see a hover menu, **item 2** of {numref}`add-child-sample`
+4. Click on 'View'
+5. When in *Record* view you will see an interface like in {numref}`add-child-from-record`
+6. Press on **item 1**, from {numref}`add-child-from-record`, *Edit*, to enter *Record* editing mode
+7. To save changes whilst editing click ***Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
 
 (create_dataset)=
-### Dataset Records
+### Dataset *Records*
 
 (create_equipment)=
-### Equipment Records
+### Equipment *Records*
+
+(add-qr)=
+### Adding a QR code to a *Record*
+
+There are several ways to associate a QR code with a *Record*.
+
+#### Adding a *reserved* QR code
+
+#### Creating a QR code within the *Record*
+
+#### Scanning a QR code to Create a *Record*
 
 ## Record Relationships
+
+There are a number of relationships specified between *Record Types* on {{ royce_ampletracks }}. These *Record Type* to *Record Type* relationships are extrinsic, as opposed to the intrinsic *Parent* <i class="fa-sharp fa-solid fa-arrow-right"></i> *Child* relationships that can be created within a *Record*.
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_relationship.png
+:name: add-relationship
+:width: 90%
+
+Create *Relationships* between *Records*
+:::
+
+To add a *Relationship* between *Records* of different *Record* type,
+
+1. Navigate to the *Record* you are interested in and enter **Edit** mode
+2. Choose the '--- Add new relationship ---' dropdown, **item 1** in {numref}`add-relationship`
+3. Choose the relationship type (these are specific to other *Record Types*), **item 2** in {numref}`add-relationship`
+4. Start typing in the name of the *Record* you want to relate to the *Record* in **Edit** mode, {numref}`add-relationship-dropdown`
+5. You will then see a number of *Records* listed as `ID:Name-of-Record Name-of-Owner`
+6. Choose the *Record* you want to relate to the *Record* in **Edit** mode or to Create a new *Record*
+7. **Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_relationship_dropdown.png
+:name: add-relationship-dropdown
+:width: 90%
+
+Various *Records* for *Relationship* option
+:::
