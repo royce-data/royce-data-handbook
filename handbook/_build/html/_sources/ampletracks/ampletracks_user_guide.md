@@ -4,6 +4,7 @@ The following guide relates to using a version of Ampletracks built for the Henr
 
 :::{contents}
 :local:
+:depth: 4
 :::
 
 ## Navigating Ampletracks
@@ -160,7 +161,13 @@ The following can be referred to when creating Sub-*Records* (*Child Records*) o
 The Ampletracks **Sample** *Record* form
 :::
 
-To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample** *Record*. Following that,
+To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample** *Record*. Following that, there are **two ways** to create a *Child Record*, creating it from the *Record* listing or from within the *Record*.
+
+:::{hint}
+You can create a *Child Record*  for any *Record* within a *Record Family Tree*, i.e. you can create a *Child Record* of a *Child Record*.
+:::
+
+##### Create a *Child* from a *Record* listing
 
 1. Navigate to the *Record* listing of the *Record Type* of interest
 2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
@@ -168,18 +175,288 @@ To create a **Sub-Sample** (*Child*) *Record*, you must first create a **Sample*
 4. Click on 'Add Child'
 5. You will be redirected to a *Child Record* form, with some inherited fields already filled in
 
+##### Create a *Child* from within the *Parent record*
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_child_from_record.png
+:name: add-child-from-record
+:width: 90%
+
+Adding a Child from *Record* View
+:::
+
+
 (edit-record)=
 #### Editing a Record
 
+:::{figure} ../images/ampletracks/royce_ampletracks_edit_record_mode.png
+:name: edit-record-mode
+:width: 90%
 
+The Ampletracks Edit *Record* mode
+:::
 
-(add-qr)=
-#### Adding a QR code to a pre-existing record
+You can enter the *Record* editing mode for any *Record* that your *User* owns (this excludes **Equipment** *Records* where you need to have elevated permissions to edit beyond creating them).
+
+There are **two ways** to access the *Record* editing mode. Either from the *Records* listing or from within the *Record*.
+
+##### Access edit mode from the *Record* listing
+
+1. Navigate to the *Record* listing of the *Record Type* of interest
+2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
+3. You will then see a hover menu, **item 2** of {numref}`add-child-sample`
+4. Click on 'Edit'
+5. You will be redirected to the Edit *Record* form, shown in {numref}`edit-record-mode`
+6. To save changes whilst editing click ***Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
+
+##### Access edit mode from the *Record*
+
+1. Navigate to the *Record* listing of the *Record Type* of interest
+2. Hover over the cog (<i class="bi bi-gear-wide"></i>) icon of the *Record* of interest, illustrated in **item 1** of {numref}`add-child-sample`
+3. You will then see a hover menu, **item 2** of {numref}`add-child-sample`
+4. Click on 'View'
+5. When in *Record* view you will see an interface like in {numref}`add-child-from-record`
+6. Press on **item 1**, from {numref}`add-child-from-record`, *Edit*, to enter *Record* editing mode
+7. To save changes whilst editing click ***Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
 
 (create_dataset)=
-### Dataset Records
+### Dataset *Records*
 
 (create_equipment)=
-### Equipment Records
+### Equipment *Records*
+
+(add-qr)=
+### Adding a QR code to a *Record*
+
+There are several ways to associate a QR code with a *Record*. In most cases, it is simpler to associate a *reserved* QR code to a *Record*, rather than generate one within the *Record*. Nevertheless, we will show you how to associate QR code labels, and generate them within the *Record*.
+
+(add-reserved-qr)=
+#### Adding a *reserved* QR code
+
+A *reserved* QR code is one where a sheet of several QR code labels, that are not yet associated with *Records*, has been printed out.
+
+Usually, we add QR code labels to physical *Records*, i.e. a physical *Sample*.
+
+Upon receipt of your QR code label sheet, you will have 56 *reserved* QR code labels in your possession. A digital representation of part of such a sheet of label is presented in {numref}`qr-labels-demo`. **Item 1** shows where the QR code ID would be. For **item 1** we will be ignoring preceding zeroes, i.e. if our QR code label had ID `0000472`, the label ID number is `472`. **Item 2** is the QR code that when scanned will redirect you to the *Record* associated with the QR code.
+
+:::{figure} ../images/ampletracks/demo_ampletracks_example_qr_code_sheet.png
+:name: qr-labels-demo
+:width: 90%
+
+Example QR code labels
+:::
+
+:::{attention}
+You can obtain a sheet of *reserved* QR codes from your {{ royce_ampletracks }} administrator.
+:::
+
+To associate a QR label with your *Record*:
+
+1. Navigate to the listing of the *Record Type*
+2. Enter *Record* **edit** mode in any way described in the {ref}`edit-record` section
+3. Navigate to the **Labels** box, as shown in {numref}`labels-box`
+4. Type your QR code ID number into the text box
+5. Either:
+   1. Click Save
+   2. Or,
+      1. Click out of the text box
+      2. A <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span> button will appear
+      3. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span>Submit</span> button
+
+:::{figure} ../images/ampletracks/royce_ampletracks_labels_box.png
+:name: labels-box
+:width: 90%
+
+Example QR code labels
+:::
+
+#### Adding a **new** *reserved* QR code or **remove** QR code
+
+There are certain circumstances that would require you to associate a new *reserved* QR code label to a *Record. For instance, the original physical QR code label getting damaged and not being able to be properly read by a scanner.
+
+In this case, the procedure is the same as the one described in section {ref}`add-reserved-qr`.
+
+Following that, the *User* will decide whether to disassociate a QR label ID with the *Record*. The process of disassociating a QR label ID with a *Record* is as follows,
+
+1. Navigate to the listing of the *Record Type*
+2. Enter *Record* **edit** mode in any way described in the {ref}`edit-record` section
+3. Navigate to the **Labels** box, as shown in {numref}`labels-box`
+4. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Remove label</span> button
+5. A text box will appear, as shown in {numref}`remove-label`
+6. Type the QR label ID number you wish to remove from the *Record* in the text box
+7. Click <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span>
+
+:::{figure} ../images/ampletracks/royce_ampletracks_remove_label.png
+:name: remove-label
+:width: 90%
+
+Example QR code labels
+:::
+
+#### Scanning a *reserved* QR code to Create a *Record*
+
+:::{figure} ../images/ampletracks/royce_ampletracks_scan_label.png
+:name: scan-label
+:width: 70%
+
+The 'Scan Label' button
+:::
+
+**SECTION UNDER CONSTRUCTION**
+
+:::{important}
+The following instructions will work on both Desktop and Mobile Phone browsers.
+:::
+
+Within the main user interface of {{ royce_ampletracks }},
+
+1. Ensure that you are logged in to Ampletracks on your browser of choice.
+2. Either,
+   1. Click on 'Scan Label' on the top right menu bar, {numref}`scan-label`
+      1. You will be redirected to the 'Label Scanner' page, {numref}`scan-label-page`
+      2. You will need to give your browser permission to use the camera
+      3. Place the label in view of the Camera
+   2. Scan the label with a QR scanner
+      1. ...
+
+:::{figure} ../images/ampletracks/ampletracks_label_scanner_pc.png
+:name: scan-label-page
+:width: 90%
+
+The 'Label Scanner' page
+:::
+
+#### Creating a QR code within the *Record*
+
+:::{warning}
+This is not recommended unless you have a dedicated label printer and configurer.
+:::
 
 ## Record Relationships
+
+### Relationships between *Record Types*
+
+We have specified a number of *Record Type* <i class="bi bi-arrow-left-right" style="stroke-width:4;"></i> *Record Type* relationships in {{ royce_ampletracks }}. Please see {numref}`royce-ampletracks-relationships` for these *Relationships*.
+
+:::{list-table} *Relationships* in {{ royce_ampletracks }}
+:header-rows: 1
+:name: royce-ampletracks-relationships
+
+* - ***Record Type***
+  - **relates to**
+  - ***Record Type***
+  - **Notes**
+
+
+* - Sample
+  - Belongs to
+  - Sub project
+  -
+
+* - 
+  - Was produced in
+  - Experiment
+  -
+
+* - 
+  - was measured using
+  - Equipment
+  - 
+
+* - 
+  - Gave rise to
+  - Dataset
+  - 
+
+* - Equipment
+  - Used on
+  - Sample
+  - for data acquisition or measurements
+
+* - 
+  - Used to produce
+  - Sample
+  - for sample creation or synthesis
+
+* -
+  - Produced
+  - Dataset
+  -
+
+* -
+  - Was used in
+  - Experiment
+  -
+
+* - Dataset
+  - was produced in the sub project
+  - Sub Project
+  - 
+
+* - 
+  - Was produced using
+  - Equipment
+  - 
+
+* - 
+  - Relates to
+  - Sample
+  - 
+
+* - 
+  - Was produced in
+  - Experiment
+  - 
+
+* - 
+  - was analysed by
+  - Analysis Tool
+  - 
+
+* - Analysis Tool
+  - analysed
+  - Dataset
+  - 
+
+* - Sub project
+  - owns
+  - Sample
+  - 
+
+* - 
+  - produced
+  - Dataset
+  - 
+
+* - 
+  - includes
+  - Experiment
+  - 
+:::
+
+### Create a relationship between two records
+
+There are a number of relationships specified between *Record Types* on {{ royce_ampletracks }}. These *Record Type* to *Record Type* relationships are extrinsic, as opposed to the intrinsic *Parent* <i class="fa-sharp fa-solid fa-arrow-right"></i> *Child* relationships that can be created within a *Record*.
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_relationship.png
+:name: add-relationship
+:width: 90%
+
+Create *Relationships* between *Records*
+:::
+
+To add a *Relationship* between *Records* of different *Record* type,
+
+1. Navigate to the *Record* you are interested in and enter **Edit** mode
+2. Choose the '--- Add new relationship ---' dropdown, **item 1** in {numref}`add-relationship`
+3. Choose the relationship type (these are specific to other *Record Types*), **item 2** in {numref}`add-relationship`
+4. Start typing in the name of the *Record* you want to relate to the *Record* in **Edit** mode, {numref}`add-relationship-dropdown`
+5. You will then see a number of *Records* listed as `ID:Name-of-Record Name-of-Owner`
+6. Choose the *Record* you want to relate to the *Record* in **Edit** mode or to Create a new *Record*
+7. ***Save*** (**item 1** in {numref}`edit-record-mode`), or ***Save \& Close*** (**item2** in {numref}`edit-record-mode`) to exit
+
+:::{figure} ../images/ampletracks/royce_ampletracks_add_relationship_dropdown.png
+:name: add-relationship-dropdown
+:width: 90%
+
+Various *Records* for *Relationship* option
+:::
