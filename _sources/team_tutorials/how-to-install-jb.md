@@ -104,15 +104,16 @@ Download the {{ jupyter_book }} environment by picture below, right-click and se
 3. Next to the menu pane you will see the environments list, at the bottom you will see a menu with environment creating options, click `Import`
    :::{image} ../images/how-to-install-jb/conda-navigator-env.jpg
    :::
-   An [animation](#import-gif) showing step 4-7 can be found below
+   An [animation](import-gif) showing step 4-7 can be found below
 4. Choose to **Import from:** your `Local drive`
-5. Find the location where you saved the [environment](#env-download-loc) you saved from this page
+5. Find the location where you saved the [environment](env-download-loc) you saved from this page
 6. (Optional) Specify a **New environment name:**
 7. Click on **Import** and you are done, you just have to wait for all the packages to download
 (import-gif)=
 ```{image} ../images/install-packages/anaconda-env.gif
 :class: center
 ```
+(check-that-your-environment-works)=
 ### Check that your environment works
 The steps outlined below will help you check if you have installed the environment correctly:
 1. Open up your **Terminal** application, we will use Git Bash to demonstrate
@@ -131,7 +132,7 @@ The steps outlined below will help you check if you have installed the environme
 ## Check that Jupyter Book works
 
 You should have now have successfully installed all you need to get started with Jupyter Book, as outlined above. We will follow a simple exercise to test whether it runs on your machine.  
-Open up a terminal and activate your environment as outlines in steps 1 - 3 [above](#check-that-your-environment-works), and type in the code below, press return (<i class="bi bi-arrow-return-left"></i>) and the Jupyter Book help menu should show appear:
+Open up a terminal and activate your environment as outlines in steps 1 - 3 [above](check-that-your-environment-works), and type in the code below, press return (<i class="bi bi-arrow-return-left"></i>) and the Jupyter Book help menu should show appear:
 ```
 jupyter-book
 ```
