@@ -22,15 +22,15 @@ The `tree` function is usually found pre-installed on command line interfaces (C
 
 You can navigate to the section related to your operating system:
 
-[Windows](#cmd-windows-tree)  
-[Terminal](#terminal-tree)
+[Windows](cmd-windows-tree)  
+[Terminal](terminal-tree)
 
 (cmd-windows-tree)=
 ## Windows Command Line
 
 The tree command installed on the Windows Command Line (cmd) has two basic functionalities:
-1. It can list the folders in the [directory](#cmd-windows-tree-folder)
-2. or the folders and the [files](#cmd-windows-tree-files) in those folders
+1. It can list the folders in the [directory](cmd-windows-tree-folder)
+2. or the folders and the [files](cmd-windows-tree-files) in those folders
 
 (cmd-windows-tree-folder)=
 ### List folders
