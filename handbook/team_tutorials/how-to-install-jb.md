@@ -5,7 +5,7 @@ This guide is supposed to provide start to end instructions on contributing to t
 ## Install Git Bash
 
 ## Get Anaconda
-At the time of writing this, the Jupyter Book package has been tested with [Python 3.7 on Windows 10](https://jupyterbook.org/en/stable/advanced/windows.html)[^note-on-lsw], with the latest Python version being 3.10.  
+At the time of writing this, the Jupyter Book package has been tested with [Python 3.8 on Windows 10](https://jupyterbook.org/en/stable/advanced/windows.html)[^note-on-lsw], with the latest Python version being 3.10.  
 We will use Anaconda as our package manager to specify which version of Python we want to run on.
 
 ### Download Anaconda
