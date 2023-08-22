@@ -59,7 +59,7 @@ To do this:
 
 Now that we have a *Sample* and *Child Sample* *Record*, we can try editing either or both of them.
 
-1. Navigate to the *Revord* **View** mode
+1. Navigate to the *Record* **View** mode
 2. Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button
 3. Modify some of the details about the sample, either the `Additional information` or `Process history`
 4. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save & Close</span> button
@@ -69,10 +69,64 @@ Now that we have a *Sample* and *Child Sample* *Record*, we can try editing eith
 
 ### Add the QR code
 
+For this part you will be handed a QR code sticker. 
+
+1. Grab an object you would like to use as a *Sample*
+2. Inspect the QR code sticker, you will see a number, as shown in {numref}`qr-code-example-fig`
+   :::{figure} ../images/ampletracks/qr_object.jpg
+   :width: 80%
+   :name: qr-code-example-fig
+   An example QR code label sticker.
+   :::
+3. Navigate to the *Sample Record* you want to associate with the QR code label and enter **Edit** mode
+4. Type in the number of your label in the text box underneath the `Assign label:` title, in the **Labels** area. The number in this example is `0001928` or `1928`, as shown in :
+   :::{figure} ../images/ampletracks/demo_ampletracks_labels_area.png
+   :width: 80%
+   :name: labels-area-example
+   The **Labels** area in a *Record*
+   :::
+5. Click out of the area in a non-responsive part of the form, a <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span> button should appear
+6. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span> button
+7. Now click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save & Close</span> button
+8. Your *Record* in now associated with the label
+    
 ### Test out the QR code
+
+(not-logged-in-qr-test)=
+#### Not logged in
+
+***For this part, you willneed to use a device with a camera. We strongly recommend that you open up an incognito window, log out of Ampletracks, or use your phone***
+
+1. Connect to <https://demo.ampletracks.com>
+2. Click on the **Want to scan a label?** area, as shown in {numref}`scan-a-label-login-page`
+   :::{figure} ../images/ampletracks/ampletracks_want_scan_label.png
+   :width: 80%
+   :name: scan-a-label-login-page
+   The **Want to scan a label?** area in the Ampletracks login page on a Desktop browser
+   :::
+3. Grant permission to Ampletracks to access your camera
+4. Plan the label within the camera window
+5. The label will scan and redirect you to a window listing some details about your *Record*, as shown in {numref}`sample-details-public`
+   :::{figure} ../images/ampletracks/demo_ampletracks_public_record.png
+   :width: 80%
+   :name: sample-details-public
+   Public details about a *Sample Record* displayed when scanning a QR code label when not logged into the system
+   ::: 
+
+#### Logged in
+
+Now, feel free to repeat the steps detailed in section {ref}`not-logged-in-qr-test` when logged into Ampletracks.
 
 (create-dataset)=
 ## Create a Dataset record
+
+1. Switch to the *Dataset Records* listing page
+2. Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Dataset</span> button
+3. Follow the form
+4. You will reach a box where you will be prompted to add a link to a local file/directory or a cloud-stored file/directory
+5. Try listing a local directory on your system following this 'link' convention `file:///explicit-full-path-to-directory-or-file`
+6. Fill in all other details for your *Dataset* *Record*
+7. Now click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save & Close</span> button
 
 (relate)=
 ## Create a relationship between the *Sample* and *Dataset* *Records*
@@ -91,5 +145,19 @@ Now that we have a *Sample* and *Child Sample* *Record*, we can try editing eith
 (create-data-child)=
 ## Create an **analysed** Dataset record (*Child*)
 
+1. Navigate to the *Dataset Record* for which you want to create a *Child Record*
+2. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">+ New child record</span> button, which is within the **Descendants** box, below the main *Dataset* menu
+3. Follow the instructions in creating a new *Dataset Record*
+4. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save & Close</span> button
+5. The *Child Dataset Record* is intrinsicly relate to your *Parent Dataset Record*
+
 (relate-analysed-dataset)=
 ## Relate the **analysed** Dataset to the Analysis Tool
+
+1. Navigate to the *Child* *Dataset* *Record* you just created
+2. Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button
+3. Click on the `-- Add new relationship --` drop-down menu, under **Relationships**
+4. Choose `was analysed using` from the dropdown menu
+5. Start typing 'AZtec Crystal Software' (you needn't type the full text in) in the text box that will appear
+6. Choose the *Analysis Tool Record* to relate it to
+7. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save & Close</span> button
