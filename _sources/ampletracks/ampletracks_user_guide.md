@@ -266,7 +266,7 @@ To associate a QR label with your *Record*:
 :name: labels-box
 :width: 90%
 
-Example QR code labels
+The assign label ID box
 :::
 
 #### Adding a **new** *reserved* QR code or **remove** QR code

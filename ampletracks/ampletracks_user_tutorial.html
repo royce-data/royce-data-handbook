@@ -62,8 +62,8 @@
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js"></script>
     <script src="https://kit.fontawesome.com/17024ac628.js"></script>
-    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script src="../_static/analytics_script.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -424,15 +424,21 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sample-record">Create a Sample record</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sub-sample-record">Create a sub-Sample record</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-sample-details">Edit the Sample details</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-action-log">View the action log</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-qr-code-to-a-pre-existing-sample">Add a QR code to a pre-existing sample</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-qr-code">Add the QR code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-out-the-qr-code">Test out the QR code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-out-the-qr-code">Test out the QR code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#not-logged-in">Not logged in</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logged-in">Logged in</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataset-record">Create a Dataset record</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-relationship-between-the-sample-and-dataset-records">Create a relationship between the <em>Sample</em> and <em>Dataset</em> <em>Records</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-analysed-dataset-record-child">Create an <strong>analysed</strong> Dataset record (<em>Child</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-the-analysed-dataset-to-the-analysis-tool">Relate the <strong>analysed</strong> Dataset to the Analysis Tool</a></li>
 </ul>
             </nav>
         </div>
@@ -447,11 +453,11 @@ document.write(`
   <section id="ampletracks-user-tutorials">
 <h1>Ampletracks <em>User</em> Tutorials<a class="headerlink" href="#ampletracks-user-tutorials" title="Permalink to this heading">#</a></h1>
 <p>We will be using <a class="reference external" href="https://demo.ampletracks.com">https://demo.ampletracks.com</a> for this tutorial.</p>
-<p>In this <em>User</em> tutorial we will be creating a record for an <strong>ingot of Steel</strong> received from <strong>Company A</strong>. We want to perform EBSD on the sample so need to section it to smaller pieces. We will be using a <strong>Tescan LC FEG-SEM</strong> to perform EBSD. We will be <strong>storing</strong> the EBSD maps on an area of our <strong>local drive</strong>. We want a way to track this procedure and decide to use Ampletracks to index the samples and EBSD maps, and relate them to each other and the acquisition equipment.</p>
-<p>We will:</p>
+<p>In this <em>User</em> tutorial we will be creating a record for an <strong>ingot of Steel</strong> received from <strong>Company A</strong>. We want to perform EBSD on the sample so need to section it to smaller pieces. We will be using a <strong>TESCAN Mira3 LC FEG-SEM</strong> to perform EBSD with a <strong>Oxford Instruments Symmetry S1</strong> detector. We will be <strong>storing</strong> the EBSD maps on an area of our <strong>local drive</strong>. We will be using <strong>Aztec Crystal Software</strong> to analyse the data. We want a way to track this work and decide to use Ampletracks to index the samples and EBSD maps, and relate them to each other and the acquisition equipment.</p>
+<p>We will (covered in sections <a class="reference internal" href="#create-sample"><span class="std std-ref">Create a Sample record</span></a> - <a class="reference internal" href="#relate"><span class="std std-ref">Create a relationship between the Sample and Dataset Records</span></a>):</p>
 <ol class="arabic">
-<li><p>Create a <em>Sample</em> record for the ingot</p></li>
-<li><p>Create a ‘<em>Sub-Sample</em>’ record from our original <em>Sample</em> record (or <em>Child</em> Sample, as is referred to in Ampletracks) for our sectioned steel ingot</p></li>
+<li><p>Create a <em>Sample</em> <em>Record</em> for the ingot</p></li>
+<li><p>Create a ‘<em>Sub-Sample</em>’ <em>Record</em> from our original <em>Sample</em> <em>Record</em> (or <em>Child</em> Sample, as is referred to in Ampletracks) for our sectioned steel ingot</p></li>
 <li><p>Create a <em>Dataset</em> record to index the EBSD map data, which is stored in a local drive</p></li>
 <li><p>Edit these records to relate them to each other</p>
 <div class="admonition important">
@@ -460,29 +466,174 @@ document.write(`
 </div>
 </li>
 </ol>
+<p>Once we have performed our analysis on the raw data, we want to track that analysis. We will:</p>
+<ol class="arabic simple">
+<li><p>Create a <em>Child</em> <em>Dataset</em> <em>Record</em> from the original <em>Dataset</em> <em>Record</em></p></li>
+<li><p>Relate that <em>Child</em> <em>Record</em> to the <em>Analysis Tool</em> <em>Record</em> for <strong>Aztec Crystal Software</strong></p></li>
+</ol>
+<p>This above is covered in sections <a class="reference internal" href="#create-data-child"><span class="std std-ref">Create an analysed Dataset record (Child)</span></a> and <a class="reference internal" href="#relate-analysed-dataset"><span class="std std-ref">Relate the analysed Dataset to the Analysis Tool</span></a></p>
 <section id="create-a-sample-record">
-<h2>Create a Sample record<a class="headerlink" href="#create-a-sample-record" title="Permalink to this heading">#</a></h2>
+<span id="create-sample"></span><h2>Create a Sample record<a class="headerlink" href="#create-a-sample-record" title="Permalink to this heading">#</a></h2>
+<p>Here, we are creating a <em>Sample</em> <em>Record</em> for the <strong>steel ingot</strong> as received from <strong>Company A</strong>.
+To create the sample record:</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Samples</em> listing</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Sample</span> button</p></li>
+<li><p>Follow the form and fill:</p>
+<ol class="arabic simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">Unique</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">sample</span></code> of your choice</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Material</span></code> details, i.e. the comprising elements</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Description</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">sample</span></code></p></li>
+<li><p>Indicate any <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">history</span></code> before receipt from <strong>Company A</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Location</span></code></p></li>
+<li><p>Indicate that the <em>Sample</em> was received from <strong>Company A</strong> in <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">information</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Contact</span> <span class="pre">name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Contact</span> <span class="pre">email</span></code></p></li>
+</ol>
+</li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button, once you have submitted all your <em>Sample</em> details</p></li>
+</ol>
 <section id="create-a-sub-sample-record">
-<h3>Create a sub-Sample record<a class="headerlink" href="#create-a-sub-sample-record" title="Permalink to this heading">#</a></h3>
+<span id="create-child"></span><h3>Create a sub-Sample record<a class="headerlink" href="#create-a-sub-sample-record" title="Permalink to this heading">#</a></h3>
+<p>We need to create a sub-<em>Sample</em> <em>Record</em> for our sectioned part of the ingot, which we will use for EBSD data acquisition.</p>
+<p>To do this:</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Record</em> of the <em>Sample</em> you just created</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">+ New child record</span> button, which is within the <strong>Descendants</strong> box, below the main <em>Sample</em> menu</p></li>
+<li><p>A new <em>Record</em> form will open up with some inherited features</p>
+<ol class="arabic simple">
+<li><p>Inspect the form before modifying anything</p></li>
+<li><p>Uncheck the <em>inherited</em> box for the field <code class="docutils literal notranslate"><span class="pre">Unique</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">sample</span></code></p></li>
+<li><p>Type out a description in the <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">history</span></code> to indicate that this is a cut-off of a larger ingot and has been prepared for EBSD data acquisition</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+</li>
+</ol>
 </section>
 <section id="edit-the-sample-details">
-<h3>Edit the Sample details<a class="headerlink" href="#edit-the-sample-details" title="Permalink to this heading">#</a></h3>
-</section>
-<section id="view-the-action-log">
-<h3>View the action log<a class="headerlink" href="#view-the-action-log" title="Permalink to this heading">#</a></h3>
+<span id="edit-sample"></span><h3>Edit the Sample details<a class="headerlink" href="#edit-the-sample-details" title="Permalink to this heading">#</a></h3>
+<p>Now that we have a <em>Sample</em> and <em>Child Sample</em> <em>Record</em>, we can try editing either or both of them.</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Record</em> <strong>View</strong> mode</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Modify some of the details about the sample, either the <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">information</span></code> or <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">history</span></code></p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
 </section>
 </section>
 <section id="add-a-qr-code-to-a-pre-existing-sample">
-<h2>Add a QR code to a pre-existing sample<a class="headerlink" href="#add-a-qr-code-to-a-pre-existing-sample" title="Permalink to this heading">#</a></h2>
+<span id="add-qr-code"></span><h2>Add a QR code to a pre-existing sample<a class="headerlink" href="#add-a-qr-code-to-a-pre-existing-sample" title="Permalink to this heading">#</a></h2>
 <section id="add-the-qr-code">
 <h3>Add the QR code<a class="headerlink" href="#add-the-qr-code" title="Permalink to this heading">#</a></h3>
+<p>For this part you will be handed a QR code sticker.</p>
+<ol class="arabic">
+<li><p>Grab an object you would like to use as a <em>Sample</em></p></li>
+<li><p>Inspect the QR code sticker, you will see a number, as shown in <a class="reference internal" href="#qr-code-example-fig"><span class="std std-numref">Fig. 20</span></a></p>
+<figure class="align-default" id="qr-code-example-fig">
+<a class="reference internal image-reference" href="../_images/qr_object.jpg"><img alt="../_images/qr_object.jpg" src="../_images/qr_object.jpg" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">An example QR code label sticker.</span><a class="headerlink" href="#qr-code-example-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Navigate to the <em>Sample Record</em> you want to associate with the QR code label and enter <strong>Edit</strong> mode</p></li>
+<li><p>Type in the number of your label in the text box underneath the <code class="docutils literal notranslate"><span class="pre">Assign</span> <span class="pre">label:</span></code> title, in the <strong>Labels</strong> area. The number in this example is <code class="docutils literal notranslate"><span class="pre">0001928</span></code> or <code class="docutils literal notranslate"><span class="pre">1928</span></code>, as shown in :</p>
+<figure class="align-default" id="labels-area-example">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_labels_area.png"><img alt="../_images/demo_ampletracks_labels_area.png" src="../_images/demo_ampletracks_labels_area.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">The <strong>Labels</strong> area in a <em>Record</em></span><a class="headerlink" href="#labels-area-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Click out of the area in a non-responsive part of the form, a <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span> button should appear</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Submit</span> button</p></li>
+<li><p>Now click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+<li><p>Your <em>Record</em> in now associated with the label</p></li>
+</ol>
 </section>
 <section id="test-out-the-qr-code">
 <h3>Test out the QR code<a class="headerlink" href="#test-out-the-qr-code" title="Permalink to this heading">#</a></h3>
+<section id="not-logged-in">
+<span id="not-logged-in-qr-test"></span><h4>Not logged in<a class="headerlink" href="#not-logged-in" title="Permalink to this heading">#</a></h4>
+<p><em><strong>For this part, you willneed to use a device with a camera. We strongly recommend that you open up an incognito window, log out of Ampletracks, or use your phone</strong></em></p>
+<ol class="arabic">
+<li><p>Connect to <a class="reference external" href="https://demo.ampletracks.com">https://demo.ampletracks.com</a></p></li>
+<li><p>Click on the <strong>Want to scan a label?</strong> area, as shown in <a class="reference internal" href="#scan-a-label-login-page"><span class="std std-numref">Fig. 22</span></a></p>
+<figure class="align-default" id="scan-a-label-login-page">
+<a class="reference internal image-reference" href="../_images/ampletracks_want_scan_label.png"><img alt="../_images/ampletracks_want_scan_label.png" src="../_images/ampletracks_want_scan_label.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">The <strong>Want to scan a label?</strong> area in the Ampletracks login page on a Desktop browser</span><a class="headerlink" href="#scan-a-label-login-page" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Grant permission to Ampletracks to access your camera</p></li>
+<li><p>Plan the label within the camera window</p></li>
+<li><p>The label will scan and redirect you to a window listing some details about your <em>Record</em>, as shown in <a class="reference internal" href="#sample-details-public"><span class="std std-numref">Fig. 23</span></a></p>
+<figure class="align-default" id="sample-details-public">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_public_record.png"><img alt="../_images/demo_ampletracks_public_record.png" src="../_images/demo_ampletracks_public_record.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Public details about a <em>Sample Record</em> displayed when scanning a QR code label when not logged into the system</span><a class="headerlink" href="#sample-details-public" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="logged-in">
+<h4>Logged in<a class="headerlink" href="#logged-in" title="Permalink to this heading">#</a></h4>
+<p>Now, feel free to repeat the steps detailed in section <a class="reference internal" href="#not-logged-in-qr-test"><span class="std std-ref">Not logged in</span></a> when logged into Ampletracks.</p>
+</section>
 </section>
 </section>
 <section id="create-a-dataset-record">
-<h2>Create a Dataset record<a class="headerlink" href="#create-a-dataset-record" title="Permalink to this heading">#</a></h2>
+<span id="create-dataset"></span><h2>Create a Dataset record<a class="headerlink" href="#create-a-dataset-record" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Switch to the <em>Dataset Records</em> listing page</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Dataset</span> button</p></li>
+<li><p>Follow the form</p></li>
+<li><p>You will reach a box where you will be prompted to add a link to a local file/directory or a cloud-stored file/directory</p></li>
+<li><p>Try listing a local directory on your system following this ‘link’ convention <code class="docutils literal notranslate"><span class="pre">file:///explicit-full-path-to-directory-or-file</span></code></p></li>
+<li><p>Fill in all other details for your <em>Dataset</em> <em>Record</em></p></li>
+<li><p>Now click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+</section>
+<section id="create-a-relationship-between-the-sample-and-dataset-records">
+<span id="relate"></span><h2>Create a relationship between the <em>Sample</em> and <em>Dataset</em> <em>Records</em><a class="headerlink" href="#create-a-relationship-between-the-sample-and-dataset-records" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Navigate to the <em>Dataset</em> <em>Record</em> you just created</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">relationship</span> <span class="pre">--</span></code> drop-down menu, under <strong>Relationships</strong></p></li>
+<li><p>Investigate what types of relationships you can form by choosing any available option</p></li>
+<li><p>Start typing in the text box that will appear</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>By typing <code class="docutils literal notranslate"><span class="pre">___</span></code> or <code class="docutils literal notranslate"><span class="pre">%%%</span></code> you can see a list of all available options. Within a larger version of Ampletracks, you can also search for <em>Records</em> to relate your <em>Record</em> to by typing in the <em>Record</em> owner’s name in the text box.</p>
+</div>
+</li>
+<li><p>Choose a <em>Record</em> to relate it to</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+</section>
+<section id="create-an-analysed-dataset-record-child">
+<span id="create-data-child"></span><h2>Create an <strong>analysed</strong> Dataset record (<em>Child</em>)<a class="headerlink" href="#create-an-analysed-dataset-record-child" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Dataset Record</em> for which you want to create a <em>Child Record</em></p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">+ New child record</span> button, which is within the <strong>Descendants</strong> box, below the main <em>Dataset</em> menu</p></li>
+<li><p>Follow the instructions in creating a new <em>Dataset Record</em></p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+<li><p>The <em>Child Dataset Record</em> is intrinsicly relate to your <em>Parent Dataset Record</em></p></li>
+</ol>
+</section>
+<section id="relate-the-analysed-dataset-to-the-analysis-tool">
+<span id="relate-analysed-dataset"></span><h2>Relate the <strong>analysed</strong> Dataset to the Analysis Tool<a class="headerlink" href="#relate-the-analysed-dataset-to-the-analysis-tool" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Navigate to the <em>Child</em> <em>Dataset</em> <em>Record</em> you just created</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">relationship</span> <span class="pre">--</span></code> drop-down menu, under <strong>Relationships</strong></p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">was</span> <span class="pre">analysed</span> <span class="pre">using</span></code> from the dropdown menu</p></li>
+<li><p>Start typing ‘AZtec Crystal Software’ (you needn’t type the full text in) in the text box that will appear</p></li>
+<li><p>Choose the <em>Analysis Tool Record</em> to relate it to</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span>, or <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
 </section>
 </section>
 
@@ -556,15 +707,21 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sample-record">Create a Sample record</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sub-sample-record">Create a sub-Sample record</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-sample-details">Edit the Sample details</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-action-log">View the action log</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-qr-code-to-a-pre-existing-sample">Add a QR code to a pre-existing sample</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-qr-code">Add the QR code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-out-the-qr-code">Test out the QR code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-out-the-qr-code">Test out the QR code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#not-logged-in">Not logged in</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logged-in">Logged in</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dataset-record">Create a Dataset record</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-relationship-between-the-sample-and-dataset-records">Create a relationship between the <em>Sample</em> and <em>Dataset</em> <em>Records</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-analysed-dataset-record-child">Create an <strong>analysed</strong> Dataset record (<em>Child</em>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-the-analysed-dataset-to-the-analysis-tool">Relate the <strong>analysed</strong> Dataset to the Analysis Tool</a></li>
 </ul>
   </nav></div>
 
@@ -597,7 +754,7 @@ By Data Curators @ Royce
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 18 Aug 2023.
+  Last updated on 22 Aug 2023.
   <br/>
 </p>
   </div>
