@@ -8,13 +8,13 @@ This guide is for early stage postgraduate researcher (PGR), PhD, or students as
 
 A research data management plan (DMP) is a living document, i.e. continually edited, that outlines all the stages of your physical and digital research data lifecycle {cite}`UKDataService2019`, illustrated in {numref}`fig-rdmlifecycle` {cite}`ELIXIR2021`. A plan will include how the data will becollected, stored, protected, shared, and who will own the license rights to the data, **before** the data collection begins. Such plans can be updated at every point of the PhD research project lifetime, to reflect the data management needs of different studies.
 
-```{figure} /images/rdmp-guide/elixir_rdmkit_lifecycle.svg
+```{figure} /images/rdmp-guide/rdm_lifecycle_royce.svg
 ---
 align: center
-figwidth: 350px
+figwidth: 450px
 name: fig-rdmlifecycle
 ---
-The research data lifecycle as illustrated in the ELIXIR RDMkit
+The research data lifecycle
 ```
 
 DMPs can be general across the project or outline how each study will be conducted. DMPs are a great way to outline your study and reflect on it, as they will highlight areas that require more attention, can evidence that your research is well planned, demonstrate to your industrial sponsor that you are implementing their data sharing and security policies in  how you conduct your research, and are a self-made resource to aid thesis writing. Several awarding and funding bodies either recommend, or require dara management plans for awarding funding {cite}`epsrcprinciplespolicy,stfcpolicy2016,stfcdmp2021,ukriopendata2023`.
