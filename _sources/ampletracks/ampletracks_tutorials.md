@@ -1,1 +1,4 @@
 # Ampletracks Tutorials
+
+:::{tableofcontents}
+:::

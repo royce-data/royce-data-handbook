@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Ampletracks Guides &#8212; Data Management Handbook</title>
+    <title>CMS Record Type Administration Guide &#8212; Data Management Handbook</title>
   
   
   
@@ -73,12 +73,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ampletracks/ampletracks_guides';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ampletracks/ampletracks_cms_record_types';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ampletracks User Guide" href="ampletracks_user_guide.html" />
-    <link rel="prev" title="What is Ampletracks?" href="ampletracks_landing_page.html" />
+    <link rel="next" title="Ampletracks Tutorials" href="ampletracks_tutorials.html" />
+    <link rel="prev" title="Ampletracks User Guide" href="ampletracks_user_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="01 Nov 2023"/>
@@ -192,9 +192,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ampletracks</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ampletracks_landing_page.html">What is Ampletracks?</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Ampletracks Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ampletracks_guides.html">Ampletracks Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ampletracks_user_guide.html">Ampletracks <em>User</em> Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ampletracks_cms_record_types.html">CMS Record Type Administration Guide</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">CMS Record Type Administration Guide</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ampletracks_tutorials.html">Ampletracks Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -295,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/ampletracks/ampletracks_guides.md" target="_blank"
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/ampletracks/ampletracks_cms_record_types.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fampletracks/ampletracks_guides.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fampletracks/ampletracks_cms_record_types.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +342,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ampletracks/ampletracks_guides.md" target="_blank"
+      <li><a href="../_sources/ampletracks/ampletracks_cms_record_types.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -411,7 +411,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -422,11 +424,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ampletracks Guides</h1>
+    <h1>CMS Record Type Administration Guide</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-record-type">Create Record Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-record-type">Import Record Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-record-type-to-record-type-relationship">Create a Record Type to Record Type Relationship</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -436,14 +448,107 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="ampletracks-guides">
-<h1>Ampletracks Guides<a class="headerlink" href="#ampletracks-guides" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ampletracks_user_guide.html">Ampletracks <em>User</em> Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ampletracks_cms_record_types.html">CMS Record Type Administration Guide</a></li>
-</ul>
+  <section id="cms-record-type-administration-guide">
+<h1>CMS Record Type Administration Guide<a class="headerlink" href="#cms-record-type-administration-guide" title="Permalink to this heading">#</a></h1>
+<p>In this guide we show you how to <em>create</em> and <em>import</em> a <em><strong>Record Type</strong></em>, and how to <em>create</em> <em><strong>Record Type</strong></em> to <em><strong>Record Type</strong></em> relationships.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have intentionally kept the metadata schema very lightweight. Ampletracks has over 13 data field types to choose from, and record types can be configured to have very specific fields that provide rich and descriptive metadata schemas.</p>
 </div>
+<br>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#create-record-type" id="id1">Create Record Type</a></p></li>
+<li><p><a class="reference internal" href="#import-record-type" id="id2">Import Record Type</a></p></li>
+<li><p><a class="reference internal" href="#create-a-record-type-to-record-type-relationship" id="id3">Create a Record Type to Record Type Relationship</a></p></li>
+</ul>
+</nav>
+<section id="create-record-type">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Create Record Type</a><a class="headerlink" href="#create-record-type" title="Permalink to this heading">#</a></h2>
+<p>In this guide we will be creating a lightweight <strong>Record Type</strong> for laboratory <em>Equipment</em>.</p>
+<ol class="arabic">
+<li><p>Navigate to the grey banner menu on the Ampletracks UI</p></li>
+<li><p>Hover over <strong>Schema</strong> on the left-hand side</p></li>
+<li><p>Select <strong>Record Types</strong> from the drop down menu</p></li>
+<li><p>You will see 3 buttons to the right-hand side of the UI</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Record Type</span> button, you will be redirected to a new page</p></li>
+<li><p>Specify the <em>Name</em> and <em>Public preview message</em> of the <strong>Record Type</strong> in the text input areas, and, optionally, add a label image</p>
+<ol class="arabic simple">
+<li><p>In <em>Name</em>, input ‘Equipment’</p></li>
+<li><p>Optionally, in <em>Public preview message</em>, input ‘This is a piece of data acquisition equipment for our laboratory’</p></li>
+</ol>
+</li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span> or the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+<li><p>Back to the <strong>Record Type</strong> list you will see your new <strong>Record Type</strong> listed</p></li>
+<li><p>Hover over the cog icon next to your new <strong>Record Type</strong> listing</p></li>
+<li><p>Select <strong>Data Fields</strong>, you will be redirected to the <strong>Data Field list</strong> for that <strong>Record Type</strong></p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Data Field</span> button</p></li>
+<li><p><strong>Data field</strong>: <em>Name</em></p>
+<ol class="arabic">
+<li><p>From the drop-down menu under <em>Type</em>: select <em>Textbox</em></p></li>
+<li><p>From the drop-down menu under <em>Position</em>: select <em>First field</em></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Once you have more than one data field defined for your Record you will be able to select data field position on the <strong>Record</strong> indexing form relative to the position of the other data fields</p>
+</div>
+</li>
+<li><p>You will then be prompted to provide a <em>Name</em>, <em>Export name</em> and <em>Question</em>, type ‘Name’ in all these</p></li>
+<li><p><strong>Options</strong> - There are several options to configure the behaviour of your data field beyond what it looks like and what types of <em>answers</em> it accepts</p>
+<ol class="arabic simple">
+<li><p><em>Display to the public</em> will determine whether a data field <em>answer</em> is shown when a QR code associated with a <em><strong>Record</strong></em> is scanned and accessed whilst not logged in or having access to Ampletracks as a <em>User</em></p></li>
+<li><p><em>Required</em> will determine whether the data field is required for the <strong>Record</strong> to be saved</p></li>
+<li><p><em>Inheritance</em> determines whether the data field will be inherited by a <em>Child Record</em></p></li>
+<li><p>…</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>Data field</strong>: <em>Equipment type</em></p></li>
+<li><p><strong>Data field</strong>: <em>Host institution</em></p></li>
+<li><p><strong>Data field</strong>: <em>Location</em></p></li>
+<li><p><strong>Data field</strong>: <em>Description</em></p></li>
+<li><p><strong>Data field</strong>: <em>Image</em></p></li>
+<li><p><strong>Data field</strong>: <em>Additional information</em></p></li>
+<li><p><strong>Data field</strong>: <em>Link</em></p></li>
+<li><p><strong>Data field</strong>: <em>Contact</em></p></li>
+<li><p><strong>Data field</strong>: <em>Contact email</em></p></li>
+</ol>
+</section>
+<section id="import-record-type">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Import Record Type</a><a class="headerlink" href="#import-record-type" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Navigate to the Ampletracks GitHub <a class="reference external" href="https://github.com/Ampletracks/Ampletracks">repository</a></p></li>
+<li><p>From there access the <a class="reference external" href="https://github.com/Ampletracks/Ampletracks/tree/main/example"><code class="docutils literal notranslate"><span class="pre">example</span></code></a> directory within the repository</p></li>
+<li><p>Download the ‘barebones’ <strong>Sample</strong> <strong>Record Type</strong> <a class="reference external" href="https://github.com/Ampletracks/Ampletracks/blob/main/example/record_types/RecordTypeStructure-Sample_20231031.xml">XML specified structure</a></p></li>
+<li><p>Navigate to the grey banner menu on the Ampletracks UI</p></li>
+<li><p>Hover over <strong>Schema</strong> on the left-hand side</p></li>
+<li><p>Select <strong>Record Types</strong> from the drop down menu</p></li>
+<li><p>You will see 3 buttons to the right-hand side of the UI</p></li>
+<li><p>Click on <span class="badge bg-light" style="background-color:#1a7182 !important;">Import</span> button, you will be redirected to a new page</p></li>
+<li><p>On the new page click on the <input type="button" value="Choose file" style="padding:1px;height:25px;"> button to select a file stored locally on your machine with the file system interaction dialog box</p></li>
+<li><p>Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Import</span> button once you have selected the file</p></li>
+</ol>
+</section>
+<section id="create-a-record-type-to-record-type-relationship">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Create a Record Type to Record Type Relationship</a><a class="headerlink" href="#create-a-record-type-to-record-type-relationship" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Navigate to the grey banner menu on the Ampletracks UI</p></li>
+<li><p>Hover over <strong>Schema</strong> on the left-hand side</p></li>
+<li><p>Select <strong>Relationships</strong> from the drop down menu</p></li>
+<li><p>You will see 2 buttons to the right-hand side of the UI</p></li>
+<li><p>Click on <strong>Add Relationship Pair</strong>, you will be redirected to a new page</p></li>
+<li><p>You will see a pane where you can select two types of records (whether the same or different) and specify the relationship between them in plain language</p></li>
+<li><p>As an example we will specify a relationship between a <strong>Sample</strong> and a piece of <strong>Equipment</strong></p>
+<ol class="arabic simple">
+<li><p>In the top pane select <strong>Equipment</strong> from the drop down menu</p></li>
+<li><p>In the bottom pane select <strong>Sample</strong> from the drop down menu</p></li>
+<li><p>On the left-hand text box type in “was measured using”, i.e. “<strong>Sample</strong> was measured using <strong>Equipment</strong>”</p></li>
+<li><p>On the right-hand text box type in “measured”, i.e. “<strong>Equipment</strong> measured <strong>Sample</strong>”</p></li>
+<li><p>For how many relationships we can have between record type and record type the minimum is 1 and the maximum is 1000000, if you wanted a <strong>Sample</strong> to have a maximum of 10 relationships to a piece of <strong>Equipment</strong> you need to input 10 in the left-hand box underneath <em>max</em></p></li>
+</ol>
+</li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -477,20 +582,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ampletracks_landing_page.html"
+       href="ampletracks_user_guide.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">What is Ampletracks?</p>
+        <p class="prev-next-title">Ampletracks <em>User</em> Guide</p>
       </div>
     </a>
     <a class="right-next"
-       href="ampletracks_user_guide.html"
+       href="ampletracks_tutorials.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ampletracks <em>User</em> Guide</p>
+        <p class="prev-next-title">Ampletracks Tutorials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -500,6 +605,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-record-type">Create Record Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-record-type">Import Record Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-record-type-to-record-type-relationship">Create a Record Type to Record Type Relationship</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

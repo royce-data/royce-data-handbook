@@ -119,12 +119,17 @@ nav.bd-links li > a {
     color: #ffffff;
 }
 
-.prev-next-area a p.prev-next-title {
-    color: rgb(0,161,154);
+nav.bd-links .current>a {
+    box-shadow: none !important;
 }
 
-.prev-next-area a:hover p.prev-next-title {
-    color: rgb(255,209,0);
+.prev-next-area a p.prev-next-title {
+    color: rgb(0,161,154) !important;
+    text-decoration: none !important;
+}
+
+.prev-next-area a p.prev-next-title:hover {
+    color: rgb(255,209,0) !important;
 }
 
 
