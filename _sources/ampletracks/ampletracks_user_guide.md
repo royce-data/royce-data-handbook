@@ -328,8 +328,33 @@ The 'Label Scanner' page
 #### Creating a QR code within the *Record*
 
 :::{warning}
-This is not recommended unless you have a dedicated label printer and configurer.
+This is not recommended unless you have the recommeded blank label papers. Our standard type of blank sheet is *Avery B7651* which can be used to print 65 labels.
 :::
+
+We will be creating a brand new label within *Record* **edit** mode.
+
+
+:::{figure} ../images/ampletracks/create_new_label.png
+:name: create-label-configurer
+:width: 100%
+
+Create a label configurer
+:::
+
+
+1. Navigate to the listing of the *Record Type*
+2. Enter *Record* **edit** mode in any way described in the {ref}`edit-record` section
+3. Navigate to the **Labels** box, as shown in {numref}`labels-box`
+4. Click the <span class="badge bg-light" style="background-color:#1a7182 !important;">Create new label</span> button
+5. You will be redirected to a the *Create Label* preview page where you can configure your label printing by selecting the size of label, by selecting the layout, and which region it will be printed on the blank sheet, shown in {numref}`create-label-configurer`
+6. Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Download Labels</span> button, which will download the label sheet as a PDF on your local drive
+7. Print the PDF of the label on one of the recommended blank label sheets
+
+:::{important}
+We recommed you first print out the labels on blank plain paper so you can make any scale adjustments within a PDF editor.
+:::
+
+
 
 ## Record Relationships
 
