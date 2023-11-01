@@ -25,6 +25,7 @@ parts:
   - file: ampletracks/ampletracks_guides.md
     sections:
     - file: ampletracks/ampletracks_user_guide.md
+    - file: ampletracks/ampletracks_cms_record_types.md
   - file: ampletracks/ampletracks_tutorials.md
     sections:
     - file: ampletracks/ampletracks_user_tutorial.md
