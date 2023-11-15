@@ -42,14 +42,32 @@ In this guide we will be creating a lightweight **Record Type** for laboratory *
        3. *Inheritance* determines whether the data field will be inherited by a *Child Record*
        4. ...
 13. **Data field**: *Equipment type*
+    1.  From the drop-down menu under *Type*: select *Textbox*
+    2.  From the drop-down menu under *Position*: select *After Name*
 14. **Data field**: *Host institution*
+    1.  From the drop-down menu under *Type*: select *Textbox*
+    2.  From the drop-down menu under *Position*: select *After Equipment type*
 15. **Data field**: *Location*
+    1.  From the drop-down menu under *Type*: select *Textbox*
+    2.  From the drop-down menu under *Position*: select *After Host Institution*
 16. **Data field**: *Description*
+    1.  From the drop-down menu under *Type*: select *Textarea*
+    2.  From the drop-down menu under *Position*: select *After Location*
 17. **Data field**: *Image*
+    1.  From the drop-down menu under *Type*: select *Image*
+    2.  From the drop-down menu under *Position*: select *After Description*
 18. **Data field**: *Additional information*
+    1.  From the drop-down menu under *Type*: select *Textbox*
+    2.  From the drop-down menu under *Position*: select *After Image*
 19. **Data field**: *Link*
+    1.  From the drop-down menu under *Type*: select *URL*
+    2.  From the drop-down menu under *Position*: select *After Additional information*
 20. **Data field**: *Contact*
+    1.  From the drop-down menu under *Type*: select *Textbox*
+    2.  From the drop-down menu under *Position*: select *After Link*
 21. **Data field**: *Contact email*
+    1.  From the drop-down menu under *Type*: select *Email Address*
+    2.  From the drop-down menu under *Position*: select *After Contact*
 
 
 ## Import Record Type
