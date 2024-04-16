@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>How to write a research data management plan &#8212; Data Management Handbook</title>
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -42,9 +42,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -63,8 +63,8 @@
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js"></script>
     <script src="https://kit.fontawesome.com/17024ac628.js"></script>
-    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script src="../_static/analytics_script.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -81,7 +81,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Introduction" href="rdm-intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="15 Nov 2023"/>
+    <meta name="docbuild:last-update" content="16 Apr 2024"/>
   </head>
   
   
@@ -89,10 +89,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -133,11 +132,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -152,6 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../welcome.html">
@@ -195,10 +198,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ampletracks/ampletracks_guides.html">Ampletracks Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_user_guide.html">Ampletracks <em>User</em> Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_cms_record_types.html">CMS Record Type Administration Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_iod.html">Ampletracks instance-on-demand</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ampletracks/ampletracks_tutorials.html">Ampletracks Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_user_tutorial.html">Ampletracks <em>User</em> Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_user_demo.html">Ampletracks user tutorial - steel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ampletracks/ampletracks_demo_extended.html">Ampletracks user tutorial - extended</a></li>
 </ul>
 </li>
 </ul>
@@ -394,6 +400,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -403,6 +410,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -493,7 +501,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="how-to-write-a-research-data-management-plan">
 <h1>How to write a research data management plan<a class="headerlink" href="#how-to-write-a-research-data-management-plan" title="Permalink to this heading">#</a></h1>
@@ -503,21 +511,21 @@ document.write(`
 </section>
 <section id="data-management-planning">
 <h2>Data Management Planning<a class="headerlink" href="#data-management-planning" title="Permalink to this heading">#</a></h2>
-<p>A research data management plan (DMP) is a living document, i.e. continually edited, that outlines all the stages of your physical and digital research data lifecycle <span id="id1">[<a class="reference internal" href="../bib-util/bibliography.html#id11" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">14</a>]</span>, illustrated in <a class="reference internal" href="#fig-rdmlifecycle"><span class="std std-numref">Fig. 1</span></a> <span id="id2">[<a class="reference internal" href="../bib-util/bibliography.html#id6" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span>. A plan will include how the data will becollected, stored, protected, shared, and who will own the license rights to the data, <strong>before</strong> the data collection begins. Such plans can be updated at every point of the PhD research project lifetime, to reflect the data management needs of different studies.</p>
+<p>A research data management plan (DMP) is a living document, i.e. continually edited, that outlines all the stages of your physical and digital research data lifecycle <span id="id1">[<a class="reference internal" href="../bib-util/bibliography.html#id12" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">15</a>]</span>, illustrated in <a class="reference internal" href="#fig-rdmlifecycle"><span class="std std-numref">Fig. 1</span></a> <span id="id2">[<a class="reference internal" href="../bib-util/bibliography.html#id7" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span>. A plan will include how the data will becollected, stored, protected, shared, and who will own the license rights to the data, <strong>before</strong> the data collection begins. Such plans can be updated at every point of the PhD research project lifetime, to reflect the data management needs of different studies.</p>
 <figure class="align-center" id="fig-rdmlifecycle" style="width: 450px">
 <img alt="../_images/rdm_lifecycle_royce.svg" src="../_images/rdm_lifecycle_royce.svg" /><figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">The research data lifecycle</span><a class="headerlink" href="#fig-rdmlifecycle" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>DMPs can be general across the project or outline how each study will be conducted. DMPs are a great way to outline your study and reflect on it, as they will highlight areas that require more attention, can evidence that your research is well planned, demonstrate to your industrial sponsor that you are implementing their data sharing and security policies in  how you conduct your research, and are a self-made resource to aid thesis writing. Several awarding and funding bodies either recommend, or require dara management plans for awarding funding <span id="id3">[<a class="reference internal" href="../bib-util/bibliography.html#id7" title="Engineering &amp; Physical Sciences Research Council, UK Research and Innovation. Policy framework on research data. principles of epsrc research data policy framework. URL: https://www.ukri.org/about-us/epsrc/our-policies-and-standards/policy-framework-on-research-data/principles/.">10</a>, <a class="reference internal" href="../bib-util/bibliography.html#id9" title="Science and Technology Facilities Council, UK Research and Innovation. Data management plan. URL: https://www.ukri.org/councils/stfc/guidance-for-applicants/what-to-include-in-your-proposal/data-management-plan/.">11</a>, <a class="reference internal" href="../bib-util/bibliography.html#id8" title="Science and Technology Facilities Council, UK Research and Innovation. Stfc scientific data policy. URL: https://www.ukri.org/publications/stfc-scientific-data-policy/.">12</a>, <a class="reference internal" href="../bib-util/bibliography.html#id10" title="UK Research and Innovation. Publishing your research findings. making your research data open. URL: https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/.">15</a>]</span>.</p>
+<p>DMPs can be general across the project or outline how each study will be conducted. DMPs are a great way to outline your study and reflect on it, as they will highlight areas that require more attention, can evidence that your research is well planned, demonstrate to your industrial sponsor that you are implementing their data sharing and security policies in  how you conduct your research, and are a self-made resource to aid thesis writing. Several awarding and funding bodies either recommend, or require dara management plans for awarding funding <span id="id3">[<a class="reference internal" href="../bib-util/bibliography.html#id8" title="Engineering &amp; Physical Sciences Research Council, UK Research and Innovation. Policy framework on research data. principles of epsrc research data policy framework. URL: https://www.ukri.org/about-us/epsrc/our-policies-and-standards/policy-framework-on-research-data/principles/.">11</a>, <a class="reference internal" href="../bib-util/bibliography.html#id10" title="Science and Technology Facilities Council, UK Research and Innovation. Data management plan. URL: https://www.ukri.org/councils/stfc/guidance-for-applicants/what-to-include-in-your-proposal/data-management-plan/.">12</a>, <a class="reference internal" href="../bib-util/bibliography.html#id9" title="Science and Technology Facilities Council, UK Research and Innovation. Stfc scientific data policy. URL: https://www.ukri.org/publications/stfc-scientific-data-policy/.">13</a>, <a class="reference internal" href="../bib-util/bibliography.html#id11" title="UK Research and Innovation. Publishing your research findings. making your research data open. URL: https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/.">16</a>]</span>.</p>
 <p>During you research lifetime you might be tasked to write a DMP. Data management planning might appear daunting at first but is a skill that can be acquired and built on. Below you will find key considerations, resources and examples to begin data management planning. The table of contents on the right can help guide you to the content you are looking for, click on the resource title to be redirected to it through the page.</p>
 <section id="the-research-data-lifecycle">
 <h3>The research data lifecycle<a class="headerlink" href="#the-research-data-lifecycle" title="Permalink to this heading">#</a></h3>
 <p>These online resources offer a detailed insight into the research data lifecycle:</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/data_life_cycle">Data life cycle</a>, RDMkit, ELIXIR <span id="id4">[<a class="reference internal" href="../bib-util/bibliography.html#id6" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
-<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#the-research-data-lifecycle-a-model-for-data-management">The Research Data Lifecycle - A Model for Data Management</a>, The Turing Way <span id="id5">[<a class="reference internal" href="../bib-util/bibliography.html#id5" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">13</a>]</span></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-wjFMMQD3UA">Research Data Lifecycle</a>, UK Data Service <span id="id6">[<a class="reference internal" href="../bib-util/bibliography.html#id11" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">14</a>]</span></p></li>
+<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/data_life_cycle">Data life cycle</a>, RDMkit, ELIXIR <span id="id4">[<a class="reference internal" href="../bib-util/bibliography.html#id7" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-data.html#the-research-data-lifecycle-a-model-for-data-management">The Research Data Lifecycle - A Model for Data Management</a>, The Turing Way <span id="id5">[<a class="reference internal" href="../bib-util/bibliography.html#id6" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">14</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-wjFMMQD3UA">Research Data Lifecycle</a>, UK Data Service <span id="id6">[<a class="reference internal" href="../bib-util/bibliography.html#id12" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">15</a>]</span></p></li>
 </ol>
 </section>
 </section>
@@ -525,7 +533,7 @@ document.write(`
 <h2>What is a research data management plan?<a class="headerlink" href="#what-is-a-research-data-management-plan" title="Permalink to this heading">#</a></h2>
 <section id="definition">
 <h3>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
-<p>A data management plan is a living document that describes your project’s research data lifecycle. Research data has a longer lifespan than the project itself, and can be used, reused and adapted after the project ends, in other projects, internal or external to the originating research group. The data management lifecycle comprises the planning (project and data management), data collection process, data processing and analysis, management and storage during a research project. It also describes data ownership and how the data will be preserved and shared during and upon completion of a project <span id="id7">[<a class="reference internal" href="../bib-util/bibliography.html#id6" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>, <a class="reference internal" href="../bib-util/bibliography.html#id4" title="Madeleine Pownall, Flávio Azevedo, Laura M. König, Hannah R. Slack, Thomas Rhys Evans, Zoe Flack, Sandra Grinschgl, Mahmoud M. Elsherif, Katie A. Gilligan-Lee, Catia M. F. de Oliveira, Biljana Gjoneska, Tamara Kalandadze, Katherine Button, Sarah Ashcroft-Jones, Jenny Terry, Nihan Albayrak-Aydemir, Filip Děchtěrenko, Shilaan Alzahawi, Bradley J. Baker, Merle-Marie Pittelkow, Lydia Riedl, Kathleen Schmidt, Charlotte R. Pennington, John J. Shaw, Timo Lüke, Matthew C. Makel, Helena Hartmann, Mirela Zaneva, Daniel Walker, Steven Verheyen, Daniel Cox, Jennifer Mattschey, Tom Gallagher-Mitchell, Peter Branney, Yanna Weisberg, Kamil Izydorczak, Ali H. Al-Hoorie, Ann-Marie Creaven, Suzanne L. K. Stewart, Kai Krautter, Karen Matvienko-Sikar, Samuel J. Westwood, Patr\'ıcia Arriaga, Meng Liu, Myriam A. Baum, Tobias Wingen, Robert M. Ross, Aoife O\textquotesingle Mahony, Agata Bochynska, Michelle Jamieson, Myrthe Vel Tromp, Siu Kit Yeung, Martin R. Vasilev, Amélie Gourdon-Kanhukamwe, Leticia Micheli, Markus Konkol, David Moreau, James E. Bartlett, Kait Clark, Gwen Brekelmans, Theofilos Gkinopoulos, Samantha L. Tyler, Jan Philipp Röer, Zlatomira G. Ilchovska, Christopher R. Madan, Olly Robertson, Bethan J. Iley, Samuel Guay, Martina Sladekova, and Shanu Sadhwani. Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes. Royal Society Open Science, 2023. doi:https://doi.org/10.1098/rsos.221255.">8</a>, <a class="reference internal" href="../bib-util/bibliography.html#id5" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">13</a>, <a class="reference internal" href="../bib-util/bibliography.html#id11" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">14</a>]</span>.</p>
+<p>A data management plan is a living document that describes your project’s research data lifecycle. Research data has a longer lifespan than the project itself, and can be used, reused and adapted after the project ends, in other projects, internal or external to the originating research group. The data management lifecycle comprises the planning (project and data management), data collection process, data processing and analysis, management and storage during a research project. It also describes data ownership and how the data will be preserved and shared during and upon completion of a project <span id="id7">[<a class="reference internal" href="../bib-util/bibliography.html#id7" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>, <a class="reference internal" href="../bib-util/bibliography.html#id5" title="Madeleine Pownall, Flávio Azevedo, Laura M. König, Hannah R. Slack, Thomas Rhys Evans, Zoe Flack, Sandra Grinschgl, Mahmoud M. Elsherif, Katie A. Gilligan-Lee, Catia M. F. de Oliveira, Biljana Gjoneska, Tamara Kalandadze, Katherine Button, Sarah Ashcroft-Jones, Jenny Terry, Nihan Albayrak-Aydemir, Filip Děchtěrenko, Shilaan Alzahawi, Bradley J. Baker, Merle-Marie Pittelkow, Lydia Riedl, Kathleen Schmidt, Charlotte R. Pennington, John J. Shaw, Timo Lüke, Matthew C. Makel, Helena Hartmann, Mirela Zaneva, Daniel Walker, Steven Verheyen, Daniel Cox, Jennifer Mattschey, Tom Gallagher-Mitchell, Peter Branney, Yanna Weisberg, Kamil Izydorczak, Ali H. Al-Hoorie, Ann-Marie Creaven, Suzanne L. K. Stewart, Kai Krautter, Karen Matvienko-Sikar, Samuel J. Westwood, Patr\'ıcia Arriaga, Meng Liu, Myriam A. Baum, Tobias Wingen, Robert M. Ross, Aoife O\textquotesingle Mahony, Agata Bochynska, Michelle Jamieson, Myrthe Vel Tromp, Siu Kit Yeung, Martin R. Vasilev, Amélie Gourdon-Kanhukamwe, Leticia Micheli, Markus Konkol, David Moreau, James E. Bartlett, Kait Clark, Gwen Brekelmans, Theofilos Gkinopoulos, Samantha L. Tyler, Jan Philipp Röer, Zlatomira G. Ilchovska, Christopher R. Madan, Olly Robertson, Bethan J. Iley, Samuel Guay, Martina Sladekova, and Shanu Sadhwani. Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes. Royal Society Open Science, 2023. doi:https://doi.org/10.1098/rsos.221255.">9</a>, <a class="reference internal" href="../bib-util/bibliography.html#id6" title="The Turing Way Community. The turing way: a handbook for reproducible, ethical and collaborative research. doi:10.5281/zenodo.3233853.">14</a>, <a class="reference internal" href="../bib-util/bibliography.html#id12" title="UK Data Service. Research data lifecycle. URL: https://www.youtube.com/watch?v=-wjFMMQD3UA.">15</a>]</span>.</p>
 </section>
 <section id="reasons-to-write-a-data-management-plan">
 <h3>Reasons to write a Data Management Plan<a class="headerlink" href="#reasons-to-write-a-data-management-plan" title="Permalink to this heading">#</a></h3>
@@ -939,12 +947,12 @@ This important as both physical and digital data take up physical space, so outl
 <h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h3>
 <p>Here are some resources you might want to consult in addition to this guide.</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://zenodo.org/record/7759355#.ZGTWMnbMLDc">Data management plans and data management costs</a> <span id="id8">[<a class="reference internal" href="../bib-util/bibliography.html#id16" title="Anja Perry. Data management plans and data management costs. doi:10.5281/zenodo.7759355.">7</a>]</span></p></li>
-<li><p><a class="reference external" href="https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING">Raw data, backup and versioning</a> <span id="id9">[<a class="reference internal" href="../bib-util/bibliography.html#id15" title="OpenAIRE. Raw data, backup and versioning. URL: https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING.">6</a>]</span></p></li>
-<li><p><a class="reference external" href="https://www.openaire.eu/non-digital-data-guide">How to deal with non-digital data</a> <span id="id10">[<a class="reference internal" href="../bib-util/bibliography.html#id12" title="OpenAIRE. Guides for researchers: how to deal with non-digital data. URL: https://www.openaire.eu/non-digital-data-guide.">5</a>]</span></p></li>
-<li><p><a class="reference external" href="https://www.openaire.eu/data-formats-preservation-guide">Data formats for preservation</a> <span id="id11">[<a class="reference internal" href="../bib-util/bibliography.html#id14" title="OpenAIRE. Data formats for preservation. URL: https://www.openaire.eu/data-formats-preservation-guide.">4</a>]</span></p></li>
-<li><p><a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan">How to Develop a Data Management and Sharing Plan</a> <span id="id12">[<a class="reference internal" href="../bib-util/bibliography.html#id13" title="S Jones. How to develop a data management and sharing plan. dcc how-to guides. URL: https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan.">2</a>]</span></p></li>
-<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/planning">Data life cycle: Planning</a> <span id="id13">[<a class="reference internal" href="../bib-util/bibliography.html#id6" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
+<li><p><a class="reference external" href="https://zenodo.org/record/7759355#.ZGTWMnbMLDc">Data management plans and data management costs</a> <span id="id8">[<a class="reference internal" href="../bib-util/bibliography.html#id17" title="Anja Perry. Data management plans and data management costs. doi:10.5281/zenodo.7759355.">8</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING">Raw data, backup and versioning</a> <span id="id9">[<a class="reference internal" href="../bib-util/bibliography.html#id16" title="OpenAIRE. Raw data, backup and versioning. URL: https://www.openaire.eu/RAW-DATA-BACKUP-AND-VERSIONING.">7</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/non-digital-data-guide">How to deal with non-digital data</a> <span id="id10">[<a class="reference internal" href="../bib-util/bibliography.html#id13" title="OpenAIRE. Guides for researchers: how to deal with non-digital data. URL: https://www.openaire.eu/non-digital-data-guide.">6</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.openaire.eu/data-formats-preservation-guide">Data formats for preservation</a> <span id="id11">[<a class="reference internal" href="../bib-util/bibliography.html#id15" title="OpenAIRE. Data formats for preservation. URL: https://www.openaire.eu/data-formats-preservation-guide.">5</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan">How to Develop a Data Management and Sharing Plan</a> <span id="id12">[<a class="reference internal" href="../bib-util/bibliography.html#id14" title="S Jones. How to develop a data management and sharing plan. dcc how-to guides. URL: https://www.dcc.ac.uk/guidance/how-guides/develop-data-plan.">2</a>]</span></p></li>
+<li><p><a class="reference external" href="https://rdmkit.elixir-europe.org/planning">Data life cycle: Planning</a> <span id="id13">[<a class="reference internal" href="../bib-util/bibliography.html#id7" title="ELIXIR. Research data management kit. a deliverable from the eu-funded elixir-converge project (grant agreement 871075). URL: https://rdmkit.elixir-europe.org/.">1</a>]</span></p></li>
 </ol>
 <section id="digital-training-from-the-university-of-manchester-library">
 <h4>Digital Training from The University of Manchester Library<a class="headerlink" href="#digital-training-from-the-university-of-manchester-library" title="Permalink to this heading">#</a></h4>
@@ -992,7 +1000,7 @@ This important as both physical and digital data take up physical space, so outl
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="rdm-intro.html"
@@ -1020,6 +1028,7 @@ This important as both physical and digital data take up physical space, so outl
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1098,6 +1107,7 @@ By Data Curators @ Royce
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1109,7 +1119,7 @@ By Data Curators @ Royce
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 15 Nov 2023.
+  Last updated on 16 Apr 2024.
   <br/>
 </p>
   </div>
@@ -1127,8 +1137,8 @@ By Data Curators @ Royce
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

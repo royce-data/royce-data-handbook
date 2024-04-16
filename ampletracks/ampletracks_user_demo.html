@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ampletracks user tutorial - steel &#8212; Data Management Handbook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.7/src/glowCookies.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.3.1/dist/mermaid.min.js"></script>
+    <script src="https://kit.fontawesome.com/17024ac628.js"></script>
+    <script src="../_static/analytics_script.js"></script>
+    <script src="../_static/rdmp_mermaid_config.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ampletracks/ampletracks_user_demo';</script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ampletracks user tutorial - extended" href="ampletracks_demo_extended.html" />
+    <link rel="prev" title="Ampletracks User Tutorials" href="ampletracks_user_tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="16 Apr 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_royce_banner.png" class="logo__image only-light" alt="Data Management Handbook - Home"/>
+    <script>document.write(`<img src="../_static/logo_royce_banner.png" class="logo__image only-dark" alt="Data Management Handbook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Data Management</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdm-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/rdmp-guide.html">DMP Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rdm/dir-tree.html">The <code class="docutils literal notranslate"><span class="pre">tree</span></code> function</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rdm/git.html">Version Control</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rdm/git-how-to-install-windows.html">Git Bash for Workshops</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Open Research</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open-research/open-research-resources.html">Open Research Articles</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open-research/case-for-open-research.html">The Case for Open Research</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ampletracks</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ampletracks_landing_page.html">What is Ampletracks?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ampletracks_guides.html">Ampletracks Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_user_guide.html">Ampletracks <em>User</em> Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_cms_record_types.html">CMS Record Type Administration Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_iod.html">Ampletracks instance-on-demand</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ampletracks_tutorials.html">Ampletracks Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_user_tutorial.html">Ampletracks <em>User</em> Tutorials</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ampletracks user tutorial - steel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ampletracks_demo_extended.html">Ampletracks user tutorial - extended</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Team Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../team_tutorials/work-on-this-book.html">Get started with this guide</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/notes-on-jb.html">Contributing to this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/how-to-install-jb.html">Get started with Jupyter Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../team_tutorials/contribution-workflow.html">Updating this book</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Events</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/appointments.html">Consult with us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc_org/events.html">Events</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workshops/workshops.html">Workshops</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workshops/git-intro.html">Version Control with Git Workshop</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography and Useful Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/bibliography.html">Blibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bib-util/useful-interesting.html">Utilities</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/edit/main/handbook/ampletracks/ampletracks_user_demo.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Data-Curators-Royce-Institute/royce-data-handbook/issues/new?title=Issue%20on%20page%20%2Fampletracks/ampletracks_user_demo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ampletracks/ampletracks_user_demo.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ampletracks user tutorial - steel</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampletracks-features">Ampletracks features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sub-project">Create a sub-project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-samples">Create samples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-sample">Create Sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-sample-to-sub-project">Relate sample to sub-project</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-initial-sample">Clone initial sample</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-child-samples">Create child samples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-samples-to-other-records">Relate samples to other records</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment">Equipment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-record-on-relationship-dataset">Creating a record on relationship - Dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-steps">Optional steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-equipment">Create equipment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-user-records">Changing user records</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ampletracks-user-tutorial-steel">
+<h1>Ampletracks user tutorial - steel<a class="headerlink" href="#ampletracks-user-tutorial-steel" title="Permalink to this heading">#</a></h1>
+<p>In this tutorial, we will be using the <strong>Demo</strong> instance of Ampletracks. You can follow along in two ways:</p>
+<ol class="arabic">
+<li><p>If you have a working instance of Ampletracks running, you can import the relevant <strong>Record Type</strong> schemata from our GitHub repository <a class="github reference external" href="https://github.com/Ampletracks/Ampletracks">Ampletracks/Ampletracks</a></p></li>
+<li><p>You can register your details and get an instance-on-demand for a week. Please see our <a class="reference internal" href="ampletracks_iod.html"><span class="doc std std-doc">instance-on-demand guide</span></a></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Be sure to check your spam folder.</p>
+</div>
+</li>
+</ol>
+<p>If you are setting up your own Ampletracks be sure to check the <a class="reference internal" href="#content-references-optional-steps"><span class="std std-ref">optional steps</span></a> to ensure that you have all the appropriate records and relationship pairs specified. These will already be available on <a class="reference external" href="https://demo.ampletracks.com/iod//">instance-on-demand</a>.</p>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
+<p>In this tutorial we will assuming a study investigating the oxidation behaviour related to chromium content by weight % (wt.%) in three different steel compositions. Each of the three different steel compositions has increasing chromium content. We will be creating three bulk <em>parent</em> sample <strong>Records</strong> for each of these compositions. Each will be sectioned into to 5 regular 5mmx5mmx5mm <strong>child Record</strong> samples using wire electric discharge machining (wire EDM). These will then undergo thermogravimetric analysis in air. After that, the samples will be mounted in cold mounting resin and ground up to reveal the cross-section. Once the samples are prepared, they will be imaged with scanning electron microscopy  (SEM) and analysed with energy dispersive X-ray spectroscopy (EDX).</p>
+<p>For simplicity we will only be tracking 3 bulk <em>parent</em> samples and <em>child</em> samples in this tutorial. For a thorough tutorial, please use <a class="reference internal" href="ampletracks_demo_extended.html"><span class="doc std std-doc">this guide</span></a> <span class="badge bg-warning">Currently under construction</span>.</p>
+<p>This tutorial was partly inspired by the work of <span id="id1">Li <em>et al.</em> [<a class="reference internal" href="../bib-util/bibliography.html#id4" title="Zhi-Feng Li, Guang-Ming Cao, Yong-Quan He, Zhen-Yu Liu, and Guo-Dong Wang. Effect of chromium and water vapor of low carbon steel on oxidation behavior at 1050 °c. steel research international, 87(11):1469–1477, March 2016. URL: http://dx.doi.org/10.1002/srin.201500429, doi:10.1002/srin.201500429.">3</a>]</span> but will deviate from it.</p>
+</section>
+<section id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h2>
+<section id="ampletracks-features">
+<h3>Ampletracks features<a class="headerlink" href="#ampletracks-features" title="Permalink to this heading">#</a></h3>
+<p>This tutorial will familiarise you with the Ampletracks features of <code class="docutils literal notranslate"><span class="pre">creating</span></code> and <code class="docutils literal notranslate"><span class="pre">cloning</span></code> records, <code class="docutils literal notranslate"><span class="pre">adding</span></code> <em>child</em> records to <em>parent</em> records, and <code class="docutils literal notranslate"><span class="pre">adding</span></code> relationships between records of different type.</p>
+<p>All sections of this tutorial will be accompanied by images below the steps. For steps which follow similar steps we will not be providing as many images.</p>
+</section>
+<section id="create-a-sub-project">
+<h3>Create a sub-project<a class="headerlink" href="#create-a-sub-project" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>On the top right-hand side menu panel of the Ampletracks user interface (UI), ensure that you are <em>Currently viewing <strong>Sub project</strong></em> <a class="reference internal" href="#fig-demo-sub-project-view"><span class="std std-numref">Fig. 25</span></a></p></li>
+<li><p>(optional) If you are not within the <strong>Sub project</strong> listing, navigate to the top right-hand side menu panel, hover over the bottom arrow and click on <em>Switch to <strong>Sub project</strong></em> on the menu that appears <a class="reference internal" href="#fig-ampletracks-switch-record-type-panel"><span class="std std-numref">Fig. 26</span></a></p></li>
+<li><p>Click on the <em>Add <strong>Sub project</strong> button</em>, this should either be on the right-hand corner above the listing table or underneath the <strong>Sub project list</strong> title depending on the size of your viewport <a class="reference internal" href="#fig-ampletracks-add-sub-project"><span class="std std-numref">Fig. 27</span></a></p></li>
+<li><p>Ensure that the correct <em><strong>Project</strong></em> is selected under the <strong>Ownership</strong> section on the form, if you are part of multiple projects <a class="reference internal" href="#fig-ampletracks-ownership"><span class="std std-numref">Fig. 28</span></a></p></li>
+<li><p>Fill in the text boxes either by</p>
+<ol class="arabic simple">
+<li><p>Inspecting the form and filling any with relevant details as you see fit, <strong>or</strong></p></li>
+<li><p>Navigate to <em>Project name:</em> and fill the text box with</p></li>
+</ol>
+<blockquote>
+<div><p>Oxidation behaviour of chromium containing steel</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Navigate to <em>Name of project contact</em> and fill the text box with your name, an example name, or the person who is responsible for this project</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This could be you, your principal investigator (PI) of the project, your PhD supervisor, or a postdoctoral researcher within your group that is supervising you.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Navigate to <em>Project description</em> and fill the text box with</p></li>
+</ol>
+<blockquote>
+<div><p>Investigating the effect of increasing chromium content to the oxidation resistance of chromium containing steels, from 0 wt.% chromium to 1.0 wt.% chromium.</p>
+</div></blockquote>
+</li>
+<li><p>Populate the other fields at your discretion and to get a feel for the <strong>Sub project</strong> form</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+<li><p>You will be redirected back to list view</p></li>
+</ol>
+<div class="admonition-visual-guide admonition">
+<p class="admonition-title">Visual guide</p>
+<figure class="align-default" id="fig-demo-sub-project-view">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_sub_project_view.png"><img alt="Sub project view on the Ampletracks UI" src="../_images/demo_ampletracks_sub_project_view.png" style="width: 568.0px; height: 317.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text"><strong>Sub project</strong> view on the Ampletracks UI</span><a class="headerlink" href="#fig-demo-sub-project-view" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-ampletracks-switch-record-type-panel">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_switch_panel.png"><img alt="Ampletracks switch record type panel" src="../_images/demo_ampletracks_switch_panel.png" style="width: 467.0px; height: 369.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The Ampletracks switch record type panel</span><a class="headerlink" href="#fig-ampletracks-switch-record-type-panel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-ampletracks-add-sub-project">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_add_sub_project.png"><img alt="Ampletracks switch record type panel" src="../_images/demo_ampletracks_add_sub_project.png" style="width: 459.0px; height: 146.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Add <strong>Sub project</strong></span><a class="headerlink" href="#fig-ampletracks-add-sub-project" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-ampletracks-ownership">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_ownership.png"><img alt="Ampletracks record ownership section" src="../_images/demo_ampletracks_ownership.png" style="width: 485.0px; height: 460.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Add <strong>Sub project</strong></span><a class="headerlink" href="#fig-ampletracks-ownership" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="create-samples">
+<h3>Create samples<a class="headerlink" href="#create-samples" title="Permalink to this heading">#</a></h3>
+<section id="create-sample">
+<h4>Create Sample<a class="headerlink" href="#create-sample" title="Permalink to this heading">#</a></h4>
+<ol class="arabic">
+<li><p>On the top right-hand side menu panel of the Ampletracks user interface (UI), ensure that you are <em>Currently viewing <strong>Sample (Demo)</strong></em></p></li>
+<li><p>(optional) If you are not within the <strong>Sample (Demo)</strong> listing, navigate to the top right-hand side menu panel, hover over the bottom arrow and click on <em>Switch to <strong>Sample (Demo)</strong></em> on the menu that appears</p></li>
+<li><p>Click on the <em>Add <strong>Sample (Demo)</strong> button</em>, this should either be on the right-hand corner above the listing table or underneath the <strong>Sub project list</strong> title depending on the size of your viewport</p></li>
+<li><p>Ensure that the correct <em><strong>Project</strong></em> is selected under the <strong>Ownership</strong> section on the form, if you are part of multiple projects</p></li>
+<li><p>Fill in the text boxes either by</p>
+<ol class="arabic simple">
+<li><p>Inspecting the form and filling any with relevant details as you see fit, <strong>or</strong></p></li>
+<li><p>Navigate to <em>Unique name of the sample</em> and fill the text box with a <strong>unique name</strong>, for the purposes of this tutorial the tutorial writer uses</p></li>
+</ol>
+<blockquote>
+<div><p>Chromium steel 0000</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Navigate to <em>Material</em> and fill the text box with</p></li>
+</ol>
+<blockquote>
+<div><p>Steel alloy</p>
+</div></blockquote>
+<ol class="arabic" start="4">
+<li><p>Navigate to <em>What is the composition of the sample</em> and</p>
+<ol class="arabic simple">
+<li><p>Select the <span class="badge bg-light" style="color:black; font-weight:strong; font-size:larger;">+</span> button, you should see a periodic table open up <a class="reference internal" href="#fig-demo-add-elements"><span class="std std-numref">Fig. 29</span></a></p></li>
+<li><p>Select elements Carbon (C) Silicon (Si) Chromium (Cr) Manganese (Mn) Phosphorus (P) Surlfur(S) and Iron (Fe)</p></li>
+<li><p>Select the <em>wt.%</em> composition declaration on the right-hand corner <a class="reference internal" href="#fig-demo-weight-pct-declarations"><span class="std std-numref">Fig. 30</span></a></p></li>
+<li><p>Click on the number at the bottom right of the square housing Fe, set it to 1</p></li>
+<li><p>Now repeat this for each of the other elements according to the table below, you will see that Fe balances automatically</p></li>
+</ol>
+<table class="table" id="label-to-reference">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">First <em>parent</em> sample composition</span><a class="headerlink" href="#label-to-reference" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>C</p></th>
+<th class="head"><p>Si</p></th>
+<th class="head"><p>Cr</p></th>
+<th class="head"><p>Mn</p></th>
+<th class="head"><p>P</p></th>
+<th class="head"><p>S</p></th>
+<th class="head"><p>Fe</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.00019</p></td>
+<td><p>0.00011</p></td>
+<td><p>0</p></td>
+<td><p>0.00020</p></td>
+<td><p>0.00015</p></td>
+<td><p>0.00007</p></td>
+<td><p>Bal.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Navigate to <em>Has this sample been manufactured in-house or received?</em> Select the radio button on the left of:</p></li>
+</ol>
+<blockquote>
+<div><p>Received</p>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>The <em>Who supplied this sample?</em> field will now appear</p></li>
+<li><p>Select</p></li>
+</ol>
+<blockquote>
+<div><p>Research partners (Public research institution)</p>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>Scroll to <em>Who is responsible for this sample?</em></p></li>
+<li><p>Select the most appropriate choice for you</p></li>
+<li><p>Fill in the contact fields as you please</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For your privacy, please do not supply your personal information</p>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+<blockquote>
+<div><p>Investigating the effect of increasing chromium content to the oxidation resistance of chromium containing steels, from 0 wt.% chromium to 1.0 wt.% chromium.</p>
+</div></blockquote>
+</li>
+</ol>
+<figure class="align-default" id="fig-demo-add-elements">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_add_elements.png"><img alt="Add elements to composition" src="../_images/demo_ampletracks_add_elements.png" style="width: 555.0px; height: 218.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Add elements to composition</span><a class="headerlink" href="#fig-demo-add-elements" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-demo-weight-pct-declarations">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_select_wt_percent.png"><img alt="Ampletracks weight percent declaration" src="../_images/demo_ampletracks_select_wt_percent.png" style="width: 258.0px; height: 81.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Create composition with weight percent declaration</span><a class="headerlink" href="#fig-demo-weight-pct-declarations" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="relate-sample-to-sub-project">
+<span id="relate-to-sub-project"></span><h5>Relate sample to sub-project<a class="headerlink" href="#relate-sample-to-sub-project" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>Navigate to the sample we just created</p></li>
+<li><p>Select the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">relationship</span> <span class="pre">--</span></code> drop-down box under the <strong>Relationships</strong> section</p></li>
+<li><p>Select <em>is part of</em> to create a <em><strong>Sample</strong></em> to <em><strong>Sub project</strong></em> relationship</p></li>
+<li><p>Type in ‘oxi’ in the search box that will have appeared</p></li>
+<li><p>Select the name you gave to your sub-project, which is <em>Oxidation behaviour of chromium containing steel</em> for the tutorial writers <a class="reference internal" href="#fig-select-sub-project"><span class="std std-numref">Fig. 31</span></a></p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+<figure class="align-default" id="fig-select-sub-project">
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_add_relationship_sub_project.png"><img alt="Select sub project relationship" src="../_images/demo_ampletracks_add_relationship_sub_project.png" style="width: 377.0px; height: 174.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Create relationship from <em><strong>Sample</strong></em> to <em><strong>Sub project</strong></em></span><a class="headerlink" href="#fig-select-sub-project" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="clone-initial-sample">
+<h4>Clone initial sample<a class="headerlink" href="#clone-initial-sample" title="Permalink to this heading">#</a></h4>
+<p>We will now create the next two bulk material samples by using the <code class="docutils literal notranslate"><span class="pre">clone</span></code> feature on Ampletracks.</p>
+<ol class="arabic">
+<li><p>Navigate to the <em>Sample</em> Record list view</p></li>
+<li><p>Locate the sample record we just made</p></li>
+<li><p>Hover over the cog <span class="fas fa-cog"><span> icon</p></li>
+<li><p>Select the <strong>Clone</strong> from the hover menu, you will be redirected to a sample form for the cloned <em>Sample</em></p></li>
+<li><p>Edit cloned <em>Sample</em> record</p>
+<ol class="arabic">
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Change the name to</p>
+<blockquote>
+<div><p>Chromium steel 0005</p>
+</div></blockquote>
+</li>
+<li><p>Change the content of Chromium to 0.005</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+</li>
+<li><p>Follow the steps outline in the <span class="xref myst">section above</span> to relate the sample to the sub project we created</p></li>
+<li><p>Repeat all steps from step 1 - 6</p>
+<ol class="arabic">
+<li><p>Use the following name for the newly cloned sample</p>
+<blockquote>
+<div><p>Chromium steel 0010</p>
+</div></blockquote>
+</li>
+<li><p>Change the content of Chromium to 0.01</p></li>
+</ol>
+</li>
+</ol>
+</section>
+</section>
+<section id="create-child-samples">
+<h3>Create child samples<a class="headerlink" href="#create-child-samples" title="Permalink to this heading">#</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>For simplicity, we will only be creating child samples for the sample we named</p>
+<blockquote>
+<div><p>Chromium steel 0005</p>
+</div></blockquote>
+</div>
+<ol class="arabic">
+<li><p>Navigate to the <em>Sample</em> Record list view</p></li>
+<li><p>Locate the sample record ‘Chromium steel 0005’</p></li>
+<li><p>Hover over the cog <span class="fas fa-cog"><span> icon</p></li>
+<li><p>Select the <strong>Add Child</strong> from the hover menu, you will be redirected to a sample form for the child <em>Sample</em></p></li>
+<li><p>Change the name to</p>
+<blockquote>
+<div><p>Chromium steel 0005 EDM cube 01</p>
+</div></blockquote>
+</li>
+<li><p>Explore other fields</p></li>
+<li><p>Fill in other fields within the form as you see fit for the sample and our known process history</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span> button</p></li>
+<li><p>Scroll up to the <strong>Relationships</strong> section</p>
+<ol class="arabic">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">---</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">relationship</span> <span class="pre">---</span></code> drop down menu</p></li>
+<li><p>Select</p>
+<blockquote>
+<div><p>was made using</p>
+</div></blockquote>
+</li>
+<li><p>Type ‘EDM’ into the search box, or the most appropriate <em>Equipment</em> name for you</p></li>
+<li><p>Select the piece of equipment</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span> button</p></li>
+</ol>
+</li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span> button</p></li>
+<li><p>Explore what other relationships and with what pieces of equipment are available to the <em>Sample</em> record type</p></li>
+<li><p>Create a relationship between the record and your <em>Sub project</em></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can search for records to relate to the currently active record using your name within the Ampletracks app</p>
+</div>
+</li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+<li><p>Repeat steps 1 - 6 twice</p></li>
+<li><p>Name the new child samples ‘Chromium steel 0005 EDM cube 02’ and ‘Chromium steel 0005 EDM cube 03’</p></li>
+<li><p>Locate sample record ‘Chromium steel 0005’</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Navigate to <em>Process history</em> field</p></li>
+<li><p>Update the <em>Process history</em> field with</p>
+<blockquote>
+<div><p>Was machined by wire EDM to produce 3 cubic 5mmx5mmx5mm child samples</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Another method to create a child record is to navigate to the record we are interested in and click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">+ New child record</span> button under the <em>Descendants</em> title</p>
+<a class="reference internal image-reference" href="../_images/demo_ampletracks_add_child_descendants.png"><img alt="../_images/demo_ampletracks_add_child_descendants.png" src="../_images/demo_ampletracks_add_child_descendants.png" style="width: 317.09999999999997px; height: 199.5px;" /></a>
+</div>
+</section>
+<section id="relate-samples-to-other-records">
+<h3>Relate samples to other records<a class="headerlink" href="#relate-samples-to-other-records" title="Permalink to this heading">#</a></h3>
+<section id="equipment">
+<h4>Equipment<a class="headerlink" href="#equipment" title="Permalink to this heading">#</a></h4>
+<p>We have see above how to create relationships between pre-existing records such as equipment.</p>
+<ul class="simple">
+<li><p>Look at what other types of relationships exist for samples</p></li>
+<li><p>Is there a rewlationship that satisfies characterisation?</p></li>
+<li><p>Can you identify a piece of equipment to relate the sample to?</p></li>
+</ul>
+</section>
+<section id="creating-a-record-on-relationship-dataset">
+<h4>Creating a record on relationship - Dataset<a class="headerlink" href="#creating-a-record-on-relationship-dataset" title="Permalink to this heading">#</a></h4>
+<p>For this part of the tutorial we are assuming that we have imaged our sample already and created a relationship with the equipment that imaged it</p>
+<ol class="arabic">
+<li><p>Navigate to your sample of interest</p></li>
+<li><p>Click on on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Edit</span> button</p></li>
+<li><p>Scroll to the <strong>Relationships</strong> section</p>
+<ol class="arabic">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">---</span> <span class="pre">Add</span> <span class="pre">new</span> <span class="pre">relationship</span> <span class="pre">---</span></code> drop down menu</p></li>
+<li><p>Select</p>
+<blockquote>
+<div><p>was measured to produce</p>
+</div></blockquote>
+</li>
+<li><p>Start typing in the text box the name of the <em>Dataset</em> record we want to create</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You only need 3 characters for search to begin.
+You can use wilcard characters such as <code class="docutils literal notranslate"><span class="pre">%%%</span></code> or <code class="docutils literal notranslate"><span class="pre">___</span></code> to show everything you have available for relationship creation between records.</p>
+</div>
+</li>
+<li><p>Click on <em>Add new record</em>. You will be redirected to a <em>Dataset</em> creation page</p></li>
+<li><p>Fill in the details of your dataset</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save</span> button</p></li>
+</ol>
+</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="optional-steps">
+<span id="content-references-optional-steps"></span><h2>Optional steps<a class="headerlink" href="#optional-steps" title="Permalink to this heading">#</a></h2>
+<p>For the following step you will need to be granted elevated access to an administrative role at the project level.</p>
+<p>You might have noticed that we have yet to create a piece of equipment for sample preparation, such as a sample mounting press and a horizontal grinding wheel.</p>
+<p>In the following set of instructions, create an equipment record for either of these pieces of equipment, or a piece of characterisation equipment that you think is necessary for this study.</p>
+<section id="create-equipment">
+<h3>Create equipment<a class="headerlink" href="#create-equipment" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Switch to the <em>Equipement</em> record type listing</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Add Equipment</span> button</p></li>
+<li><p>Make sure that the project we are registering this piece of equipment under is ‘Central Index’</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/demo_ampletracks_project_select.png" src="../_images/demo_ampletracks_project_select.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Project select drop-down menu in record creation</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Fill in the equipment record with the appropriate details</p></li>
+<li><p>Click on the <span class="badge bg-light" style="background-color:#1a7182 !important;">Save &amp; Close</span> button</p></li>
+</ol>
+</section>
+<section id="changing-user-records">
+<h3>Changing user records<a class="headerlink" href="#changing-user-records" title="Permalink to this heading">#</a></h3>
+<p>When elevated to an administrative role at the <em>Project</em> level, you will have the permission to change records from within the <em>Projects</em> you have access to.</p>
+<ul class="simple">
+<li><p>Try changing a record you do not own</p></li>
+<li><p>Has the UI changed?</p>
+<ul>
+<li><p>How?</p></li>
+<li><p>What other features do you have access to?</p></li>
+</ul>
+</li>
+<li><p>Record ownership transfer</p>
+<ul>
+<li><p>Try changing the owner of a record from one user to another</p></li>
+</ul>
+</li>
+</ul>
+<!-- ### Import record types
+
+### Specify relationship pairs --></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ampletracks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ampletracks_user_tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ampletracks <em>User</em> Tutorials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ampletracks_demo_extended.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ampletracks user tutorial - extended</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampletracks-features">Ampletracks features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-sub-project">Create a sub-project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-samples">Create samples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-sample">Create Sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-sample-to-sub-project">Relate sample to sub-project</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-initial-sample">Clone initial sample</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-child-samples">Create child samples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relate-samples-to-other-records">Relate samples to other records</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment">Equipment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-record-on-relationship-dataset">Creating a record on relationship - Dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-steps">Optional steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-equipment">Create equipment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-user-records">Changing user records</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Data Curators @ Royce
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 16 Apr 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
