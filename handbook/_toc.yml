@@ -26,9 +26,12 @@ parts:
     sections:
     - file: ampletracks/ampletracks_user_guide.md
     - file: ampletracks/ampletracks_cms_record_types.md
+    - file: ampletracks/ampletracks_iod.md
   - file: ampletracks/ampletracks_tutorials.md
     sections:
     - file: ampletracks/ampletracks_user_tutorial.md
+    - file: ampletracks/ampletracks_user_demo.md
+    - file: ampletracks/ampletracks_demo_extended.md
 - caption: Team Tutorials
   chapters:
   - file: team_tutorials/work-on-this-book
