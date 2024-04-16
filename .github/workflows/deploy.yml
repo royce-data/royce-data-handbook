@@ -34,7 +34,7 @@ jobs:
     # Deploy the book's HTML to gh-pages branch
     - name: Deploy to GitHub pages
       uses: peaceiris/actions-gh-pages@v4
-      permissions: write-all
       with:
+        permissions: write-all
         github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: handbook/_build/html
