@@ -1,8 +1,8 @@
-# Welcome to the Royce Institute Data Handbook
+# Welcome to the Henry Royce Institute Data Handbook
 
 We've written this to share resources that we find useful to (research) data management practices, and to host our user guides.  
 <br>
-The content is written and managed by the {{ data_curators }} based at the {{ royce_institute }} Manchester Hub.  
+The content is written and managed by the {{ data_curators }} of the {{ royce_institute }}, based at the Royce Hub Building, the University of Manchester.  
 <br>
 We're proudly powered by {{ jupyter_book }} and {{ executable_books }}.  
 <br>

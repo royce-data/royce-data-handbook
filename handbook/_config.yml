@@ -11,7 +11,7 @@ parse:
   myst_substitutions:
     jupyter_book: '[Jupyter Book](https://jupyterbook.org)'
     executable_books: '[The Executable Books Project](https://executablebooks.org/)'
-    royce_institute: '[Royce Institute](https://royce.ac.uk)'
+    royce_institute: '[Henry Royce Institute](https://royce.ac.uk)'
     data_curators: '[Data Curation Team](https://royce.ac.uk/data-curation)'
     royce_ampletracks: '[royce.ampletracks.com](https://royce.ampletracks.com/)'
   myst_enable_extensions:
