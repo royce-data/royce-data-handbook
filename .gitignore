@@ -9,3 +9,4 @@ handbook/_build/.doctrees/test_note.doctree
 handbook/_build/jupyter_execute/*
 handbook/_build/html/_sources/test_note.ipynb
 handbook/_build/*
+.DS_STORE
