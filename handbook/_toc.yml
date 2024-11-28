@@ -46,9 +46,8 @@ parts:
   - file: workshops/workshops
     sections:
     - file: workshops/git-intro
-- caption: Bibliography and Useful Links
+- caption: Useful Links
   chapters:
-  - file: bib-util/bibliography.md
   - file: bib-util/useful-interesting.md
 
 
