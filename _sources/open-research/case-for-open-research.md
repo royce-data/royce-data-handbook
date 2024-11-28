@@ -66,5 +66,5 @@ If you have any questions or concerns regarding open research practices and the 
 
 :::{bibliography} ../bib-util/case-for-open-research.bib
 :style: unsrt
-<!-- :filter: cited-->
-:::
+:filter: docname in docnames
+```
