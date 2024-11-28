@@ -62,6 +62,8 @@ As science continues to evolve, open research practices such as open publication
 
 If you have any questions or concerns regarding open research practices and the open publishing of research data, please contact: <datacuration@royce.ac.uk>
 
+## References
+
 :::{bibliography} ../bib-util/case-for-open-research.bib
 :style: unsrt
 <!-- :filter: cited and "case-for-open-research" -->
