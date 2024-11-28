@@ -32,6 +32,7 @@ latex:
 bibtex_bibfiles:
   - bib-util/references.bib
   - bib-util/rdmp_references.bib
+  - bib-util/case-for-open-research.bib
 
 # Information about where the book exists on the web
 repository:
