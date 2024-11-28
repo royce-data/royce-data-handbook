@@ -374,9 +374,10 @@ This training is available open and free online for anyone and not limited to PG
 1. [Research data explained, My Research Essentials](https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data-explained/)
 2. [Research data management, My Research Essentials](https://www.escholar.manchester.ac.uk/learning-objects/mre/research-data/)
 
-<!-- ## References
+## References
 
 ```{bibliography}
-:style: plain
-:filter: docname in docnames
-``` -->
+:style: unsrt
+:filter: cited and "rdmp_references.bib"
+```
+
