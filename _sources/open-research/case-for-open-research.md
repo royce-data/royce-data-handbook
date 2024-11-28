@@ -48,7 +48,7 @@ Naturally, some researchers may hold reservations about adopting open data as st
 **Solution**: Institutions to roll out ‘How to Share Data’ training programmes and provide access to a suitable platform such as a generalist repository.
 
 **Barrier**: Time constraints  
-**Solution**: Institutions employ research data management services, and many are working to formalise the data steward profession. Such professionals can provide services in preparing data for sharing, and training on how researchers can effectively prepare data for sharing. Many institutions already host such training, including effective and actionable research data management planning.
+**Solution**: Institutions often offer research data management services and are increasingly formalising the role of data stewards. These professionals play a key role in preparing data for sharing and providing training to help researchers effectively manage and share their data. Many institutions already deliver training on topics such as actionable and effective [research data management planning](../rdm/rdmp-guide.md).
 
 **Barrier**: Concerns about intellectual property or ‘being scooped’  
 **Solution**: Apply Creative Commons Attribution Licensing and stipulate an embargo when publishing data openly in repositories.
@@ -66,5 +66,5 @@ If you have any questions or concerns regarding open research practices and the 
 
 :::{bibliography} ../bib-util/case-for-open-research.bib
 :style: unsrt
-<!-- :filter: cited and "case-for-open-research" -->
+<!-- :filter: cited-->
 :::

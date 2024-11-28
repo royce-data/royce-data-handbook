@@ -378,6 +378,6 @@ This training is available open and free online for anyone and not limited to PG
 
 ```{bibliography}
 :style: unsrt
-:filter: cited and "rdmp_references.bib"
+:filter: cited
 ```
 
