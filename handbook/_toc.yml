@@ -41,7 +41,6 @@ parts:
     - file: team_tutorials/contribution-workflow
 - caption: Events
   chapters:
-  - file: misc_org/appointments
   - file: misc_org/events
   - file: workshops/workshops
     sections:
