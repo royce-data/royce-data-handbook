@@ -47,6 +47,11 @@ parts:
     - file: workshops/git-intro
 - caption: Useful Links
   chapters:
-  - file: bib-util/useful-interesting.md
-
-
+  - file: util/useful-interesting.md
+- caption: Bibliographies
+  chapters:
+  - file: util/bibliographies.md
+- caption: Material reuse
+  chapters:
+  - file: util/reuse.md
+    title: Handbook adaptation
