@@ -80,7 +80,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Introduction" href="rdm/rdm-intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="29 Nov 2024"/>
+    <meta name="docbuild:last-update" content="04 Dec 2024"/>
   </head>
   
   
@@ -231,7 +231,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Useful Links</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="bib-util/useful-interesting.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="util/useful-interesting.html">Utilities</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliographies</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="util/bibliographies.html">Bibliographic information</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Material reuse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="util/reuse.html">Handbook adaptation</a></li>
 </ul>
 
     </div>
@@ -421,9 +429,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -439,14 +445,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -467,25 +465,17 @@ We’re proudly powered by <a class="reference external" href="https://jupyterbo
 This book isn’t meant to be read page-to-page or in the sequence presented in the sidebar.<br />
 We suggest starting out with a topic from the sidebar that interests you.<br />
 <br>
-Some of the most useful materials will be found under the <strong>Research Data Management</strong> section and the <strong><a class="reference internal" href="bib-util/useful-interesting.html"><span class="doc std std-doc">Utilities</span></a></strong> article.<br />
-If you would like to consult with us, please have a look at this <strong><span class="xref myst">page</span></strong>.
+Some of the most useful materials will be found under the <strong>Research Data Management</strong> section and the <strong><a class="reference internal" href="util/useful-interesting.html"><span class="doc std std-doc">Utilities</span></a></strong> article.<br />
 <br></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some of the content in this book are training materials for our team, so while not directly relevant they might be useful to some, or if you’re interested in contributing.</p>
 </div>
 <br>
-<p>All animated images (GIFs) in this book were created using the ScreenToGif tool by <span id="id1">[<a class="reference internal" href="#id3" title="Nicke Manarin. ScreenToGif - Record your screen, edit and save as a gif or video. URL: https://www.screentogif.com/ (visited on 2022-10-21).">1</a>]</span></p>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Nicke Manarin. ScreenToGif - Record your screen, edit and save as a gif or video. URL: <a class="reference external" href="https://www.screentogif.com/">https://www.screentogif.com/</a> (visited on 2022-10-21).</p>
-</dd>
-</dl>
+<div class="toctree-wrapper compound">
 </div>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -546,21 +536,6 @@ If you would like to consult with us, please have a look at this <strong><span c
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -570,7 +545,7 @@ If you would like to consult with us, please have a look at this <strong><span c
   <div class="footer-item">
     
 <p class="component-author">
-By Data Curators @ Royce
+By Royce Data Curation
 </p>
 
   </div>
@@ -589,13 +564,16 @@ By Data Curators @ Royce
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 29 Nov 2024.
+  Last updated on 04 Dec 2024.
   <br/>
 </p>
   </div>
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://royce-data.github.io/royce-data-handbook/">The Royce Data Handbook</a> by <span property="cc:attributionName">Royce Data Curation</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+</div>
   </div>
   
 </div>
