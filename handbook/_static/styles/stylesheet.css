@@ -121,8 +121,14 @@ nav.bd-links li > a {
 
 nav.bd-links .current>a {
     box-shadow: none !important;
-}
+    color: rgb(255,209,0) !important;
 
+}
+nav.bd-links li>a:hover {
+    box-shadow: none !important;
+    color: rgb(255,209,0) !important;
+
+}
 .prev-next-area a p.prev-next-title {
     color: rgb(0,161,154) !important;
     text-decoration: none !important;
@@ -178,15 +184,15 @@ nav#bd-toc-nav a:hover,
     text-decoration: none !important;
 }
 
+.toc-entry a.nav-link.active {
+    color: rgb(255,209,0) !important;
+    box-shadow: inset max(3px, .1875rem, .12em) 0 0 rgb(255,209,0) !important;
+}
+
 /* nav#bd-toc-nav a:visited {
     color: #5e3652 !important;
     text-decoration: none;
 } */
-
-.bd-toc nav li.active>a.active {
-    color: rgb(255,209,0) !important;
-    border-left: 2px solid rgb(255,209,0) !important;
-}
 
 /* #main-content a:visited {
     color: rgb(112,112,113) !important
